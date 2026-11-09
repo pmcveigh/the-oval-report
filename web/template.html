@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102d24">
+<meta name="description" content="The Oval Report — Glentoran fixtures, Premiership standings, results guide and season projections.">
+<title>The Oval Report</title>
+<!-- Reproducible offline build; frozen reference retained separately. -->
+<style>/* STYLE */</style>
+</head>
+<body>
+<a class="skip-link" href="#standings">Skip to standings</a><div class="site">
+<header class="masthead">
+  <div class="mast-inner">
+    <div class="identity"><div class="shield" aria-hidden="true">G</div><div><div class="brand-title">THE OVAL <em>REPORT</em></div></div></div>
+    <div class="issue">BOYLE Sports Premiership <b>26 / 27</b> 8 November 2026</div>
+  </div>
+  <nav class="site-nav" aria-label="Dashboard sections"><a href="#match">01 / Next league game</a><a href="#standings">02 / Table</a><a href="#projection">Final table forecast</a><a href="#fixturelab">03 / Results guide</a><a href="#predictions">Match predictions</a><a href="#difficulty">Run-in difficulty</a><a href="#momentum">Form tracker</a><a href="#backtest">Accuracy audit</a><a href="#scorematrix">Scoreline matrix</a><a href="#postsplit">The split</a><a href="#targets">04 / Points targets</a><a href="#probabilities">05 / Forecast</a><a href="#model-report">Model evidence</a><a href="#exports">Exports</a><a href="#calendar">06 / League fixtures</a><span class="edition">EAST BELFAST / THE OVAL</span></nav>
+</header>
+<div class="notice" id="data-status" role="status">Data as of 7 November 2026 · Supplied snapshot; independent source verification unavailable.</div>
+<section class="hero" id="match" aria-label="Next Glentoran fixture">
+ <div class="hero-main">
+   <div class="hero-topline"><span class="small-id">NEXT LEAGUE GAME</span><span class="live-mark"><span></span> Matchday 16</span></div>
+   <div class="hero-headline">UP <span>NEXT.</span></div>
+   <div class="duel" aria-label="Glentoran home versus Bangor away"><div class="duel-side"><div class="club-name">GLENTORAN</div><span class="club-tag">Home</span></div><div class="duel-mid"><span class="versus">V</span></div><div class="duel-side"><div class="club-name away">BANGOR</div><span class="club-tag opp">Away</span></div></div>
+   <div class="match-footer"><div class="location">Friday 13 November 2026 · BetMcLean Oval</div><a class="link-arrow" href="https://www.glentoran.com/matches/fixtures/" target="_blank" rel="noopener">Fixture details (unchecked) ↗</a></div>
+ </div>
+ <aside class="hero-stub" aria-label="Match details">
+   <div class="kickoff"><div class="stub-caption">Next Game / Friday</div><div class="date-huge">13</div><div class="monthline">NOVEMBER 2026</div><div class="time-line">19:45<small>GMT</small></div></div>
+   <div class="stub-bottom"><div class="stub-caption">Last League Game</div><div class="previous-line"><div><span>Carrick Rangers v Glentoran</span><b>0—0</b></div><div><span>7 Nov 2026</span></div></div><div class="stub-links"><a href="https://www.glentoran.com/tickets" target="_blank" rel="noopener">Ticket information (unchecked) ↗</a><a href="https://www.nifootballleague.com/all-clubs/glentoran/" target="_blank" rel="noopener">Club schedule (unchecked) ↗</a></div></div>
+ </aside>
+</section>
+
+<section class="prediction-section" id="match-analysis" aria-label="Next and last match statistical forecasts">
+ <div class="prediction-title"><div><span class="eyebrow">THE FORMBOOK / MATCH INTELLIGENCE</span><h2>THE NUMBERS<br>BEHIND THE MATCH.</h2></div><p>Fitted, draw-aware Elo outcomes with a separately fitted Dixon–Coles conditional goal model. The previous fixture uses only information from earlier dates.</p></div>
+ <div class="prediction-columns">
+  <article class="prediction-card"><div class="eyebrow">01 / NEXT MATCH / MODEL FORECAST</div><div id="next-match-prediction"></div></article>
+  <article class="prediction-card past"><div class="eyebrow">02 / LAST LEAGUE GAME / RETROSPECTIVE</div><div id="previous-match-prediction"></div></article>
+ </div>
+ <p class="prediction-legend">Goal and score forecasts are an explicit Elo / Dixon–Coles hybrid. Recent form and the descriptive momentum indicator do not enter candidate models. Strength is a relative Elo rating, not a win probability.</p>
+</section>
+
+<section class="stats-strip" aria-label="Glentoran season at a glance">
+ <div class="stat"><div class="label">League position</div><div class="number" id="k-position">4th</div><div class="detail">12-team Premiership</div></div>
+ <div class="stat"><div class="label">Points on the board</div><div class="number" id="k-points">22</div><div class="detail" id="k-record">6W / 4D / 4L · P14</div></div>
+ <div class="stat"><div class="label">Gap to leaders</div><div class="number" id="k-gap">14</div><div class="detail">Points off first place</div></div>
+ <div class="stat"><div class="label">League title chance</div><div class="number" id="k-title-chance">—</div><div class="detail">Modelled season finish · see forecast</div></div>
+</section>
+<main class="main-grid">
+ <section class="standings" id="standings">
+   <div class="chapter-heading"><div><span class="section-num">02 / The standings</span><h2>THE STATE<br>OF PLAY.</h2></div><div class="caption">Factual supplied standings stay visible. Hypothetical results appear in a separate scenario table.</div></div>
+   <span class="table-mode" id="table-heading">Current league table</span>
+   <div class="league-wrap"><table class="league" aria-label="NIFL Premiership table"><thead><tr><th>POS</th><th>CLUB</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody id="league-body"></tbody></table></div>
+   <details id="factual-table"><summary>Factual table · supplied results only</summary><div class="league-wrap"><table class="league"><caption>Immutable factual standings</caption><thead><tr><th>POS</th><th>CLUB</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GF</th><th>GA</th><th>GD</th><th>PTS</th></tr></thead><tbody id="factual-body"></tbody></table></div></details><div class="table-note" id="simulation-note">Select match results to see how they change the table.</div>
+ </section>
+ <section class="fixturelab" id="fixturelab">
+   <div class="chapter-heading"><div><span class="section-num">03 / Supporter's result guide</span><h2>WHO DO<br>WE WANT?</h2></div><div class="caption">Next supplied league round · exact-position probability changes, with paired uncertainty</div></div>
+   <div class="control-bar focus-three" role="group" aria-label="Choose exact league position to optimise">
+<button id="focus-p1" class="active" type="button" onclick="setFocus('p1')" aria-pressed="true">League Title (1st)</button>
+<button id="focus-p2" type="button" onclick="setFocus('p2')" aria-pressed="false">2nd (Direct Europe*)</button>
+<button id="focus-p3" type="button" onclick="setFocus('p3')" aria-pressed="false">3rd</button>
+</div>
+   <div class="pick-help"><span>Conditional simulations compare the three possible results for every match</span><span><b>H</b> Home · <b>D</b> Draw · <b>A</b> Away</span></div>
+   <p class="result-model-status" id="result-model-status">Computing scenario impact…</p><div id="fixture-list" aria-live="polite"></div>
+   <div class="simulation-footer"><span class="simulation-count" id="scenario-count">0 / 6 results simulated</span><button type="button" class="reset" onclick="resetPicks()">↺ Clear the board</button></div>
+   <p class="explain">Algorithmic preference: each tab maximises the probability of finishing in that <strong>exact position</strong>, not merely the probability of reaching that position or higher. *Direct Europe is subject to current rules and licensing; authoritative verification is unavailable in this build. No automatic qualification is asserted for third. Changes smaller than sampling uncertainty are flagged as inconclusive. Select H, D or A beside any fixture to try a scenario. Each chosen win is modelled as 1–0; each draw as 0–0. The scenario table, season probabilities, projections, targets and preferred-results guide update together. Fitted ratings stay frozen; unplayed match forecasts retain the same information cut-off. The recommendations represent preferences, not predictions.</p>
+ </section>
+</main>
+<section class="oval-section oval-projection" id="projection" aria-label="Predicted final 2026 2027 Premiership table">
+ <div class="oval-heading"><div><span class="eyebrow">THE SEASON END / SIMULATED STANDINGS</span><h2>HOW IT<br><em>ENDS.</em></h2></div><p>An entire projected Premiership table. Every club receives an expected points total, finishing-position average and probabilities of first, top three and top six.</p></div>
+ <div class="proj-lead"><div><span>Glentoran / projected final points</span><strong id="proj-glens-points">—</strong></div><div><span>Glentoran / average finishing position</span><strong id="proj-glens-position">—</strong></div></div>
+ <div class="ov-table-scroll"><table class="ov-table" aria-label="Projected final Premiership table"><thead><tr><th>Rank*</th><th>Club</th><th>Mean pts</th><th>80% pts range</th><th>Mean pos</th><th>Title</th><th>2nd</th><th>3rd</th><th>Top 3</th><th>Top 6</th></tr></thead><tbody id="projected-tbody"></tbody></table></div>
+ <p class="oval-note" id="projection-run-note">Calculating projected table…</p><p class="oval-note">*Rank is ordered by average simulated finishing position, rather than a fictional exact final league result. “80% pts range” covers the central 80% of simulations. Sixth and seventh are separated by the league split.</p>
+</section>
+
+<section class="oval-section oval-split" id="postsplit">
+ <div class="oval-heading"><div><span class="eyebrow">BEYOND ROUND 33 / SECTION A AND B</span><h2>THE FINAL<br><em>FIVE.</em></h2></div><p>Possible compositions of the top six and the clubs Glentoran could meet after the split. Computed from the same 10,000 conditional season simulations, without assuming the groups in advance.</p></div>
+ <div class="split-feature"><div><span>Glentoran / top-six group at split</span><strong id="split-glens-prob">—</strong><small>Chance of entering Section A after 33 matches</small></div><div><span>Predicted split opponents</span><div id="split-opponent-list"></div></div></div>
+ <div class="split-heading"><h3>MOST LIKELY TOP-SIX COMBINATIONS</h3><span>Probability of each exact six-club group</span></div><div id="split-groups" class="split-groups"></div>
+ <p class="oval-note">The final five pairings are inferred from simulated section membership. Home/away is sampled 50:50 for provisional pairings. Venue balancing rules and current tie-break regulations could not be independently verified; projections are conditional on the stated assumptions. Group composition is not a published fixture list. Post-split final positions cannot cross the sixth/seventh boundary.</p>
+</section>
+<section class="oval-section oval-predict" id="predictions" aria-label="Predictions for remaining league matches">
+ <div class="oval-heading"><div><span class="eyebrow">THE PREVIEW DESK / EVERY PREMIERSHIP GAME</span><h2>THE MATCH<br><em>FORECAST.</em></h2></div><p>Every supplied remaining league fixture. Elo supplies 1/X/2; Dixon–Coles supplies conditional score shapes. Expected points are 3 × win probability + draw probability. Locked fixtures are shown as hypothetical.</p></div>
+ <div class="match-filter"><div class="oval-tabbar" role="group" aria-label="Prediction date filter"><button id="pred-next" class="active" aria-pressed="true" onclick="setPredictionFilter('next')">Next round</button><button id="pred-month" aria-pressed="false" onclick="setPredictionFilter('month')">Next month</button><button id="pred-all" aria-pressed="false" onclick="setPredictionFilter('all')">Entire run-in</button></div><span id="pred-match-count"></span></div>
+ <div class="extra-filters"><label>Club <select id="prediction-club" onchange="renderMatchPredictions()"><option value="all">All clubs</option></select></label><label>Date <input id="prediction-date" type="date" onchange="renderMatchPredictions()"></label></div><div class="prediction-rows" id="all-match-predictions"></div><p class="oval-note" style="color:#b6cdb7">The most likely single score is not necessarily the most likely match outcome. Predictions use the supplied pre-split fixture list; the final five opponents are unknown until the split. All odds are statistical estimates.</p>
+</section>
+
+<section class="oval-section oval-matrix" id="scorematrix">
+ <div class="oval-heading"><div><span class="eyebrow">MATCH ENGINE / EXACT SCORE DISTRIBUTION</span><h2>EVERY<br><em>SCORELINE.</em></h2></div><p>Explore the probabilities behind the predicted score. Each cell is the chance of that particular final result from the same explicitly labelled hybrid distribution used by the season simulator.</p></div>
+ <div class="matrix-toolbar"><label for="matrix-fixture">CHOOSE A REMAINING LEAGUE FIXTURE</label><select id="matrix-fixture" onchange="renderScoreMatrix()"></select></div>
+ <div class="matrix-stats" id="matrix-stats"></div><div id="matrix-key" class="matrix-key"></div><div id="matrix-grid" class="matrix-scroll"></div>
+ <p class="oval-note">Cells show scores from 0–0 to 5–5; probability outside that grid is reported separately. The most likely individual score need not share the most likely overall win/draw/loss category. Scenarios entered elsewhere in the dashboard update these values.</p>
+</section>
+<section class="oval-section oval-difficulty" id="difficulty" aria-label="Premiership fixture difficulty rankings">
+ <div class="oval-heading"><div><span class="eyebrow">THE RUN-IN / TOUGHNESS OF OPPOSITION</span><h2>HARDER<br><em>THAN WHO?</em></h2></div><p>Difficulty ranks each remaining programme by expected points per match, using the shared prediction engine and home/away context. Lower expected points means a harder run-in.</p></div>
+ <div class="match-filter"><div class="oval-tabbar" role="group" aria-label="Difficulty analysis range"><button id="difficulty-all" class="active" aria-pressed="true" onclick="setRunInWindow('all')">All supplied</button><button id="difficulty-five" aria-pressed="false" onclick="setRunInWindow('five')">Next five</button></div><span id="difficulty-lede"></span></div>
+ <div class="difficulty-layout"><div id="runin-rows"></div><aside class="runin-glens" id="glens-runin"></aside></div>
+ <p class="oval-note">Difficulty rank uses expected points per match. Opponent strength is a relative Elo rating. Locks remove fixtures from the remaining programme; model parameters are frozen at the factual data cut-off. Excludes the five post-split fixtures that cannot yet be identified.</p>
+</section>
+<section class="oval-section oval-momentum" id="momentum" aria-label="Last five and ten Premiership matches club momentum">
+ <div class="oval-heading"><div><span class="eyebrow">THE FORMBOOK / LAST 10 LEAGUE MATCHES</span><h2>FORM.<br><em>NOT FEELING.</em></h2></div><p>Actual scorelines and recent results for every club. Momentum is opponent-adjusted, rewards every win and puts nearly 70% of its weight on the last three games. Strong rebounds count; repeated setbacks hurt.</p></div>
+ <div class="ov-table-scroll"><table class="ov-table" aria-label="League recent form and momentum table"><thead><tr><th>Club</th><th>Last 5 (oldest → newest)</th><th>Pts / 5</th><th>Pts / 10</th><th>Goals 5 F–A</th><th>Weighted PPG</th><th>Momentum /100</th></tr></thead><tbody id="form-track-rows"></tbody></table></div>
+ <div class="form-detail"><div class="form-detail-left"><label for="form-club-select">SELECT A CLUB / LAST TEN RESULTS</label><select id="form-club-select" onchange="setFormClub(this.value)"><option>Glentoran</option><option>Bangor</option><option>Ballymena United</option><option>Carrick Rangers</option><option>Cliftonville</option><option>Coleraine</option><option>Crusaders</option><option>Dungannon Swifts</option><option>Larne</option><option>Limavady United</option><option>Linfield</option><option>Portadown</option></select><h3 id="form-club-title">GLENTORAN</h3><div class="form-glens-summary" id="form-glens-summary"></div><p class="oval-note">Goals in each game, oldest to newest</p><div class="form-chart" id="form-strips"></div><div class="form-legend"><span><i></i> Goals scored</span><span><i></i> Goals conceded</span></div></div><div id="form-match-ledger"></div></div>
+ <p class="oval-note">League games only, to 7 November 2026. Momentum uses a 0–100 index: 50 neutral, higher rising, lower falling. The most recent three results contribute about 69% of the weighted signal. Wins always add momentum, regardless of league position; draws add momentum only against stronger opponents. Defeats and repeated setbacks subtract momentum; immediate comeback wins add an extra recovery bonus. Opponent positions are reconstructed <strong>before their matchday</strong> and heavily down-weighted when early-season rankings are provisional. This is a heuristic form index, not a probability or betting measure.</p>
+</section>
+
+
+<section class="oval-section oval-audit" id="backtest">
+ <div class="oval-heading"><div><span class="eyebrow">87 COMPLETED LEAGUE MATCHES / WALK-FORWARD EVALUATION</span><h2>SHOW ME<br><em>THE RECEIPTS.</em></h2></div><p>All 87 supplied matches remain visible for every model. Candidate forecasts require 20 earlier results; missing forecasts show their reason. These are reconstructed backtests, never published pre-kick-off snapshots.</p></div>
+ <div class="audit-stats" id="audit-summary"></div>
+ <div class="audit-method"><strong>FROZEN SCORE / 100</strong><span><b>35</b> correct 1X2 outcome</span><span><b>20 + 20</b> exact goals for each team (8 per team if one goal out)</span><span><b>10</b> exact goal difference (4 if one out)</span><span><b>15</b> exact score bonus</span><span>Perfect score = 100. No bonus for a wrong result; near misses can earn partial credit. Most likely W/D/L is the highest 1X2 probability. Brier score evaluates all three probabilities separately (lower is better). Models are NOT refitted to improve these results.</span></div>
+ <label class="audit-model-label">Audit model <select id="audit-model" onchange="drawAuditRows()"><option value="baseline">Frozen Oval v3</option><option value="poisson">Fitted Poisson</option><option value="dc">Dixon–Coles</option><option value="elo">Draw-aware Elo</option><option value="frequency">Historical frequency</option></select></label><div class="audit-controls"><div class="oval-tabbar" role="group" aria-label="Historical backtest filter"><button id="audit-all" class="active" onclick="setAuditFilter('all')">All clubs</button><button id="audit-glens" onclick="setAuditFilter('glens')">Glentoran</button><button id="audit-others" onclick="setAuditFilter('others')">Other games</button></div><label>Sort <select id="audit-sort" onchange="setAuditSort(this.value)"><option value="date">Match date</option><option value="best">Highest accuracy</option><option value="worst">Lowest accuracy</option></select></label><span id="audit-count"></span></div>
+ <div class="ov-table-scroll"><table class="audit-table" aria-label="Complete walk-forward prediction accuracy results"><thead><tr><th>Date</th><th>Fixture</th><th>Model W/D/L</th><th>Predicted score</th><th>Actual FT</th><th>Outcome</th><th>Score /100 · provenance</th></tr></thead><tbody id="audit-body"></tbody></table></div>
+ <div class="audit-bottom"><div><strong>BASELINE DISCIPLINE</strong><p>The supplied HTML and both audits remain byte-for-byte frozen. The original backtest algorithm reproduces all 87 imported forecasts and scores. New candidates use joint attack/defence or chronological Elo; momentum is descriptive only.</p></div><div><strong>HONEST LIMITATIONS</strong><p>No independent historic seasons or official schedule verification were available. All forecasts are reconstructed. Test dates were declared before candidate comparison; later test dates may ingest earlier observed test results. No same-date result enters a forecast.</p><p id="audit-integrity"></p></div></div></section>
+<section class="targets-section" id="targets">
+ <div class="targets-top"><div class="chapter-heading"><div><span class="section-num">04 / Season arithmetic</span><h2>THE MATHS.</h2></div></div><p class="targets-lede">No arbitrary targets: these are points thresholds derived from the final standings in the 10,000 conditional simulated seasons. They update whenever you fix a match result.</p></div>
+ <div id="target-list" aria-live="polite"></div>
+ <p class="targets-caveat">Each target is the simulated points total of the club in that finishing position, with a central 80% range. This is a probabilistic benchmark, not a guaranteed threshold: ties and goal difference matter. European routes depend on rules and licensing that could not be verified here.</p>
+</section>
+<section class="prob-section" id="probabilities">
+ <div class="prob-heading"><div><span class="section-num">05 / Season forecast</span><h2>THE ODDS<br><em>ON THE GLENS.</em></h2></div><p>The same simulation engine powers this position distribution, every club’s projected final table and the algorithmic preferred-results guide.</p></div>
+ <div class="prob-layout">
+   <div class="prob-feature"><span class="prob-eyebrow">CHANCE OF WINNING THE PREMIERSHIP</span><div id="title-prob" class="prob-giant" aria-live="polite">—</div><div class="prob-meter"><span id="title-prob-meter"></span></div><div class="prob-splits"><div><span>Top three</span><strong id="top3-prob">—</strong></div><div><span>Top six</span><strong id="top6-prob">—</strong></div></div><div class="prob-mini" id="prob-updated">Calculating conditional simulations…</div></div>
+   <div class="prob-table"><div class="prob-table-head"><strong>FINAL POSITION</strong><span>ESTIMATED CHANCE</span></div><div id="position-prob" class="position-prob" aria-live="polite"><p>Calculating season distribution…</p></div></div>
+ </div>
+ <p class="prob-method">10,000 deterministic Monte Carlo seasons from the shared hybrid distribution. All 111 supplied pre-split fixtures complete 33 games per club; conditional six-club groups each add five games, totalling 38. Positions cannot cross the sixth/seventh split boundary. Ranking assumes points, goal difference, then goals scored; unresolved ties are sampled. These rules and provisional 50:50 post-split venues require official verification. Sampling precision does not measure model or data uncertainty.</p>
+</section>
+
+<section class="calendar" id="calendar">
+ <div class="chapter-heading"><div><span class="section-num">06 / Supplied league programme</span><h2>THE RUN-IN.</h2></div><span class="caption">All supplied remaining Premiership fixtures · Europe/Belfast</span></div>
+ <div class="schedule-top"><div class="schedule-toggle" role="group" aria-label="Fixture list filter"><button id="cal-glens" class="active" type="button" aria-pressed="true" onclick="setFixtureFilter('glens')">GLENTORAN ONLY</button><button id="cal-all" type="button" aria-pressed="false" onclick="setFixtureFilter('all')">ALL CLUBS</button></div><p id="fixture-summary">111 supplied pre-split fixtures</p></div>
+ <div class="schedule-list" id="schedule-list" aria-live="polite"></div>
+ <p class="fixture-register-note">Dates and pairings are retained from the supplied 2026/27 programme; independent verification was unavailable. Glentoran v Ballymena United, postponed on 24 October, has a new date still to be confirmed. The last five games are determined after the top-six/bottom-six split and cannot yet have known opponents. Fitted parameters use only supplied results through 7 November. Opening the offline file does not refresh its data.</p>
+ <details class="cup-aside"><summary>Domestic cup fixtures <span>Kept separate from the league</span></summary><div class="cup-content"><b>Supplied cup fixture · not independently verified · Tuesday 24 November · 19:45</b> — Glentoran v Larne · BetMcLean Cup · The Oval. Does not count towards the Premiership table or forecasts.</div></details>
+</section>
+
+<section class="oval-section" id="model-report"><div class="oval-heading"><div><span class="eyebrow">METHOD / COVERAGE / VALIDATION</span><h2>TESTED.<br><em>NOT ASSUMED.</em></h2></div><p id="selection-rationale"></p></div><div id="model-comparison"></div><div id="calibration-chart"></div><p id="test-uncertainty" class="oval-note"></p><details><summary>Data and competition assumptions</summary><p>No completed historical seasons could be independently obtained. The supplied 87 results reconcile internally with all twelve table totals. The 111 supplied fixtures complete 33 games per club, but a complete official programme and league rules could not be cross-checked. Split pairings and venues are conditional assumptions, never published fixtures. Exact league-table ties use provisional display order. Unavailable authoritative verification is a data gap, not evidence of correctness.</p></details></section>
+<section class="oval-section exports" id="exports"><span class="eyebrow">TAKE THE NUMBERS WITH YOU</span><h2>THE EXPORT DESK.</h2><div id="export-links"></div><p>CSV exports include model version, reconstructed forecast status and information cut-offs. The dashboard is fully offline; regenerate it explicitly to update accepted source data.</p></section>
+<footer class="sources"><div class="sources-title">FIXTURES &amp; SOURCES</div><div class="source-date">Data through 7 November 2026 · Imported 9 November 2026 · Europe/Belfast · Supplied snapshot</div><div><a href="https://www.nifootballleague.com/" target="_blank" rel="noopener">NIFL official site ↗</a><a href="https://www.glentoran.com/" target="_blank" rel="noopener">Glentoran official site ↗</a></div><p>Official links are provided for checking; current destinations, fixtures, ticket availability and rules were not verified. No internet connection is needed for the dashboard.</p></footer>
+</div>
+<script id="oval-data" type="application/json">/* DATA */</script>
+<script>/* ENGINE */
+/* UI */</script>
+</body>
+</html>

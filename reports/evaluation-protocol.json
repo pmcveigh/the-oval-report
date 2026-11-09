@@ -1,0 +1,18 @@
+{
+  "protocol_version": "1.0.0",
+  "declared_before_candidate_evaluation": true,
+  "dataset": "supplied-2026-27-snapshot",
+  "minimum_training_matches": 20,
+  "validation_windows": [["2026-09-15", "2026-09-26"], ["2026-10-03", "2026-10-17"]],
+  "final_test": ["2026-10-20", "2026-11-07"],
+  "test_type": "reconstructed expanding-window; predict whole date before ingestion",
+  "goal_half_life_days": [45, 120, 365],
+  "goal_penalties": [2, 8, 24],
+  "elo_K_candidates": [8, 24, 48],
+  "selection": "Minimum validation mean log loss, with summed Brier reported alongside. Within 0.01 log loss of best, prefer frequency, Poisson, Elo, then Dixon-Coles. Frozen original is comparison only.",
+  "frequency_prior": "Dirichlet(1,1,1), earlier results only",
+  "numerical_log_floor": 1e-15,
+  "seed": 20261109,
+  "bootstrap": "2000 paired calendar-date blocks, seed 20261109",
+  "limitations": "Single supplied season; no independently verified historic seasons. Test is unexamined at protocol declaration, but original baseline was authored retrospectively. This is not prospective validation."
+}

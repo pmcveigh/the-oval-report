@@ -1,0 +1,175 @@
+﻿date,club,opponent,home_or_away,club_position_before_matchday,opponent_position_before_matchday,club_matches_before,opponent_matches_before,rank_confidence,goals_for,goals_against,result,momentum_pulse,bounceback_win,repeated_setback_after_recovery,momentum_index_after_game,position_status
+2026-08-07,Cliftonville,Crusaders,H,4,6,0,0,0.0,2,1,W,1.11,False,False,82,provisional
+2026-08-07,Crusaders,Cliftonville,A,6,4,0,0,0.0,1,2,L,-0.94,False,False,23,provisional
+2026-08-08,Carrick Rangers,Portadown,H,4,11,0,0,0.0,1,0,W,1.11,False,False,82,provisional
+2026-08-08,Portadown,Carrick Rangers,A,11,4,0,0,0.0,0,1,L,-0.94,False,False,23,provisional
+2026-08-08,Dungannon Swifts,Coleraine,H,6,5,0,0,0.0,1,3,L,-0.94,False,False,23,provisional
+2026-08-08,Coleraine,Dungannon Swifts,A,5,6,0,0,0.0,3,1,W,1.11,False,False,82,provisional
+2026-08-08,Glentoran,Limavady United,H,7,9,0,0,0.0,2,0,W,1.11,False,False,82,provisional
+2026-08-08,Limavady United,Glentoran,A,9,7,0,0,0.0,0,2,L,-0.94,False,False,23,provisional
+2026-08-08,Linfield,Ballymena United,H,10,2,0,0,0.0,0,3,L,-0.94,False,False,23,provisional
+2026-08-08,Ballymena United,Linfield,A,2,10,0,0,0.0,3,0,W,1.11,False,False,82,provisional
+2026-08-15,Bangor,Cliftonville,H,6,4,0,1,0.0,0,3,L,-0.94,False,False,23,provisional
+2026-08-15,Cliftonville,Bangor,A,4,6,1,0,0.0,3,0,W,1.4100000000000001,False,False,87,provisional
+2026-08-15,Coleraine,Larne,H,2,7,1,0,0.0,0,0,D,-0.16,False,False,61,provisional
+2026-08-15,Larne,Coleraine,A,7,2,0,1,0.0,0,0,D,-0.16,False,False,45,provisional
+2026-08-15,Crusaders,Ballymena United,H,8,1,1,1,0.25,2,1,W,1.7493181818181818,True,False,67,provisional
+2026-08-15,Ballymena United,Crusaders,A,1,8,1,1,0.25,1,2,L,-1.0274999999999999,False,False,47,provisional
+2026-08-15,Limavady United,Carrick Rangers,H,11,5,1,1,0.25,1,2,L,-1.1318181818181818,False,False,20,provisional
+2026-08-15,Carrick Rangers,Limavady United,A,5,11,1,1,0.25,2,1,W,1.3711363636363638,False,False,87,provisional
+2026-08-15,Linfield,Glentoran,H,12,3,1,1,0.25,2,1,W,1.741136363636364,True,False,67,provisional
+2026-08-15,Glentoran,Linfield,A,3,12,1,1,0.25,1,2,L,-1.0525,False,False,46,provisional
+2026-08-15,Portadown,Dungannon Swifts,H,9,10,1,1,0.25,0,1,L,-1.1824999999999999,False,False,19,provisional
+2026-08-15,Dungannon Swifts,Portadown,A,10,9,1,1,0.25,1,0,W,1.6529545454545456,True,False,66,provisional
+2026-08-21,Ballymena United,Glentoran,H,4,5,2,2,0.5,0,2,L,-1.195,False,False,33,provisional
+2026-08-21,Glentoran,Ballymena United,A,5,4,2,2,0.5,2,0,W,1.7222727272727274,True,False,70,provisional
+2026-08-21,Linfield,Cliftonville,H,8,1,2,2,0.5,1,0,W,1.3686363636363639,False,False,77,provisional
+2026-08-21,Cliftonville,Linfield,A,1,8,2,2,0.5,0,1,L,-1.115,False,False,57,provisional
+2026-08-22,Carrick Rangers,Coleraine,H,3,5,2,2,0.5,0,2,L,-0.99,False,False,58,provisional
+2026-08-22,Coleraine,Carrick Rangers,A,5,3,2,2,0.5,2,0,W,1.4686363636363635,True,False,75,provisional
+2026-08-22,Crusaders,Portadown,H,7,10,2,2,0.5,3,2,W,1.1495454545454546,False,False,74,provisional
+2026-08-22,Portadown,Crusaders,A,10,7,2,2,0.5,2,3,L,-1.3118181818181818,False,False,16,provisional
+2026-08-22,Dungannon Swifts,Bangor,H,8,12,2,1,0.25,2,0,W,1.1625,False,False,73,provisional
+2026-08-22,Bangor,Dungannon Swifts,A,12,8,1,2,0.25,0,2,L,-1.1445454545454545,False,False,19,provisional
+2026-08-28,Portadown,Coleraine,H,10,1,3,3,0.75,0,3,L,-1.1781818181818182,False,False,15,provisional
+2026-08-28,Coleraine,Portadown,A,1,10,3,3,0.75,3,0,W,1.1193181818181819,False,False,77,provisional
+2026-08-29,Bangor,Carrick Rangers,H,11,6,2,3,0.5,0,4,L,-1.2863636363636364,False,False,16,provisional
+2026-08-29,Carrick Rangers,Bangor,A,6,11,3,2,0.5,4,0,W,1.7922727272727272,True,False,74,provisional
+2026-08-29,Cliftonville,Dungannon Swifts,H,2,5,3,3,0.75,0,2,L,-1.2825,False,False,39,provisional
+2026-08-29,Dungannon Swifts,Cliftonville,A,5,2,3,3,0.75,2,0,W,1.4675,False,False,83,provisional
+2026-08-29,Glentoran,Crusaders,H,3,4,3,3,0.75,1,2,L,-1.4575,False,True,45,provisional
+2026-08-29,Crusaders,Glentoran,A,4,3,3,3,0.75,2,1,W,1.4143181818181818,False,False,83,provisional
+2026-08-29,Limavady United,Linfield,H,10,7,2,3,0.5,0,2,L,-1.3118181818181818,False,False,16,provisional
+2026-08-29,Linfield,Limavady United,A,7,10,3,2,0.5,2,0,W,1.2495454545454545,False,False,83,provisional
+2026-09-04,Larne,Glentoran,H,9,6,1,4,0.25,2,1,W,1.4079545454545455,True,False,71,provisional
+2026-09-04,Glentoran,Larne,A,6,9,4,1,0.25,1,2,L,-1.2075,False,False,36,provisional
+2026-09-05,Bangor,Ballymena United,H,12,9,3,3,0.75,2,2,D,-0.24181818181818185,False,False,26,provisional
+2026-09-05,Ballymena United,Bangor,A,9,12,3,3,0.75,2,2,D,-0.6681818181818182,False,False,30,provisional
+2026-09-05,Cliftonville,Portadown,H,7,11,4,4,1,3,1,W,1.7145454545454546,True,False,58,pre-date reconstructed
+2026-09-05,Portadown,Cliftonville,A,11,7,4,4,1,1,3,L,-1.248181818181818,False,False,15,pre-date reconstructed
+2026-09-05,Coleraine,Crusaders,H,1,4,4,4,1,4,1,W,1.3963636363636363,False,False,83,pre-date reconstructed
+2026-09-05,Crusaders,Coleraine,A,4,1,4,4,1,1,4,L,-0.8636363636363635,False,False,62,pre-date reconstructed
+2026-09-05,Limavady United,Dungannon Swifts,H,10,3,3,4,0.75,0,2,L,-1.2163636363636363,False,False,15,provisional
+2026-09-05,Dungannon Swifts,Limavady United,A,3,10,4,3,0.75,2,0,W,1.3193181818181818,False,False,84,provisional
+2026-09-05,Linfield,Carrick Rangers,H,5,2,4,4,1,1,0,W,1.62,False,False,87,pre-date reconstructed
+2026-09-05,Carrick Rangers,Linfield,A,2,5,4,4,1,0,1,L,-1.5699999999999998,False,True,49,pre-date reconstructed
+2026-09-08,Larne,Bangor,H,8,10,2,4,0.5,1,0,W,1.1495454545454546,False,False,77,provisional
+2026-09-08,Bangor,Larne,A,10,8,4,2,0.5,0,1,L,-1.3245454545454545,False,False,22,provisional
+2026-09-11,Coleraine,Ballymena United,H,1,9,5,4,1,3,2,W,1.3236363636363637,False,False,85,pre-date reconstructed
+2026-09-11,Ballymena United,Coleraine,A,9,1,4,5,1,2,3,L,-1.1463636363636365,False,False,26,pre-date reconstructed
+2026-09-12,Carrick Rangers,Cliftonville,H,5,4,5,5,1,1,3,L,-1.1445454545454545,False,False,39,pre-date reconstructed
+2026-09-12,Cliftonville,Carrick Rangers,A,4,5,5,5,1,3,1,W,1.261818181818182,False,False,69,pre-date reconstructed
+2026-09-12,Crusaders,Limavady United,H,6,11,5,4,1,1,2,L,-1.42,False,False,43,pre-date reconstructed
+2026-09-12,Limavady United,Crusaders,A,11,6,4,5,1,2,1,W,1.778181818181818,True,False,46,pre-date reconstructed
+2026-09-12,Dungannon Swifts,Linfield,H,2,3,5,5,1,0,1,L,-0.99,False,False,63,pre-date reconstructed
+2026-09-12,Linfield,Dungannon Swifts,A,3,2,5,5,1,1,0,W,1.5836363636363637,False,False,90,pre-date reconstructed
+2026-09-12,Glentoran,Bangor,H,8,10,5,5,1,1,1,D,-0.6572727272727272,False,False,31,pre-date reconstructed
+2026-09-12,Bangor,Glentoran,A,10,8,5,5,1,1,1,D,-0.2627272727272727,False,False,29,pre-date reconstructed
+2026-09-12,Portadown,Larne,H,12,7,5,3,0.75,0,2,L,-1.2545454545454544,False,False,15,provisional
+2026-09-12,Larne,Portadown,A,7,12,3,5,0.75,2,0,W,1.1675,False,False,81,provisional
+2026-09-15,Ballymena United,Carrick Rangers,H,9,6,5,6,1,1,1,D,-0.1790909090909091,False,False,32,pre-date reconstructed
+2026-09-15,Carrick Rangers,Ballymena United,A,6,9,6,5,1,1,1,D,-0.7009090909090909,False,False,33,pre-date reconstructed
+2026-09-15,Crusaders,Dungannon Swifts,H,7,4,6,6,1,3,0,W,2.0109090909090908,True,False,62,pre-date reconstructed
+2026-09-15,Dungannon Swifts,Crusaders,A,4,7,6,6,1,0,3,L,-1.3199999999999998,False,False,46,pre-date reconstructed
+2026-09-15,Glentoran,Coleraine,H,8,1,6,6,1,1,2,L,-1.1718181818181819,False,False,28,pre-date reconstructed
+2026-09-15,Coleraine,Glentoran,A,1,8,6,6,1,2,1,W,1.3581818181818182,False,False,86,pre-date reconstructed
+2026-09-15,Larne,Cliftonville,H,5,3,4,6,1,2,0,W,1.5672727272727274,False,False,85,pre-date reconstructed
+2026-09-15,Cliftonville,Larne,A,3,5,6,4,1,0,2,L,-1.04,False,False,56,pre-date reconstructed
+2026-09-15,Limavady United,Bangor,H,10,11,5,6,1,3,1,W,1.0545454545454547,False,False,59,pre-date reconstructed
+2026-09-15,Bangor,Limavady United,A,11,10,6,5,1,1,3,L,-1.3245454545454545,False,False,23,pre-date reconstructed
+2026-09-15,Portadown,Linfield,H,12,2,6,6,1,1,1,D,0.40636363636363637,False,False,30,pre-date reconstructed
+2026-09-15,Linfield,Portadown,A,2,12,6,6,1,1,1,D,-0.5963636363636363,False,False,72,pre-date reconstructed
+2026-09-19,Bangor,Portadown,H,11,12,7,7,1,3,1,W,1.48,True,False,45,pre-date reconstructed
+2026-09-19,Portadown,Bangor,A,12,11,7,7,1,1,3,L,-1.3245454545454545,False,False,25,pre-date reconstructed
+2026-09-19,Carrick Rangers,Larne,H,7,3,7,5,1,2,5,L,-1.248181818181818,False,False,29,pre-date reconstructed
+2026-09-19,Larne,Carrick Rangers,A,3,7,5,7,1,5,2,W,1.3927272727272728,False,False,87,pre-date reconstructed
+2026-09-19,Cliftonville,Glentoran,H,4,8,7,7,1,1,2,L,-1.3699999999999999,False,False,40,pre-date reconstructed
+2026-09-19,Glentoran,Cliftonville,A,8,4,7,7,1,2,1,W,1.829090909090909,True,False,51,pre-date reconstructed
+2026-09-19,Coleraine,Limavady United,H,1,9,7,6,1,1,0,W,1.3236363636363637,False,False,87,pre-date reconstructed
+2026-09-19,Limavady United,Coleraine,A,9,1,6,7,1,0,1,L,-0.7363636363636363,False,False,51,pre-date reconstructed
+2026-09-19,Dungannon Swifts,Ballymena United,H,6,10,7,6,1,1,1,D,-0.7445454545454546,False,False,39,pre-date reconstructed
+2026-09-19,Ballymena United,Dungannon Swifts,A,10,6,6,7,1,1,1,D,-0.09545454545454546,False,False,37,pre-date reconstructed
+2026-09-19,Linfield,Crusaders,H,2,5,7,7,1,1,0,W,1.6418181818181818,True,False,79,pre-date reconstructed
+2026-09-19,Crusaders,Linfield,A,5,2,7,7,1,0,1,L,-1.3436363636363635,False,True,48,pre-date reconstructed
+2026-09-25,Coleraine,Linfield,H,1,2,8,8,1,1,3,L,-0.99,False,False,67,pre-date reconstructed
+2026-09-25,Linfield,Coleraine,A,2,1,8,8,1,3,1,W,1.4181818181818182,False,False,82,pre-date reconstructed
+2026-09-26,Ballymena United,Portadown,H,9,12,7,8,1,2,0,W,1.2000000000000002,True,False,53,pre-date reconstructed
+2026-09-26,Portadown,Ballymena United,A,12,9,8,7,1,0,2,L,-1.2736363636363635,False,False,22,pre-date reconstructed
+2026-09-26,Crusaders,Bangor,H,6,11,8,8,1,2,1,W,1.7145454545454546,True,False,65,pre-date reconstructed
+2026-09-26,Bangor,Crusaders,A,11,6,8,8,1,1,2,L,-1.2927272727272725,False,True,35,pre-date reconstructed
+2026-09-26,Glentoran,Carrick Rangers,H,7,8,8,8,1,2,0,W,1.1581818181818182,False,False,62,pre-date reconstructed
+2026-09-26,Carrick Rangers,Glentoran,A,8,7,8,8,1,0,2,L,-1.3245454545454545,False,False,24,pre-date reconstructed
+2026-09-26,Limavady United,Cliftonville,H,10,5,7,8,1,1,0,W,2.0127272727272727,True,False,66,pre-date reconstructed
+2026-09-26,Cliftonville,Limavady United,A,5,10,8,7,1,0,1,L,-1.6,False,False,28,pre-date reconstructed
+2026-10-03,Carrick Rangers,Crusaders,H,8,4,9,9,1,4,0,W,1.829090909090909,True,False,48,pre-date reconstructed
+2026-10-03,Crusaders,Carrick Rangers,A,4,8,9,9,1,0,4,L,-1.6199999999999999,False,True,45,pre-date reconstructed
+2026-10-03,Cliftonville,Ballymena United,H,7,9,9,8,1,0,1,L,-1.4500000000000002,False,False,22,pre-date reconstructed
+2026-10-03,Ballymena United,Cliftonville,A,9,7,8,9,1,1,0,W,1.2290909090909092,False,False,63,pre-date reconstructed
+2026-10-03,Glentoran,Dungannon Swifts,H,5,6,9,8,1,2,0,W,1.3272727272727272,False,False,72,pre-date reconstructed
+2026-10-03,Dungannon Swifts,Glentoran,A,6,5,8,9,1,0,2,L,-1.3245454545454545,False,False,31,pre-date reconstructed
+2026-10-03,Portadown,Limavady United,H,12,10,9,8,1,3,1,W,1.5854545454545454,True,False,42,pre-date reconstructed
+2026-10-03,Limavady United,Portadown,A,10,12,8,9,1,1,3,L,-1.52,False,True,48,pre-date reconstructed
+2026-10-04,Bangor,Coleraine,H,11,1,9,9,1,2,3,L,-0.9154545454545453,False,False,32,pre-date reconstructed
+2026-10-04,Coleraine,Bangor,A,1,11,9,9,1,3,2,W,1.7145454545454546,True,False,76,pre-date reconstructed
+2026-10-09,Portadown,Glentoran,H,12,4,10,10,1,0,0,D,0.16909090909090918,False,True,47,pre-date reconstructed
+2026-10-09,Glentoran,Portadown,A,4,12,10,10,1,0,0,D,-0.509090909090909,False,False,59,pre-date reconstructed
+2026-10-10,Coleraine,Cliftonville,H,1,9,10,10,1,1,0,W,1.1236363636363638,False,False,77,pre-date reconstructed
+2026-10-10,Cliftonville,Coleraine,A,9,1,10,10,1,0,1,L,-1.1463636363636365,False,False,20,pre-date reconstructed
+2026-10-10,Crusaders,Larne,H,5,4,10,6,1,0,3,L,-1.1445454545454545,False,False,39,pre-date reconstructed
+2026-10-10,Larne,Crusaders,A,4,5,6,10,1,3,0,W,1.461818181818182,False,False,89,pre-date reconstructed
+2026-10-10,Dungannon Swifts,Carrick Rangers,H,7,6,9,10,1,2,4,L,-1.3245454545454545,False,False,26,pre-date reconstructed
+2026-10-10,Carrick Rangers,Dungannon Swifts,A,6,7,10,9,1,4,2,W,1.1927272727272729,False,False,59,pre-date reconstructed
+2026-10-10,Limavady United,Ballymena United,H,10,8,9,9,1,3,2,W,1.8545454545454545,True,False,65,pre-date reconstructed
+2026-10-10,Ballymena United,Limavady United,A,8,10,9,9,1,2,3,L,-1.04,False,False,51,pre-date reconstructed
+2026-10-10,Linfield,Bangor,H,2,11,9,10,1,2,0,W,1.1545454545454545,False,False,84,pre-date reconstructed
+2026-10-10,Bangor,Linfield,A,11,2,10,9,1,0,2,L,-1.1209090909090909,False,False,26,pre-date reconstructed
+2026-10-16,Larne,Coleraine,H,3,1,7,11,1,2,3,L,-0.889090909090909,False,False,69,pre-date reconstructed
+2026-10-16,Coleraine,Larne,A,1,3,11,7,1,3,2,W,1.430909090909091,False,False,84,pre-date reconstructed
+2026-10-17,Ballymena United,Crusaders,H,8,6,10,11,1,2,1,W,1.9236363636363636,True,False,65,pre-date reconstructed
+2026-10-17,Crusaders,Ballymena United,A,6,8,11,10,1,1,2,L,-1.4500000000000002,False,False,26,pre-date reconstructed
+2026-10-17,Bangor,Dungannon Swifts,H,12,7,11,10,1,0,0,D,-0.011818181818181839,False,False,34,pre-date reconstructed
+2026-10-17,Dungannon Swifts,Bangor,A,7,12,10,11,1,0,0,D,-0.7881818181818182,False,False,27,pre-date reconstructed
+2026-10-17,Carrick Rangers,Linfield,H,5,2,11,10,1,2,2,D,0.23090909090909092,False,False,60,pre-date reconstructed
+2026-10-17,Linfield,Carrick Rangers,A,2,5,10,11,1,2,2,D,-0.2909090909090909,False,False,72,pre-date reconstructed
+2026-10-17,Cliftonville,Portadown,H,9,11,11,11,1,1,2,L,-1.4500000000000002,False,False,16,pre-date reconstructed
+2026-10-17,Portadown,Cliftonville,A,11,9,11,11,1,2,1,W,1.34,True,False,61,pre-date reconstructed
+2026-10-17,Glentoran,Limavady United,H,4,10,11,10,1,1,0,W,1.4690909090909092,True,False,69,pre-date reconstructed
+2026-10-17,Limavady United,Glentoran,A,10,4,10,11,1,0,1,L,-1.267272727272727,False,True,48,pre-date reconstructed
+2026-10-20,Larne,Linfield,H,4,2,8,11,1,1,2,L,-1.1190909090909091,False,False,52,pre-date reconstructed
+2026-10-20,Linfield,Larne,A,2,4,11,8,1,2,1,W,1.6763636363636363,True,False,79,pre-date reconstructed
+2026-10-23,Portadown,Linfield,H,11,2,12,12,1,1,2,L,-1.190909090909091,False,True,47,pre-date reconstructed
+2026-10-23,Linfield,Portadown,A,2,11,12,12,1,2,1,W,1.0545454545454547,False,False,79,pre-date reconstructed
+2026-10-24,Bangor,Larne,H,12,4,12,9,1,1,2,L,-1.1463636363636365,False,False,29,pre-date reconstructed
+2026-10-24,Larne,Bangor,A,4,12,9,12,1,2,1,W,1.6800000000000002,True,False,65,pre-date reconstructed
+2026-10-24,Carrick Rangers,Limavady United,H,5,10,12,11,1,1,1,D,-0.6081818181818182,False,False,50,pre-date reconstructed
+2026-10-24,Limavady United,Carrick Rangers,A,10,5,11,12,1,1,1,D,0.16818181818181818,False,False,52,pre-date reconstructed
+2026-10-24,Crusaders,Coleraine,H,7,2,12,12,1,0,5,L,-1.2227272727272727,False,False,23,pre-date reconstructed
+2026-10-24,Coleraine,Crusaders,A,2,7,12,12,1,5,0,W,1.3927272727272728,False,False,85,pre-date reconstructed
+2026-10-24,Dungannon Swifts,Cliftonville,H,8,9,11,12,1,1,3,L,-1.4,False,False,22,pre-date reconstructed
+2026-10-24,Cliftonville,Dungannon Swifts,A,9,8,12,11,1,3,1,W,1.6363636363636362,True,False,41,pre-date reconstructed
+2026-10-27,Larne,Limavady United,H,3,10,10,12,1,1,1,D,-0.9454545454545454,False,True,54,pre-date reconstructed
+2026-10-27,Limavady United,Larne,A,10,3,12,10,1,1,1,D,0.1554545454545454,False,False,52,pre-date reconstructed
+2026-10-30,Coleraine,Glentoran,H,1,4,13,12,1,1,1,D,-0.2909090909090909,False,False,73,pre-date reconstructed
+2026-10-30,Glentoran,Coleraine,A,4,1,12,13,1,1,1,D,-0.24909090909090906,False,True,60,pre-date reconstructed
+2026-10-30,Larne,Portadown,H,3,11,11,13,1,1,0,W,1.4345454545454546,True,False,66,pre-date reconstructed
+2026-10-30,Portadown,Larne,A,11,3,13,11,1,0,1,L,-0.9663636363636363,False,False,40,pre-date reconstructed
+2026-10-31,Ballymena United,Bangor,H,6,12,11,13,1,0,1,L,-1.72,False,True,46,pre-date reconstructed
+2026-10-31,Bangor,Ballymena United,A,12,6,13,11,1,1,0,W,1.7963636363636364,True,False,51,pre-date reconstructed
+2026-10-31,Cliftonville,Carrick Rangers,H,7,5,13,13,1,7,1,W,1.2981818181818183,False,False,56,pre-date reconstructed
+2026-10-31,Carrick Rangers,Cliftonville,A,5,7,13,13,1,1,7,L,-1.4500000000000002,False,False,36,pre-date reconstructed
+2026-10-31,Limavady United,Crusaders,H,10,8,13,13,1,1,4,L,-1.299090909090909,False,False,42,pre-date reconstructed
+2026-10-31,Crusaders,Limavady United,A,8,10,13,13,1,4,1,W,1.5490909090909093,True,False,44,pre-date reconstructed
+2026-10-31,Linfield,Dungannon Swifts,H,2,9,13,12,1,1,1,D,-0.46545454545454545,False,False,68,pre-date reconstructed
+2026-10-31,Dungannon Swifts,Linfield,A,9,2,12,13,1,1,1,D,0.1554545454545454,False,False,31,pre-date reconstructed
+2026-11-06,Cliftonville,Larne,H,5,3,14,12,1,4,2,W,1.4672727272727273,False,False,68,pre-date reconstructed
+2026-11-06,Larne,Cliftonville,A,3,5,12,14,1,2,4,L,-1.52,False,True,47,pre-date reconstructed
+2026-11-07,Bangor,Crusaders,H,11,7,14,14,1,1,0,W,1.2654545454545456,False,False,62,pre-date reconstructed
+2026-11-07,Crusaders,Bangor,A,7,11,14,14,1,0,1,L,-1.6199999999999999,False,True,33,pre-date reconstructed
+2026-11-07,Carrick Rangers,Glentoran,H,6,5,14,13,1,0,0,D,-0.3463636363636364,False,False,37,pre-date reconstructed
+2026-11-07,Glentoran,Carrick Rangers,A,5,6,13,14,1,0,0,D,-0.43363636363636365,False,False,55,pre-date reconstructed
+2026-11-07,Dungannon Swifts,Limavady United,H,9,10,13,14,1,3,2,W,1.269090909090909,True,False,47,pre-date reconstructed
+2026-11-07,Limavady United,Dungannon Swifts,A,10,9,14,13,1,2,3,L,-1.3245454545454545,False,False,32,pre-date reconstructed
+2026-11-07,Linfield,Coleraine,H,2,1,14,14,1,3,0,W,1.798181818181818,True,False,76,pre-date reconstructed
+2026-11-07,Coleraine,Linfield,A,1,2,14,14,1,0,3,L,-1.22,False,False,54,pre-date reconstructed
+2026-11-07,Portadown,Ballymena United,H,12,8,14,12,1,1,1,D,-0.09545454545454546,False,False,40,pre-date reconstructed
+2026-11-07,Ballymena United,Portadown,A,8,12,12,14,1,1,1,D,-0.5645454545454546,False,False,43,pre-date reconstructed

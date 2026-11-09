@@ -1,0 +1,11 @@
+{
+  "dataset_id": "supplied-2026-27-v3",
+  "source_sha256": "65f4f3203a41267e6d18a5b520d49b449f096b23d400d7f9b014e42e77ea043e",
+  "results": 87,
+  "remaining": 111,
+  "completed_seasons": 0,
+  "independently_verified": false,
+  "snapshot_through": "2026-11-07",
+  "imported_on": "2026-11-09",
+  "time_zone": "Europe/Belfast"
+}

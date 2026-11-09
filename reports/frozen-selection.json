@@ -1,0 +1,66 @@
+{
+  "production_model": "elo",
+  "goal_model": "dc",
+  "configurations": {
+    "poisson": {
+      "penalty": 8,
+      "half_life": 45
+    },
+    "dc": {
+      "penalty": 8,
+      "half_life": 120
+    },
+    "elo": {
+      "K": 48
+    },
+    "frequency": {}
+  },
+  "validation": {
+    "poisson": {
+      "matches": 34,
+      "first_date": "2026-09-15",
+      "last_date": "2026-10-17",
+      "brier": 0.6374268314360602,
+      "log_loss": 1.0540960722705268,
+      "outcome_hit_rate": 0.47058823529411764,
+      "exact_score_hit_rate": 0.08823529411764706,
+      "custom_100": 44.088235294117645
+    },
+    "dc": {
+      "matches": 34,
+      "first_date": "2026-09-15",
+      "last_date": "2026-10-17",
+      "brier": 0.6370971792230741,
+      "log_loss": 1.0502798575584582,
+      "outcome_hit_rate": 0.47058823529411764,
+      "exact_score_hit_rate": 0.14705882352941177,
+      "custom_100": 43.14705882352941
+    },
+    "elo": {
+      "matches": 34,
+      "first_date": "2026-09-15",
+      "last_date": "2026-10-17",
+      "brier": 0.6131568718009477,
+      "log_loss": 1.0338929025915067,
+      "outcome_hit_rate": 0.4117647058823529,
+      "exact_score_hit_rate": null,
+      "custom_100": null
+    },
+    "frequency": {
+      "matches": 34,
+      "first_date": "2026-09-15",
+      "last_date": "2026-10-17",
+      "brier": 0.6451750930428533,
+      "log_loss": 1.068731134348931,
+      "outcome_hit_rate": 0.3235294117647059,
+      "exact_score_hit_rate": null,
+      "custom_100": null
+    }
+  },
+  "selection_frozen_before_test": true,
+  "rationale": "Minimum validation mean log loss, with summed Brier reported alongside. Within 0.01 log loss of best, prefer frequency, Poisson, Elo, then Dixon-Coles. Frozen original is comparison only.",
+  "final_test": [
+    "2026-10-20",
+    "2026-11-07"
+  ]
+}

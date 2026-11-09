@@ -1,0 +1,122 @@
+[
+  {
+    "name": "Linfield",
+    "p": 15,
+    "w": 11,
+    "d": 3,
+    "l": 1,
+    "gf": 24,
+    "ga": 11,
+    "pts": 36
+  },
+  {
+    "name": "Coleraine",
+    "p": 15,
+    "w": 11,
+    "d": 2,
+    "l": 2,
+    "gf": 32,
+    "ga": 16,
+    "pts": 35
+  },
+  {
+    "name": "Larne",
+    "p": 13,
+    "w": 8,
+    "d": 2,
+    "l": 3,
+    "gf": 24,
+    "ga": 14,
+    "pts": 26
+  },
+  {
+    "name": "Glentoran",
+    "p": 14,
+    "w": 6,
+    "d": 4,
+    "l": 4,
+    "gf": 17,
+    "ga": 11,
+    "pts": 22
+  },
+  {
+    "name": "Cliftonville",
+    "p": 15,
+    "w": 7,
+    "d": 0,
+    "l": 8,
+    "gf": 27,
+    "ga": 19,
+    "pts": 21
+  },
+  {
+    "name": "Carrick Rangers",
+    "p": 15,
+    "w": 5,
+    "d": 4,
+    "l": 6,
+    "gf": 23,
+    "ga": 27,
+    "pts": 19
+  },
+  {
+    "name": "Dungannon Swifts",
+    "p": 14,
+    "w": 5,
+    "d": 3,
+    "l": 6,
+    "gf": 16,
+    "ga": 20,
+    "pts": 18
+  },
+  {
+    "name": "Crusaders",
+    "p": 15,
+    "w": 6,
+    "d": 0,
+    "l": 9,
+    "gf": 20,
+    "ga": 30,
+    "pts": 18
+  },
+  {
+    "name": "Ballymena United",
+    "p": 13,
+    "w": 4,
+    "d": 4,
+    "l": 5,
+    "gf": 18,
+    "ga": 17,
+    "pts": 16
+  },
+  {
+    "name": "Limavady United",
+    "p": 15,
+    "w": 4,
+    "d": 2,
+    "l": 9,
+    "gf": 16,
+    "ga": 26,
+    "pts": 14
+  },
+  {
+    "name": "Bangor",
+    "p": 15,
+    "w": 3,
+    "d": 3,
+    "l": 9,
+    "gf": 13,
+    "ga": 26,
+    "pts": 12
+  },
+  {
+    "name": "Portadown",
+    "p": 15,
+    "w": 2,
+    "d": 3,
+    "l": 10,
+    "gf": 12,
+    "ga": 25,
+    "pts": 9
+  }
+]

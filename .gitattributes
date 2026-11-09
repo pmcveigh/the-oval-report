@@ -1,0 +1,8 @@
+The_Oval_Report.html linguist-generated=true
+data/canonical/*.json linguist-generated=true
+data/raw/*.json linguist-generated=true
+tests/golden.json linguist-generated=true
+exports/*.csv linguist-generated=true
+reports/evaluation.json linguist-generated=true
+reports/fitted-models.json linguist-generated=true
+reports/frozen-selection.json linguist-generated=true

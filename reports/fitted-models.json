@@ -1,0 +1,183 @@
+{
+  "poisson": {
+    "model_id": "poisson",
+    "model_version": "poisson-1.0.0",
+    "trained_through": "2026-11-07",
+    "training_sample_size": 87,
+    "teams": [
+      "Ballymena United",
+      "Bangor",
+      "Carrick Rangers",
+      "Cliftonville",
+      "Coleraine",
+      "Crusaders",
+      "Dungannon Swifts",
+      "Glentoran",
+      "Larne",
+      "Limavady United",
+      "Linfield",
+      "Portadown"
+    ],
+    "intercept": 0.2882233071946805,
+    "home_advantage": 0.056964154676802964,
+    "attack": [
+      -0.06719907907439585,
+      -0.2351338518852866,
+      0.07464687305144994,
+      0.2811815987454885,
+      0.28937740094122416,
+      -0.07171024996064458,
+      -0.07709317125347491,
+      -0.16906250419554533,
+      0.17003319070227366,
+      -0.11308280816506755,
+      0.12743701114029427,
+      -0.20939441004631568
+    ],
+    "defence": [
+      0.022716300712969293,
+      -0.02243679621104134,
+      -0.23764395487738305,
+      0.02135328899288576,
+      0.06319172620477828,
+      -0.2674960729270339,
+      -0.08166550503855963,
+      0.34995040203836425,
+      0.039758169456582594,
+      -0.1857745300052587,
+      0.3194977776162662,
+      -0.021450805962569708
+    ],
+    "rho": 0.0,
+    "penalty": 8,
+    "half_life_days": 45,
+    "diagnostics": {
+      "converged": true,
+      "iterations": 23,
+      "objective": 80.1772761798626,
+      "gradient_max": 1.199795704065823e-05
+    }
+  },
+  "dc": {
+    "model_id": "dc",
+    "model_version": "dc-1.0.0",
+    "trained_through": "2026-11-07",
+    "training_sample_size": 87,
+    "teams": [
+      "Ballymena United",
+      "Bangor",
+      "Carrick Rangers",
+      "Cliftonville",
+      "Coleraine",
+      "Crusaders",
+      "Dungannon Swifts",
+      "Glentoran",
+      "Larne",
+      "Limavady United",
+      "Linfield",
+      "Portadown"
+    ],
+    "intercept": 0.28707321019902393,
+    "home_advantage": 0.02406966249386871,
+    "attack": [
+      -0.046002222716222646,
+      -0.26581658892146925,
+      0.11036037967851478,
+      0.23144721294831547,
+      0.34306781010108833,
+      -0.03839271897276952,
+      -0.10578162239683156,
+      -0.1339611493056128,
+      0.20081372175734002,
+      -0.14412305153383348,
+      0.10940541190852104,
+      -0.26101718254704037
+    ],
+    "defence": [
+      0.0013561862251008012,
+      -0.1109292607931082,
+      -0.23246045441521523,
+      0.031191271287637327,
+      0.11211105126882505,
+      -0.29097976924492236,
+      -0.06483295348452334,
+      0.35687801949073705,
+      0.10139280827015608,
+      -0.18284778563539522,
+      0.3587120089204679,
+      -0.07959112188975981
+    ],
+    "rho": 0.03863257617000221,
+    "penalty": 8,
+    "half_life_days": 120,
+    "diagnostics": {
+      "converged": true,
+      "iterations": 19,
+      "objective": 115.5378398831852,
+      "gradient_max": 5.001880794175406e-05,
+      "rho_converged": true
+    },
+    "rho_bounds": [
+      -0.3886055521336358,
+      0.30312077044562297
+    ],
+    "fit_method": "two-stage penalised Poisson followed by conditional weighted rho likelihood"
+  },
+  "elo": {
+    "model_id": "elo",
+    "model_version": "elo-1.0.0",
+    "trained_through": "2026-11-07",
+    "training_sample_size": 87,
+    "teams": [
+      "Ballymena United",
+      "Bangor",
+      "Carrick Rangers",
+      "Cliftonville",
+      "Coleraine",
+      "Crusaders",
+      "Dungannon Swifts",
+      "Glentoran",
+      "Larne",
+      "Limavady United",
+      "Linfield",
+      "Portadown"
+    ],
+    "K": 48,
+    "home_advantage": 19.04676353299795,
+    "draw_log_weight": -0.8398716346102466,
+    "ratings": {
+      "Ballymena United": -35.54232939359619,
+      "Bangor": -74.03233862222831,
+      "Carrick Rangers": -19.87276789073212,
+      "Cliftonville": -14.415836279078224,
+      "Coleraine": 144.29663639826694,
+      "Crusaders": -62.7025955064359,
+      "Dungannon Swifts": -34.489551935471596,
+      "Glentoran": 45.87259280116249,
+      "Larne": 63.215113132254785,
+      "Limavady United": -83.60861891680196,
+      "Linfield": 180.57909111266167,
+      "Portadown": -109.29939490000154
+    },
+    "diagnostics": {
+      "converged": true,
+      "objective": 86.42103877134156
+    }
+  },
+  "frequency": {
+    "model_id": "frequency",
+    "model_version": "frequency-1.0.0",
+    "trained_through": "2026-11-07",
+    "training_sample_size": 87,
+    "probabilities": [
+      0.43333333333333335,
+      0.17777777777777778,
+      0.3888888888888889
+    ],
+    "prior": [
+      1,
+      1,
+      1
+    ]
+  }
+}
