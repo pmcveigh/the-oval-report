@@ -1,0 +1,1269 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#102d24">
+<meta name="description" content="The Oval Report — Glentoran fixtures, Premiership standings, results guide and season projections.">
+<title>The Oval Report</title>
+<!-- Edition 3: rank-at-kick-off momentum with bounceback weighting; first-to-third result guide. -->
+<style>
+/* Fully offline-capable system font stack. */
+:root{--ink:#13251e;--green:#125c42;--forest:#0d3d2f;--red:#cc2735;--paper:#f0eee5;--chalk:#fffdf3;--muted:#6c7770;--line:#c8cbc0;--gold:#eadc98;--font:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;--display:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif}
+*{box-sizing:border-box}html{scroll-behaviour:smooth}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.5 var(--font)}button,a{ -webkit-tap-highlight-color:transparent}button{font:inherit}a{color:inherit;text-decoration:none}a:hover{text-decoration:underline}button:focus-visible,a:focus-visible{outline:3px solid #e3b936;outline-offset:3px}.site{max-width:1560px;margin:0 auto;overflow:hidden}.masthead{background:var(--chalk);border-bottom:5px solid var(--ink)}.mast-inner{display:flex;align-items:stretch;justify-content:space-between;gap:20px;padding:18px clamp(18px,3.4vw,52px) 17px}.identity{display:flex;gap:17px;align-items:center}.shield{flex:none;width:63px;height:71px;clip-path:polygon(50% 0,100% 10%,100% 75%,50% 100%,0 75%,0 10%);background:linear-gradient(90deg,var(--red) 0 48%,#fff 48% 52%,var(--green) 52%);border:0;position:relative;display:grid;place-items:center;color:#fff;font:900 39px/.9 var(--display);text-shadow:1px 2px #112c23;filter:drop-shadow(0 2px 0 #152b22)}.shield::after{content:'1882';position:absolute;bottom:14px;left:0;right:0;font:800 8px/1 var(--font);letter-spacing:.14em;text-align:center}.eyebrow{font:800 10px/1.3 var(--font);letter-spacing:.21em;text-transform:uppercase}.brand-title{font:900 clamp(28px,3.6vw,51px)/.9 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin-top:5px}.brand-title em{color:var(--red);font-style:normal}.issue{align-self:center;text-align:right;font:800 11px/1.7 var(--font);letter-spacing:.15em;text-transform:uppercase}.issue b{display:block;font:900 27px/1 var(--display);letter-spacing:0}.site-nav{display:flex;align-items:center;background:var(--ink);color:white;padding:0 clamp(18px,3.4vw,52px);gap:0;overflow-x:auto;scrollbar-width:none}.site-nav::-webkit-scrollbar{display:none}.site-nav a{font:800 11px/1 var(--font);letter-spacing:.1em;text-transform:uppercase;padding:14px 20px;border-left:1px solid #385045;white-space:nowrap}.site-nav a:first-child{padding-left:0;border-left:0}.site-nav a:hover{color:#f8d0d5;text-decoration:none}.site-nav .edition{margin-left:auto;color:#93b5a2;font-size:10px;white-space:nowrap}.notice{padding:10px clamp(18px,3.4vw,52px);background:#e5debb;border-bottom:1px solid #d0c9a8;font-size:11px;font-weight:650;line-height:1.45}.notice strong{font-weight:900;color:#62212b}.hero{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(310px,.8fr);min-height:458px;background:var(--forest)}.hero-main{position:relative;overflow:hidden;color:var(--chalk);padding:29px clamp(20px,4.2vw,62px) 32px;background:linear-gradient(125deg,rgba(15,103,68,.96),rgba(12,62,45,.98));isolation:isolate}.hero-main::before{content:'';position:absolute;inset:-20% -10% auto auto;width:70%;height:130%;background:repeating-linear-gradient(-22deg,transparent,transparent 26px,rgba(255,255,255,.032) 27px,rgba(255,255,255,.032) 28px);transform:skew(-10deg);z-index:-1}.hero-main::after{content:'G';position:absolute;right:-45px;top:-101px;font:900 640px/.8 var(--display);color:rgba(255,255,255,.045);z-index:-1;pointer-events:none}.hero-topline{display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:2px solid #87b69d;padding-top:11px}.hero-topline .small-id{font:800 11px/1 var(--font);letter-spacing:.2em;text-transform:uppercase}.live-mark{display:inline-flex;align-items:center;gap:7px;color:#ffdbdf;font:800 10px/1 var(--font);letter-spacing:.14em;text-transform:uppercase}.live-mark span{display:block;background:var(--red);width:8px;height:8px;transform:rotate(45deg)}.hero-headline{font:900 clamp(68px,10vw,153px)/.72 var(--display);letter-spacing:-.055em;text-transform:uppercase;margin:36px 0 36px}.hero-headline span{color:#f17880}.duel{display:grid;grid-template-columns:minmax(0,1fr) 66px minmax(0,1fr);align-items:center;gap:12px}.club-name{font:900 clamp(39px,5.9vw,91px)/.78 var(--display);letter-spacing:-.045em;text-transform:uppercase;overflow-wrap:anywhere}.club-name.away{color:#f5edd4}.club-tag{display:inline-block;background:var(--red);padding:5px 9px;color:#fff;font:800 10px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;margin-top:13px}.club-tag.opp{background:#d7e7dc;color:#0e4230}.duel .versus{border-top:1px solid #8cae9e;border-bottom:1px solid #8cae9e;text-align:center;font:900 27px/1 var(--display);padding:10px 0;color:#b5d1bf}.match-footer{border-top:1px solid #699480;margin-top:37px;padding-top:15px;display:flex;justify-content:space-between;gap:15px;align-items:center;flex-wrap:wrap}.match-footer .location{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.09em}.link-arrow{font-weight:800;font-size:12px;text-transform:uppercase;letter-spacing:.06em;border-bottom:2px solid #f17980;padding-bottom:4px}.hero-stub{background:#e6e3d4;display:flex;flex-direction:column;border-left:9px solid var(--red);position:relative}.hero-stub:before{content:'';position:absolute;left:-9px;top:0;bottom:0;border-left:1px dashed #f2aaad}.kickoff{padding:30px 30px 25px;border-bottom:2px dashed #b4b6a9;flex:1}.stub-caption{font:900 11px/1.3 var(--font);letter-spacing:.16em;text-transform:uppercase;color:#5c6b62}.date-huge{font:900 clamp(88px,10vw,154px)/.78 var(--display);letter-spacing:-.04em;margin:25px 0 8px}.monthline{font:900 32px/1 var(--display);text-transform:uppercase;letter-spacing:.04em;color:var(--red)}.time-line{font:900 65px/.9 var(--display);margin:20px 0 0}.time-line small{font:700 13px/1 var(--font);letter-spacing:.12em;margin-left:7px}.stub-bottom{padding:21px 30px 24px;display:grid;gap:14px}.previous-line{display:flex;justify-content:space-between;align-items:flex-start;gap:16px}.previous-line b{display:block;font:900 33px/1 var(--display)}.previous-line span{font-size:11px;color:#66746a}.stub-links{display:flex;gap:15px;flex-wrap:wrap;font:800 11px/1 var(--font);text-transform:uppercase;letter-spacing:.04em;text-decoration:underline;text-decoration-thickness:2px;text-underline-offset:4px}.stats-strip{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));background:var(--red);color:white;min-height:132px}.stat{padding:18px clamp(13px,2.6vw,39px) 19px;display:grid;grid-template-columns:1fr auto;grid-template-rows:auto 1fr;gap:3px;border-right:1px solid #e06870}.stat:last-child{border-right:0}.stat .label{font:800 10px/1.3 var(--font);letter-spacing:.15em;text-transform:uppercase}.stat .number{font:900 clamp(43px,5vw,78px)/.89 var(--display);letter-spacing:-.01em;align-self:end;grid-column:1/-1}.stat .detail{font-size:10px;align-self:end;grid-column:1/-1;color:#ffe4e5}.chapter-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;margin-bottom:17px;padding-bottom:10px;border-bottom:2px solid currentColor}.chapter-heading .section-num{display:block;font:900 11px/1 var(--font);letter-spacing:.2em;text-transform:uppercase;margin-bottom:7px}.chapter-heading h2{font:900 clamp(36px,4.5vw,67px)/.84 var(--display);text-transform:uppercase;letter-spacing:-.025em;margin:0}.chapter-heading .caption{font:700 11px/1.4 var(--font);max-width:185px;text-align:right;color:inherit;opacity:.76}.main-grid{display:grid;grid-template-columns:minmax(320px,.86fr) minmax(0,1.14fr);gap:0;border-bottom:8px solid var(--ink)}.standings{padding:35px clamp(18px,2.6vw,40px) 42px;background:var(--chalk);border-right:3px solid var(--ink)}.fixturelab{padding:35px clamp(18px,3.2vw,48px) 42px;background:#14281f;color:var(--chalk);position:relative}.fixturelab::after{position:absolute;content:'';inset:0;background:repeating-linear-gradient(0deg,transparent,transparent 35px,rgba(255,255,255,.012) 36px);pointer-events:none}.fixturelab>*{position:relative;z-index:1}.table-mode{font:900 10px/1 var(--font);letter-spacing:.13em;text-transform:uppercase;background:#e5e0d0;display:inline-block;padding:7px 9px;margin-bottom:12px}.league-wrap{overflow-x:auto}.league{width:100%;border-collapse:collapse;white-space:nowrap;font-size:12px;font-weight:650;font-variant-numeric:tabular-nums}.league th{text-align:right;font:800 10px/1 var(--font);letter-spacing:.09em;color:#68766e;text-transform:uppercase;padding:9px 6px;border-bottom:3px solid var(--ink)}.league td{text-align:right;padding:10px 6px;border-bottom:1px solid #d8d8cc}.league th:first-child,.league td:first-child{text-align:left}.league th:nth-child(2),.league td:nth-child(2){text-align:left}.league td:nth-child(2){font-weight:800}.league .rank{display:inline-block;width:22px;font:900 15px/1 var(--display)}.league .rank.top{color:var(--green)}.league .club-points{font:900 18px/.9 var(--display)}.league tbody tr.glens{background:var(--red);color:white}.league tbody tr.glens td{border-color:#db7177}.league tbody tr.glens .club-points,.league tbody tr.glens .rank{color:white}.league tbody tr.glens td:first-child{padding-left:8px}.league tbody tr.glens td:last-child{padding-right:8px}.table-note{border-top:1px solid #a9afa3;margin-top:17px;padding-top:11px;font-size:11px;line-height:1.5;color:#5d695f}.control-bar{display:flex;gap:0;margin:22px 0 18px;border:2px solid #9ab09f;max-width:620px}.control-bar button{flex:1;border:0;border-right:2px solid #9ab09f;background:transparent;color:#cedbd0;padding:12px 11px;font:900 12px/1 var(--font);text-transform:uppercase;letter-spacing:.08em;cursor:pointer}.control-bar button:last-child{border-right:0}.control-bar button.active{background:var(--gold);color:#1d3426}.control-bar button:not(.active):hover{background:#254a39}.pick-help{display:flex;justify-content:space-between;gap:15px;flex-wrap:wrap;color:#b9cabc;font-size:11px;margin-bottom:12px}.fixture-row{display:grid;grid-template-columns:31px minmax(0,1fr) auto;gap:10px;border-top:1px solid #486456;padding:15px 0;align-items:start}.fixture-row:last-child{border-bottom:1px solid #486456}.fixture-no{font:900 29px/1 var(--display);color:#688c77}.fixture-names{font:900 clamp(19px,2.15vw,28px)/.95 var(--display);text-transform:uppercase;letter-spacing:.01em}.fixture-names .vs{font:800 10px/1 var(--font);color:#a0b7a8;padding:0 4px;vertical-align:middle}.fixture-row.own .fixture-names{color:#ff8b91}.fixture-recommend{margin-top:9px;font-size:11px;color:#bdccbe;line-height:1.4}.verdict{display:inline-block;font:900 10px/1 var(--font);letter-spacing:.1em;text-transform:uppercase;background:var(--gold);color:#1b392a;padding:4px 6px;margin:0 5px 4px 0}.verdict.neutral{background:#c0c9c0}.verdict.own{background:var(--red);color:#fff}.pick-grid{display:flex;align-items:center;gap:0;border:1px solid #597664}.pick-grid button{cursor:pointer;border:0;border-right:1px solid #597664;background:#213e30;color:#d1e0d5;width:35px;height:38px;font:900 15px/1 var(--display)}.pick-grid button:last-child{border-right:0}.pick-grid button.chosen{background:#f5e7a5;color:#183b2c}.pick-grid button:hover:not(.chosen){background:#42634e}.simulation-footer{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;padding:19px 0 0}.simulation-count{font:900 13px/1.3 var(--font);letter-spacing:.04em;color:#e2e8dc}.reset{cursor:pointer;border:1px solid #7c9a85;color:var(--chalk);background:transparent;padding:10px 15px;text-transform:uppercase;font:800 10px/1 var(--font);letter-spacing:.1em}.reset:hover{background:#31533e}.explain{font-size:11px;line-height:1.6;color:#b5c6b9;margin:17px 0 0;max-width:760px}.targets-section{background:#e3dcc4;padding:46px clamp(18px,3.4vw,52px) 48px;border-bottom:8px solid var(--red)}.targets-top{display:flex;justify-content:space-between;gap:30px;align-items:end;margin-bottom:26px}.targets-top .chapter-heading{border:0;margin:0;padding:0}.targets-lede{max-width:510px;font-size:13px;line-height:1.55;margin:0;color:#455649}.target-row{display:grid;grid-template-columns:minmax(190px,1.2fr) minmax(80px,.45fr) minmax(220px,1.3fr);gap:18px;align-items:center;padding:18px 0;border-top:2px solid #acb0a0}.target-row:last-child{border-bottom:2px solid #acb0a0}.target-name{font:900 clamp(21px,2.6vw,34px)/.92 var(--display);text-transform:uppercase}.target-desc{color:#617166;font-size:11px;margin-top:5px;line-height:1.35}.target-number{font:900 clamp(31px,4vw,58px)/.95 var(--display);white-space:nowrap}.target-number small{font:800 11px/1 var(--font);text-transform:uppercase;display:block;letter-spacing:.12em;margin-top:6px;color:#69766a}.target-meter-label{display:flex;justify-content:space-between;gap:12px;font-size:11px;font-weight:800;margin-bottom:7px}.target-meter{height:15px;border:2px solid var(--ink);background:repeating-linear-gradient(90deg,#d1d0bb,#d1d0bb 11.5%,#c7c4ab 11.5%,#c7c4ab 12.5%);overflow:hidden}.target-meter span{display:block;height:100%;background:var(--green)}.target-meter span.euro{background:#a04d28}.target-meter span.title{background:var(--red)}.target-need{margin-top:7px;font-size:11px;line-height:1.4;color:#435747}.targets-caveat{font-size:11px;line-height:1.6;color:#516052;margin-top:20px;max-width:900px}.calendar{background:var(--chalk);padding:43px clamp(18px,3.4vw,52px) 48px}.calendar-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:3px solid var(--ink);border-left:1px solid #bdc4b9;margin-top:23px}.calendar-entry{padding:20px 18px 23px;border-right:1px solid #bdc4b9;border-bottom:1px solid #bdc4b9;min-height:164px;display:flex;flex-direction:column}.calendar-date{font:900 12px/1 var(--font);letter-spacing:.12em;text-transform:uppercase;color:var(--red)}.calendar-teams{font:900 31px/.92 var(--display);text-transform:uppercase;letter-spacing:-.01em;margin:17px 0 10px;flex:1}.calendar-type{font-size:11px;color:#5b6a61;font-weight:650}.calendar-entry.featured{background:var(--ink);color:var(--chalk)}.calendar-entry.featured .calendar-type{color:#a9c4b3}.sources{background:var(--ink);color:#bed3c3;padding:31px clamp(18px,3.4vw,52px) 40px;font-size:11px;line-height:1.7}.sources-title{font:900 26px/.9 var(--display);color:white;margin-bottom:10px;text-transform:uppercase}.sources a{text-decoration:underline;text-underline-offset:4px;margin-right:17px;color:#e5eddb;display:inline-block;margin-top:7px}.sources .fine{margin-top:13px;color:#8fae99}.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+@media(max-width:1100px){.hero{grid-template-columns:minmax(0,1.3fr) minmax(255px,.8fr)}.duel{grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr)}.club-name{font-size:clamp(37px,5vw,66px)}.hero-headline{font-size:clamp(66px,9vw,110px)}.main-grid{grid-template-columns:minmax(310px,1fr) minmax(0,1fr)}.fixture-row{grid-template-columns:23px minmax(0,1fr)}.pick-grid{grid-column:2}.fixture-no{font-size:22px}.target-row{grid-template-columns:minmax(150px,1fr) 110px minmax(180px,1.4fr)}}
+@media(max-width:750px){.mast-inner{padding:15px 17px}.shield{width:51px;height:59px;font-size:30px}.shield::after{font-size:7px;bottom:12px}.identity{gap:11px}.brand-title{font-size:32px}.issue{font-size:9px}.issue b{font-size:20px}.site-nav{padding:0 17px}.site-nav a{font-size:10px;padding:12px}.site-nav .edition{display:none}.notice{padding:10px 17px}.hero{grid-template-columns:1fr}.hero-main{min-height:410px;padding:25px 22px}.hero-headline{font-size:clamp(83px,16vw,135px);margin:34px 0}.club-name{font-size:clamp(49px,9.5vw,81px)}.duel{grid-template-columns:1fr 52px 1fr}.hero-stub{border-left:0;border-top:7px solid var(--red);display:grid;grid-template-columns:1fr 1fr}.hero-stub:before{display:none}.kickoff{border-bottom:0;border-right:2px dashed #b4b6a9;padding:23px}.date-huge{font-size:95px;margin:12px 0 3px}.monthline{font-size:23px}.time-line{font-size:42px;margin-top:10px}.stub-bottom{padding:23px}.stats-strip{grid-template-columns:repeat(2,1fr)}.stat{min-height:116px;border-bottom:1px solid #e06870}.stat:nth-child(2){border-right:0}.main-grid{grid-template-columns:1fr}.standings{border-right:0;border-bottom:7px solid var(--ink)}.standings,.fixturelab{padding:31px 20px}.fixture-row{grid-template-columns:28px minmax(0,1fr) auto}.pick-grid{grid-column:auto}.targets-top{display:block}.targets-lede{margin-top:16px}.calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.target-row{grid-template-columns:minmax(0,1fr) auto;gap:12px}.target-progress{grid-column:1/-1}.target-number{text-align:right}}
+@media(max-width:480px){.mast-inner{gap:7px}.brand-title{font-size:28px}.eyebrow{font-size:9px}.issue{font-size:8px;letter-spacing:.05em}.issue b{font-size:16px}.hero-main{min-height:auto;padding:22px 16px 24px}.hero-headline{font-size:81px;line-height:.75;margin:31px 0}.duel{grid-template-columns:minmax(0,1fr) 27px minmax(0,1fr);gap:6px}.club-name{font-size:40px;white-space:nowrap;overflow-wrap:normal}.duel .versus{font-size:19px}.match-footer{margin-top:28px}.hero-stub{grid-template-columns:1fr 1fr}.kickoff{padding:18px}.stub-bottom{padding:18px}.date-huge{font-size:74px}.monthline{font-size:18px}.time-line{font-size:37px}.previous-line{display:block}.previous-line b{margin-top:4px}.stub-links{gap:9px}.stat{padding:17px}.stat .number{font-size:54px}.standings,.fixturelab{padding:27px 15px}.chapter-heading h2{font-size:46px}.chapter-heading .caption{font-size:10px;max-width:125px}.league{font-size:11px}.league th,.league td{padding:9px 5px}.fixture-row{grid-template-columns:21px minmax(0,1fr);gap:8px}.fixture-row .pick-grid{grid-column:2}.fixture-names{font-size:27px}.control-bar button{font-size:11px;padding:12px 7px}.targets-section,.calendar{padding:33px 17px}.target-number{font-size:36px}.calendar-entry{padding:17px 12px;min-height:145px}.calendar-teams{font-size:24px}.sources{padding:29px 17px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behaviour:auto}}
+
+/* More readable typography: regular-width Inter and comfortable tracking. */
+body{letter-spacing:0;line-height:1.5}
+.brand-title{font-size:clamp(26px,3.1vw,44px);letter-spacing:-.045em;line-height:1.09}
+.issue{letter-spacing:.035em;line-height:1.5}
+.issue b{letter-spacing:-.035em;font-size:25px;line-height:1.1}
+.site-nav a{font-size:12px;letter-spacing:.035em}
+.hero-headline{font-size:clamp(58px,8vw,115px);line-height:1;letter-spacing:-.065em;margin:29px 0 30px}
+.club-name{font-size:clamp(34px,4.7vw,70px);line-height:.98;letter-spacing:-.065em}
+.duel .versus{font-size:23px;line-height:1.1}
+.date-huge{font-size:clamp(75px,8vw,124px);line-height:1.02}
+.monthline{font-size:26px;letter-spacing:0}
+.time-line{font-size:clamp(38px,5vw,58px);line-height:1.05}
+.stat .number{font-size:clamp(40px,4.6vw,67px);line-height:1.1}
+.stat .label,.chapter-heading .section-num,.stub-caption,.site-nav a{line-height:1.4}
+.chapter-heading h2{font-size:clamp(32px,3.6vw,52px);line-height:1.06;letter-spacing:-.055em}
+.chapter-heading .caption,.table-note,.calendar-type,.target-desc,.target-need,.targets-caveat,.fixture-recommend,.explain{font-size:12px;line-height:1.55}
+.league{font-size:12px;line-height:1.4}
+.league .rank{font-size:13px;line-height:1.2}
+.league .club-points{font-size:16px;line-height:1.2}
+.fixture-names{line-height:1.12;letter-spacing:-.025em}
+.target-name{font-size:clamp(18px,2.1vw,26px);line-height:1.15;letter-spacing:-.04em}
+.target-number{font-size:clamp(28px,3.1vw,44px);line-height:1.1;letter-spacing:-.05em}
+.calendar-teams{font-size:clamp(19px,2vw,27px);line-height:1.13;letter-spacing:-.04em}
+.sources{font-size:12px;line-height:1.65}.sources-title{font-size:20px;line-height:1.1}.source-date{color:#9ebcaa}
+@media(max-width:1100px){.club-name{font-size:clamp(32px,4.5vw,59px)}.hero-headline{font-size:clamp(57px,8vw,101px)}}
+@media(max-width:750px){.brand-title{font-size:29px}.hero-headline{font-size:clamp(60px,13vw,103px)}.club-name{font-size:clamp(35px,7vw,59px)}.date-huge{font-size:80px}.time-line{font-size:36px}.chapter-heading h2{font-size:clamp(34px,7vw,48px)}}
+@media(max-width:480px){.brand-title{font-size:clamp(22px,5vw,27px)}.issue{font-size:9px}.issue b{font-size:17px}.hero-headline{font-size:clamp(53px,12.5vw,73px);line-height:1.04}.club-name{font-size:clamp(30px,8.2vw,39px)}.date-huge{font-size:69px}.monthline{font-size:16px}.time-line{font-size:32px}.fixture-names{font-size:23px}.calendar-teams{font-size:20px}}
+
+/* League match-centre adjustments */
+.duel{display:flex;flex-direction:column;align-items:stretch;gap:10px;margin-top:5px}
+.duel-side{display:flex;align-items:center;justify-content:space-between;gap:15px;min-width:0}
+.duel .club-name{font-size:clamp(41px,6vw,82px);line-height:1.02;letter-spacing:-.075em;white-space:nowrap;overflow-wrap:normal;min-width:0}
+.duel .club-tag{margin-top:0;flex:none;white-space:nowrap}
+.duel-mid{display:flex;align-items:center;gap:16px;color:#bdd2c5}
+.duel-mid::before,.duel-mid::after{content:'';height:1px;flex:1;background:#7eac91}
+.duel .versus{border:0;padding:2px 0;line-height:1;font-size:18px}
+.hero-main{display:flex;flex-direction:column;justify-content:center}
+.hero-main .hero-headline{margin:22px 0 24px}
+.hero-main .match-footer{margin-top:24px}
+.prob-section{background:#ede6d1;padding:42px clamp(18px,3.4vw,52px) 48px;border-bottom:8px solid var(--ink)}
+.prob-heading{display:flex;justify-content:space-between;gap:25px;align-items:end;padding-bottom:22px;border-bottom:3px solid var(--ink)}
+.prob-heading .section-num{font:900 11px/1.3 var(--font);letter-spacing:.18em;text-transform:uppercase}
+.prob-heading h2{font:900 clamp(42px,5.9vw,83px)/.94 var(--display);letter-spacing:-.07em;margin:8px 0 0}
+.prob-heading h2 em{color:var(--red);font-style:normal}
+.prob-heading p{max-width:360px;font-size:14px;font-weight:650;line-height:1.5;margin:0 0 5px}
+.prob-layout{display:grid;grid-template-columns:minmax(270px,.85fr) minmax(300px,1.15fr);border-bottom:2px solid var(--ink)}
+.prob-feature{background:var(--red);padding:34px clamp(20px,3vw,45px);color:#fff;display:flex;flex-direction:column;justify-content:center}
+.prob-eyebrow{font:800 11px/1.5 var(--font);letter-spacing:.13em}
+.prob-giant{font:900 clamp(78px,10vw,152px)/1 var(--display);letter-spacing:-.09em;margin:24px 0 24px;white-space:nowrap}
+.prob-meter{background:#ffffff66;height:9px;width:100%;overflow:hidden}.prob-meter span{display:block;height:100%;background:white;width:0;transition:width .45s ease}
+.prob-splits{display:grid;grid-template-columns:1fr 1fr;margin-top:34px;gap:10px}.prob-splits>div{border-top:1px solid #ffffff8a;padding-top:12px}.prob-splits span{font:700 12px/1.4 var(--font);display:block;text-transform:uppercase}.prob-splits strong{font:900 45px/1.2 var(--display);letter-spacing:-.065em;display:block;margin-top:5px}
+.prob-mini{font:700 11px/1.4 var(--font);opacity:.83;margin-top:25px}
+.prob-table{padding:26px clamp(16px,3vw,42px) 32px;background:var(--chalk)}
+.prob-table-head{display:flex;justify-content:space-between;gap:12px;padding:0 0 14px;border-bottom:2px solid var(--ink);font:900 10px/1.2 var(--font);letter-spacing:.1em}
+.pos-row{display:grid;grid-template-columns:39px 1fr 64px;align-items:center;gap:15px;padding:9px 0;border-bottom:1px solid #d9dccf;font-size:13px;font-weight:800;font-variant-numeric:tabular-nums}
+.pos-row .pos-label{font-weight:900}.pos-row .pos-val{text-align:right;font-weight:900}
+.pos-bar{height:14px;background:#e4e4da;overflow:hidden}.pos-bar span{display:block;height:100%;background:#244f39;min-width:0}.pos-row:first-child .pos-bar span{background:var(--red)}.pos-row:nth-child(n+2):nth-child(-n+6) .pos-bar span{background:#27805b}.pos-row:nth-child(n+7) .pos-bar span{background:#a7aaa0}
+.prob-method{font-size:12px;line-height:1.65;max-width:1120px;margin:20px 0 0;color:#4b5b50}
+.cup-aside{margin-top:21px;border-top:1px solid #a6afa5;padding-top:14px;font-size:13px}.cup-aside summary{cursor:pointer;font-weight:900;text-transform:uppercase;letter-spacing:.06em}.cup-aside summary span{font-size:11px;font-weight:600;letter-spacing:0;text-transform:none;color:#637266;margin-left:8px}.cup-content{background:#e5e3d5;padding:14px 16px;margin-top:12px;line-height:1.5}
+@media(max-width:1100px){.duel .club-name{font-size:clamp(40px,5.8vw,68px)}.prob-giant{font-size:clamp(66px,9vw,119px)}}
+@media(max-width:750px){.duel .club-name{font-size:clamp(44px,9vw,74px)}.hero-main{min-height:0}.prob-heading{display:block}.prob-heading p{margin-top:17px}.prob-layout{grid-template-columns:1fr}.prob-feature{padding:28px 25px}.prob-giant{font-size:clamp(76px,17vw,133px);margin:15px 0}.prob-section{padding:34px 18px}.prob-splits{margin-top:25px}}
+@media(max-width:480px){.duel .club-name{font-size:clamp(37px,9vw,52px)}.duel-side{gap:7px}.duel .club-tag{font-size:9px;padding:5px 7px}.duel-mid{gap:10px}.hero-main .hero-headline{margin:22px 0}.prob-heading h2{font-size:clamp(40px,10vw,53px)}.prob-feature{padding:24px 19px}.prob-splits strong{font-size:36px}.prob-table{padding:21px 14px}.pos-row{grid-template-columns:31px 1fr 58px;gap:9px;padding:8px 0}}
+
+
+/* Match-centre intelligence: bespoke editorial panels */
+.prediction-section{padding:38px clamp(18px,3.4vw,52px) 45px;background:#e5deca;border-bottom:8px solid var(--ink)}
+.prediction-title{display:flex;align-items:end;justify-content:space-between;gap:20px;border-bottom:2px solid #26392f;padding-bottom:14px;margin-bottom:22px}
+.prediction-title h2{font:900 clamp(36px,5.3vw,67px)/.92 var(--font);letter-spacing:-.045em;margin:6px 0 0;text-transform:uppercase}
+.prediction-title p{max-width:350px;margin:0;font:600 13px/1.5 var(--font);color:#485e50}
+.prediction-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.prediction-card{background:var(--chalk);border:2px solid #233b2d;padding:20px clamp(16px,2vw,30px) 17px;min-width:0;box-shadow:5px 5px 0 #405748}
+.prediction-card.past{background:#d4e2d6}
+.preview-head{display:flex;gap:10px;justify-content:space-between;align-items:center;border-bottom:2px solid #273e31;padding-bottom:12px;font-size:11px;font-weight:900;letter-spacing:.06em}
+.forecast-pick,.actual-score{background:var(--red);padding:6px 8px;color:white;font-size:10px;line-height:1.2;white-space:nowrap}
+.actual-score{font-size:15px}
+.preview-teams{display:grid;grid-template-columns:minmax(0,1fr) 24px minmax(0,1fr);align-items:center;gap:12px;padding:22px 0}
+.preview-teams .right-side{text-align:right;min-width:0}
+.preview-teams .side-label{font-size:10px;font-weight:800;letter-spacing:.12em;color:#677a6a}
+.preview-teams h3{font:900 clamp(19px,2.25vw,31px)/1 var(--font);margin:7px 0 11px;letter-spacing:-.04em;overflow-wrap:break-word}
+.preview-teams .mini-v{text-align:center;font:900 20px/1 var(--font);color:var(--red)}
+.recent-form{display:flex;gap:4px;align-items:center;flex-wrap:wrap}
+.right-side .recent-form{justify-content:flex-end}
+.recent-form small{width:100%;font-size:10px;color:#596a5d;font-weight:700}
+.form-badge{font-size:10px;font-weight:900;padding:3px 5px;color:#fff}
+.form-W{background:#116849}.form-D{background:#868f80}.form-L{background:#ba3140}
+.outcome-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:5px 0 19px}
+.outcome{min-width:0}.outcome .outcome-name{display:block;font-size:10px;color:#526658;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-weight:800;text-transform:uppercase}
+.outcome strong{font:900 clamp(24px,3vw,43px)/1 var(--font);letter-spacing:-.045em;display:block;margin:6px 0 9px}
+.outcome-track{height:7px;background:#d1d8cb;overflow:hidden}.outcome-track>span{height:100%;display:block}
+.out-home{background:var(--red)}.out-draw{background:#83897e}.out-away{background:var(--green)}
+.pre-metrics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:2px solid #244532}
+.pre-metrics>div{padding:14px 9px 7px 0;min-width:0}.pre-metrics>div:not(:first-child){padding-left:10px;border-left:1px solid #bdc8b7}
+.pre-metrics span{display:block;font-size:9px;font-weight:800;text-transform:uppercase;color:#5c705e}
+.pre-metrics strong{display:block;font:900 clamp(21px,2.5vw,33px)/1 var(--font);letter-spacing:-.04em;margin:8px 0 6px;white-space:nowrap}
+.pre-metrics strong small{font-size:12px;color:#718173}.pre-metrics em{display:block;font:600 10px/1.3 var(--font);font-style:normal;color:#6b7b6e}
+.panel-foot{font-size:10px;font-weight:700;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;border-top:1px solid #b2c2b4;padding-top:12px;margin-top:10px;color:#3c5a43}
+.prediction-legend{font:650 12px/1.6 var(--font);margin:19px 0 0;color:#48594e}
+.fixture-prob{font-size:9px;font-weight:800;opacity:.72;letter-spacing:.04em;margin-top:8px}
+.calendar{background:var(--paper)}
+.schedule-top{display:flex;justify-content:space-between;align-items:center;gap:15px;flex-wrap:wrap;margin-bottom:18px}
+.schedule-top p{font-size:12px;font-weight:800;margin:0;color:#526456}
+.schedule-toggle{display:flex;border:2px solid var(--ink)}
+.schedule-toggle button{font-size:11px;font-weight:900;letter-spacing:.06em;background:transparent;color:var(--ink);border:0;border-right:1px solid var(--ink);padding:11px 14px;cursor:pointer}
+.schedule-toggle button:last-child{border-right:0}.schedule-toggle button.active{color:white;background:var(--forest)}
+.schedule-list{border-top:3px solid var(--ink)}
+.schedule-month{font-size:12px;font-weight:900;letter-spacing:.15em;color:#fff;background:var(--forest);padding:10px 15px}
+.schedule-row{display:grid;grid-template-columns:minmax(140px,.8fr) minmax(230px,2fr) minmax(175px,1fr);align-items:center;gap:12px;padding:14px 15px;border-bottom:1px solid #bdc6bb;min-height:76px}
+.schedule-row:nth-child(2n){background:#e7e8dd}.schedule-row.schedule-glens{background:#faefeb;border-left:5px solid var(--red);padding-left:10px}
+.schedule-date{font:800 12px/1.5 var(--font);color:#4b5c50;letter-spacing:.02em}
+.schedule-fixture strong{font:850 clamp(13px,1.3vw,17px)/1.4 var(--font);letter-spacing:-.02em}
+.schedule-fixture strong span{color:#9a3d48;padding:0 5px}
+.loc-tag{display:inline-block;margin-left:8px;padding:2px 6px;background:var(--forest);color:#fff;font:900 9px/1.3 var(--font);vertical-align:middle}
+.schedule-right{text-align:right}
+.schedule-right>strong{display:block;font:900 27px/.95 var(--font);letter-spacing:-.05em}
+.schedule-right>strong small{font-size:11px;color:#718375;letter-spacing:0}
+.schedule-right>span,.schedule-right>b{display:block;font-size:9px;font-weight:800;letter-spacing:.05em;color:#576a59}
+.schedule-right>b{font-size:10px;color:#ad3e4b;margin-top:4px}
+.fixture-register-note{font:600 12px/1.6 var(--font);color:#506352;margin-top:17px}
+@media(max-width:1050px){.prediction-columns{grid-template-columns:1fr}.preview-teams h3{font-size:clamp(22px,4.3vw,33px)}}
+@media(max-width:720px){.prediction-section{padding:25px 17px 34px}.prediction-title{display:block}.prediction-title p{margin-top:13px}.prediction-card{padding:16px 13px;box-shadow:3px 3px 0 #405748}.preview-teams{gap:7px}.preview-teams h3{font-size:clamp(17px,4.2vw,25px)}.pre-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.pre-metrics>div:nth-child(3){border-left:0;padding-left:0}.pre-metrics>div:nth-child(n+3){border-top:1px solid #bdc8b7}.outcome-grid{gap:8px}.outcome strong{font-size:clamp(23px,6vw,33px)}.schedule-row{grid-template-columns:1fr auto;gap:8px;padding:13px 12px}.schedule-date{grid-column:1/-1;font-size:10px}.schedule-fixture strong{font-size:14px}.schedule-right>strong{font-size:22px}}
+
+/* P1 / newspaper-grid extensions, no template cards */
+.site-nav{overflow-x:auto;scrollbar-width:thin}
+.site-nav a{white-space:nowrap;flex:none}
+.oval-section{padding:44px clamp(18px,3.4vw,52px) 53px;border-bottom:8px solid var(--ink)}
+.oval-section h2{margin:5px 0 0;font:900 clamp(38px,5.3vw,70px)/.96 var(--font);letter-spacing:-.064em}
+.oval-section h2 em{font-style:normal;color:var(--red)}
+.oval-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;border-bottom:3px solid var(--ink);padding-bottom:19px;margin-bottom:20px}
+.oval-heading p{max-width:400px;font:650 13px/1.55 var(--font);margin:0;color:#496050}
+.oval-section .eyebrow{font-size:11px;letter-spacing:.14em;font-weight:900}
+.oval-note{font:650 11px/1.55 var(--font);color:#516253;margin:16px 0 0}
+.oval-projection{background:#dfe1d2}
+.proj-lead{display:flex;justify-content:space-between;align-items:stretch;gap:0;background:#113927;color:#f2edda;margin-bottom:25px}
+.proj-lead>div{flex:1;padding:18px 21px;border-right:1px solid #557761}
+.proj-lead>div:last-child{border:0}
+.proj-lead span{display:block;font:850 10px/1.5 var(--font);text-transform:uppercase;letter-spacing:.09em;color:#a4cab1}
+.proj-lead strong{font:900 clamp(32px,5vw,63px)/1 var(--font);letter-spacing:-.08em;display:block;margin:10px 0 4px}
+.ov-table-scroll{overflow-x:auto;border:2px solid var(--ink);background:#f8f5e9}
+.ov-table{border-collapse:collapse;min-width:750px;width:100%;font:750 12px/1.4 var(--font);font-variant-numeric:tabular-nums}
+.ov-table th{background:#103c2b;color:#fff;text-align:left;font-size:10px;letter-spacing:.09em;padding:13px 11px;text-transform:uppercase;white-space:nowrap}
+.ov-table th:nth-child(n+3),.ov-table td:nth-child(n+3){text-align:right}
+.ov-table td{padding:12px 11px;border-top:1px solid #d9ded0}
+.ov-table tbody tr:nth-child(even){background:#e9eadc}
+.ov-table tbody tr.featured{background:#e7c4bb!important;color:#1d3326;font-weight:900;border-left:6px solid var(--red)}
+.ov-table tbody tr:hover:not(.featured){background:#d6dfd4}
+.oval-predict{background:#193a2a;color:#f0eddb}
+.oval-predict h2{color:#f7f1d9}
+.oval-predict .oval-heading{border-color:#93b49b}
+.oval-predict .oval-heading p{color:#b5d0b8}
+.match-filter{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:17px 0;flex-wrap:wrap}
+.match-filter>span{font:800 11px/1.4 var(--font);letter-spacing:.05em;color:#b9d3be}
+.oval-tabbar{display:inline-flex;border:2px solid currentColor}
+.oval-tabbar button{color:inherit;background:transparent;border:0;border-right:1px solid currentColor;padding:11px 14px;font:900 11px/1.2 var(--font);cursor:pointer;text-transform:uppercase;letter-spacing:.07em}
+.oval-tabbar button:last-child{border:0}
+.oval-tabbar button.active{background:var(--red);color:white}
+.prediction-rows{border-top:2px solid #9fbaa6}
+.prediction-row{display:grid;grid-template-columns:130px minmax(225px,1.4fr) minmax(220px,1fr) 88px;gap:15px;align-items:center;padding:16px 12px;border-bottom:1px solid #66816f;font-variant-numeric:tabular-nums}
+.prediction-row.glens{background:#315f42;border-left:5px solid #e75c63;padding-left:7px}
+.pr-date{font:800 11px/1.35 var(--font);color:#a8c6ae}
+.pr-clubs{display:grid;grid-template-columns:1fr 18px 1fr;gap:5px;align-items:center;font-size:14px;line-height:1.25}
+.pr-clubs>span{text-align:center;color:#ee7279;font-weight:900}
+.pr-clubs>strong:last-child{text-align:right}
+.pr-percents{display:flex;justify-content:space-between;font-size:10px;gap:7px;align-items:center;margin-bottom:9px}
+.pr-percents b{font-size:12px}
+.pr-probbar{height:12px;display:flex;overflow:hidden;background:#506f58;gap:2px}
+.pr-probbar span:nth-child(1){background:#e6656d}.pr-probbar span:nth-child(2){background:#bfbaab}.pr-probbar span:nth-child(3){background:#49a474}
+.pr-score{text-align:right}.pr-score strong{font:900 27px/1 var(--font);white-space:nowrap}
+.pr-score small{display:block;color:#b7c8b4;font-size:9px;margin-top:4px;text-transform:uppercase;font-weight:800}
+.oval-difficulty{background:#eee7d6}
+.difficulty-layout{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(250px,.8fr);gap:28px}
+.runin-row{display:grid;grid-template-columns:31px minmax(160px,1fr) minmax(110px,1fr) 55px;align-items:center;gap:11px;padding:10px 12px;border-bottom:1px solid #b9c4b8;font-variant-numeric:tabular-nums}
+.runin-row:nth-child(even){background:#e0e1d3}
+.runin-row.glens{background:#eac9c2;border-left:5px solid var(--red);padding-left:7px}
+.run-rank{font:850 13px/1 var(--font)}
+.run-team strong{display:block;font:850 14px/1.3 var(--font)}
+.run-team small{display:block;font:650 10px/1.3 var(--font);color:#617463;margin-top:4px}
+.run-bar{height:13px;background:#c6d0bf;overflow:hidden}
+.run-bar span{display:block;height:100%;background:#234e35}
+.runin-row.glens .run-bar span{background:var(--red)}
+.run-value{text-align:right;font-size:16px}
+.runin-glens{background:#153b2a;color:#eff0df;padding:21px 19px;align-self:start}
+.runin-glens-label{font:900 16px/1.3 var(--font);margin-bottom:19px;border-bottom:2px solid #789c7c;padding-bottom:12px}
+.runin-mini{display:grid;grid-template-columns:24px minmax(0,1fr) 35px;gap:10px;align-items:center;border-bottom:1px solid #54735b;padding:12px 0;font-size:13px}
+.runin-mini>b{color:#9bb6a3}.runin-mini>span{font-weight:800}
+.runin-mini small{display:block;color:#abcbb5;font-weight:600;font-size:10px;margin-top:3px}
+.runin-mini strong{text-align:right;font-size:17px}
+.oval-momentum{background:#e0e7db}
+.form-detail{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.3fr);gap:22px;margin-top:27px;border-top:3px solid #183d29;padding-top:22px}
+.form-detail-left h3{font:900 clamp(28px,3.7vw,47px)/1 var(--font);letter-spacing:-.05em;margin:15px 0 19px}
+.form-detail-left label{display:block;font:850 11px/1.3 var(--font);letter-spacing:.07em}
+.form-detail-left select{margin-top:8px;background:#f0f1e7;color:#1b3828;padding:10px 15px;border:2px solid #213d2b;font:800 12px var(--font);max-width:100%;width:240px}
+.form-glens-summary{display:grid;grid-template-columns:repeat(2,1fr);gap:0;margin:9px 0;border:2px solid #234230}
+.form-glens-summary span{font:900 25px/1 var(--font);padding:14px 12px;border-right:1px solid #8ca58f;border-bottom:1px solid #8ca58f}
+.form-glens-summary span:nth-child(2n){border-right:0}
+.form-glens-summary span:nth-child(n+3){border-bottom:0}
+.form-glens-summary span small{display:block;margin-top:7px;font:800 10px/1.4 var(--font);color:#577360}
+.form-glens-summary .down{color:#ac3e44}.form-glens-summary .up{color:#216e49}
+.form-chart{display:flex;gap:8px;align-items:flex-end;padding:16px 5px;background:#eff0e3;min-height:100px;border-bottom:2px solid #25412f}
+.form-goalbar{height:72px;display:flex;align-items:flex-end;justify-content:center;gap:2px;flex:1}
+.form-goalbar span{display:block;width:38%;max-width:19px;min-height:3px}
+.form-goalbar .form-gf{background:#1f754d}.form-goalbar .form-ga{background:#c94b54}
+.form-legend{display:flex;gap:14px;font-size:10px;font-weight:800;margin-top:5px}
+.form-legend i{width:10px;height:10px;display:inline-block;margin-right:4px;background:#1f754d}
+.form-legend span:last-child i{background:#c94b54}
+.form-match{display:grid;grid-template-columns:53px 25px 46px minmax(0,1fr);align-items:center;gap:9px;padding:10px 8px;border-bottom:1px solid #b5c7b6;font-size:12px}
+.form-match time{font-size:10px;font-weight:900;color:#637669}
+.form-match .form-badge{width:23px;text-align:center}
+.form-match strong{font-size:14px}
+.form-opponent{font-weight:800;min-width:0}.form-opponent small{font-weight:650;display:block;font-size:10px;color:#6a7e6b}
+.form-seq{display:flex;gap:3px}
+.ov-table .up{color:#147047}.ov-table .down{color:#c23e49}
+.ov-table td small{font-size:10px;color:#6e7e71}
+.impact-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:5px;margin-top:12px;font-size:10px;font-weight:800}
+.impact-chip{background:#e4e3d7;border:1px solid #8dab97;display:grid;grid-template-columns:auto 1fr;gap:3px 6px;align-items:center;padding:6px 7px}
+.impact-chip.best{border:2px solid #b83b48;background:#eed8cc;padding:5px 6px}
+.impact-chip strong{font-size:9px;color:#657c6a}.impact-chip span{text-align:right;color:#1f4831}.impact-chip small{grid-column:1/-1;font-size:10px;color:#435b48}
+.impact-chip.best span{font-weight:950}
+.impact-context{grid-column:1/-1;line-height:1.4;color:#5d705e;font-size:10px}
+.fixture-recommend>span:last-child{font-size:11px;font-weight:650;color:#526451}
+.result-model-status{font-size:10px;letter-spacing:.05em;font-weight:850;color:#31533a;margin:10px 0}
+@media(max-width:1020px){.prediction-row{grid-template-columns:115px minmax(190px,1fr) minmax(200px,1fr) 70px;gap:9px}.pr-clubs{font-size:12px}.difficulty-layout{grid-template-columns:1fr}.runin-glens{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px}.runin-glens-label{grid-column:1/-1;margin:0}.runin-mini{display:block}.runin-mini>span{display:block;margin:8px 0}.runin-mini strong{text-align:left}}
+@media(max-width:720px){.oval-section{padding:29px 15px 34px}.oval-heading{display:block}.oval-heading p{margin-top:13px}.oval-section h2{font-size:clamp(36px,9vw,54px)}.proj-lead>div{padding:13px}.proj-lead strong{font-size:35px}.ov-table{font-size:11px}.ov-table th,.ov-table td{padding:9px 7px}.prediction-row{grid-template-columns:1fr auto;gap:9px;padding:16px 6px}.pr-date{grid-column:1/-1}.pr-clubs{font-size:14px}.pr-outcomes{grid-column:1/-1;grid-row:3}.pr-score{grid-column:2;grid-row:2}.pr-score strong{font-size:24px}.pr-probbar{height:10px}.runin-glens{display:block}.runin-mini{display:grid;grid-template-columns:24px 1fr 35px}.runin-mini strong{text-align:right}.form-detail{grid-template-columns:1fr}.runin-row{grid-template-columns:25px minmax(100px,1fr) minmax(50px,.7fr) 44px;gap:6px;padding:9px 6px}.run-team strong{font-size:12px}.run-team small{font-size:9px}.run-value{font-size:13px}.impact-chip{display:block}.impact-chip span{display:block;text-align:left;margin:2px 0}.oval-tabbar{max-width:100%;flex-wrap:wrap}.oval-tabbar button{padding:9px 10px;font-size:10px}}
+@media(max-width:420px){.pr-clubs{font-size:12px}.pr-clubs strong{overflow-wrap:anywhere}.impact-values{gap:4px}.impact-chip{padding:5px 4px}.impact-chip strong{font-size:8px}.proj-lead span{font-size:9px}}
+
+
+/* Contrast corrections for the dark result-guide surface */
+.fixturelab .fixture-recommend>span:last-child{color:#cfdfd1}
+.fixturelab .impact-context{color:#bdd4c0}
+.fixturelab .result-model-status{color:#d0e0d0}
+.oval-difficulty .match-filter>span{color:#506554}
+.fixturelab .impact-chip strong{color:#45614b}
+/* Distinct matchday editorial visual style, responsive and fully offline. */
+.focus-six{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;gap:0;margin-top:23px;margin-bottom:17px;border:2px solid #adc6b3}.focus-six button{border-right:1px solid #acc2b4;border-bottom:1px solid #acc2b4;min-height:45px;padding:10px 6px;font-size:10px}.focus-six button:nth-child(3n){border-right:0}.focus-six button:nth-last-child(-n+3){border-bottom:0}.focus-six button.active{background:#f5e6c6;color:#15432d}.fixturelab .impact-context{font-size:10px}
+.oval-split{background:#143e30;color:#fffaf0}.oval-split h2 em{color:#fac0bf}.split-feature{display:grid;grid-template-columns:.85fr 1.15fr;gap:2px;border:1px solid #658b78;margin:22px 0 29px}.split-feature>div{padding:23px;background:#1d513f}.split-feature>div>span{font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:.1em}.split-feature>div>strong{display:block;font-size:clamp(49px,8vw,104px);line-height:1;font-weight:950;margin:20px 0}.split-feature small{display:block;font-size:11px;color:#cfe1d5}.split-opponent{border-bottom:1px solid #46725e;display:flex;justify-content:space-between;gap:13px;padding:7px 0;font-size:12px}.split-opponent b{color:#f4d09e}.split-heading{display:flex;align-items:end;justify-content:space-between;gap:12px;border-bottom:2px solid #9cb9a3;padding-bottom:11px}.split-heading h3{font-size:20px;line-height:1.1;margin:0}.split-heading span{font-size:11px;color:#c2d3c7}.split-group{display:flex;align-items:center;justify-content:space-between;gap:15px;padding:15px 4px;border-bottom:1px solid #577c67}.split-group div{min-width:0}.split-group small{display:block;color:#9cc6aa;font-size:10px;font-weight:800}.split-group strong{display:block;font-size:13px;line-height:1.6;margin-top:4px}.split-group>span{white-space:nowrap;font-size:24px;font-weight:950;color:#f0dba7}
+.oval-matrix{background:#eee6d8}.oval-matrix h2 em{color:#ad2f3b}.matrix-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:15px;margin:22px 0}.matrix-toolbar label{font-size:11px;font-weight:900;letter-spacing:.1em}.matrix-toolbar select,.audit-controls select{min-width:240px;font:700 13px/1.5 var(--font);border:2px solid #46634d;padding:10px 12px;background:#fffdf7;color:#123c29;max-width:100%}.matrix-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:4px solid #234333;border-bottom:2px solid #234333;margin:18px 0}.matrix-stats div{padding:13px;border-right:1px solid #bcc6ba}.matrix-stats div:last-child{border-right:0}.matrix-stats small{display:block;text-transform:uppercase;letter-spacing:.1em;font-size:9px;font-weight:900;color:#6a766e}.matrix-stats strong{display:block;font-size:clamp(16px,2.4vw,29px);line-height:1.15;margin-top:8px;font-weight:950}.matrix-key{font-size:10px;font-weight:900;letter-spacing:.1em;margin-bottom:8px;color:#4c6458}.matrix-scroll{overflow-x:auto}.matrix-table{border-collapse:separate;border-spacing:4px;width:100%;min-width:430px;table-layout:fixed;text-align:center;font-variant-numeric:tabular-nums}.matrix-table th{font-size:11px;padding:10px 4px;background:#193f30;color:#fff}.matrix-table th:first-child{font-size:9px;width:112px}.matrix-table tbody td{border:1px solid #c5c9bd;background:linear-gradient(rgba(19,111,72,calc(var(--intensity)*.73)),rgba(19,111,72,calc(var(--intensity)*.73))),#f9f7ed;padding:12px 4px;font-size:clamp(12px,1.7vw,21px);font-weight:900;color:#153428}.matrix-table tbody td.matrix-best{outline:3px solid #bd2939;outline-offset:-2px;background:#e7cbb2}.matrix-table tbody td small{font-size:9px;color:#55725e;font-weight:700}
+.oval-audit{background:#f8f5e9}.oval-audit h2 em{color:#c62e3a}.audit-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:4px solid #183c2b;border-bottom:4px solid #183c2b;margin:26px 0}.audit-stats>div{padding:18px 14px;border-right:1px solid #d5d4c9;border-bottom:1px solid #d5d4c9}.audit-stats>div:nth-child(3n){border-right:0}.audit-stats>div:nth-last-child(-n+3){border-bottom:0}.audit-stats span,.audit-stats small{display:block;font-size:10px;font-weight:850;letter-spacing:.07em}.audit-stats span{color:#627568}.audit-stats strong{font-size:clamp(30px,4.5vw,62px);font-weight:950;line-height:1.1;display:block;margin:8px 0}.audit-stats sup{font-size:16px;vertical-align:super}.audit-stats small{font-weight:600;letter-spacing:0;color:#58695e}.audit-method{display:flex;flex-wrap:wrap;gap:6px 12px;padding:17px 19px;border-left:5px solid #b93644;background:#efe9dc;font-size:11px}.audit-method>strong{flex-basis:100%;font-size:14px}.audit-method>span:not(:last-child){border-right:1px solid #c6c5b8;padding-right:12px}.audit-method>span:last-child{flex-basis:100%;margin-top:5px;line-height:1.55}.audit-controls{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:25px 0 12px}.audit-controls label{font-size:11px;font-weight:900;text-transform:uppercase}.audit-controls select{min-width:160px;margin-left:5px}.audit-controls #audit-count{font-size:11px;font-weight:750;color:#56685c}.audit-table{width:100%;min-width:790px;border-collapse:collapse;text-align:left;font-size:12px}.audit-table th{background:#1d3a2b;color:#fffdf0;padding:11px 9px;font-size:10px;letter-spacing:.05em;text-transform:uppercase}.audit-table td{border-bottom:1px solid #cbd2c7;padding:11px 9px;white-space:nowrap}.audit-table td:nth-child(2){min-width:210px}.audit-table tr.glens-match{background:#f9e3dc}.audit-table td:nth-child(3) small{display:block;font-size:10px;color:#6f7e73}.audit-table td:nth-child(3) b{display:inline-block;background:#173e2d;color:white;padding:2px 5px;margin-bottom:3px}.audit-table .scoreline{font-weight:900;font-size:18px}.audit-hit{font-weight:900;color:#207848;font-size:10px}.audit-miss{font-size:10px;font-weight:900;color:#a2323d}.audit-score{display:inline-block;text-align:center;min-width:37px;padding:5px 6px;background:#eee1b9;color:#5b4a29;font-weight:950}.audit-score.excellent{background:#1a6746;color:white}.audit-score.good{background:#b4dbba;color:#143d25}.audit-score.partial{background:#f0dba7;color:#644b1d}.audit-score.poor{background:#e9bec2;color:#6c2631}.audit-bottom{display:grid;grid-template-columns:1.2fr .8fr;gap:33px;margin-top:30px}.audit-bottom>div>strong{font-weight:950;font-size:18px}.audit-bottom p{font-size:12px;line-height:1.65;color:#5d6c61}.audit-club{display:grid;grid-template-columns:22px 1fr 75px 100px;align-items:center;gap:9px;border-bottom:1px solid #d3d3c6;padding:9px 7px;font-size:12px}.audit-club.highlight{background:#f5d4ce;color:#4c292a}.audit-club>span:nth-child(3){font-weight:950}.audit-club small{text-align:right;font-size:10px}.dynamic-target .target-number{font-size:clamp(30px,5vw,55px)}.dynamic-target .target-number small{font-size:10px;letter-spacing:0}.dynamic-target .target-progress p{font-size:11px}
+@media(max-width:900px){.matrix-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.matrix-stats div:nth-child(2){border-right:0}.matrix-stats div:nth-child(-n+2){border-bottom:1px solid #b1beb1}.audit-bottom{grid-template-columns:1fr}.focus-six{grid-template-columns:repeat(2,minmax(0,1fr))}.focus-six button:nth-child(3n){border-right:1px solid #acc2b4}.focus-six button:nth-child(2n){border-right:0}.focus-six button:nth-last-child(-n+3){border-bottom:1px solid #acc2b4}.focus-six button:nth-last-child(-n+2){border-bottom:0}}
+@media(max-width:580px){.split-feature{grid-template-columns:1fr}.split-feature>div{padding:16px}.split-feature>div>strong{font-size:66px}.split-heading span{display:none}.split-group strong{font-size:11px}.split-group>span{font-size:17px}.audit-stats{grid-template-columns:repeat(2,minmax(0,1fr))}.audit-stats>div:nth-child(3n){border-right:1px solid #d5d4c9}.audit-stats>div:nth-child(2n){border-right:0}.audit-stats>div:nth-last-child(-n+3){border-bottom:1px solid #d5d4c9}.audit-stats>div:nth-last-child(-n+2){border-bottom:0}.audit-stats>div{padding:11px}.audit-stats strong{font-size:34px}.audit-stats sup{font-size:11px}.audit-club{grid-template-columns:19px 1fr 65px;gap:4px}.audit-club small{display:none}.audit-controls .oval-tabbar{width:100%}.audit-controls .oval-tabbar button{flex:1}.matrix-table th:first-child{width:95px}.focus-six button{font-size:9px;min-height:43px;padding:8px 4px}}
+
+
+.audit-breakdown{position:relative}.audit-breakdown summary{list-style:none;cursor:pointer;display:flex;gap:6px;align-items:center}.audit-breakdown summary::-webkit-details-marker{display:none}.audit-open{font-size:9px;text-decoration:underline;text-underline-offset:2px;color:#647265}.audit-breakdown p{position:absolute;top:100%;right:0;width:245px;white-space:normal;z-index:9;background:#fffdf5;color:#1d3f2f;border:2px solid #9daea0;padding:10px 12px;font-size:11px;line-height:1.55;box-shadow:3px 4px 0 #c7c5b7;font-weight:650;margin:3px 0}.audit-breakdown[open] summary{outline:1px dashed #bd3040}
+
+/* Formbook V2: contemporary opposition rank and three-game emphasis. */
+.focus-three{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));max-width:none;gap:0;margin-top:23px;margin-bottom:17px;border:2px solid #adc6b3}
+.focus-three button{border:0;border-right:1px solid #acc2b4;background:transparent;color:#cedbd0;min-height:49px;padding:11px 10px;font-size:11px;font-weight:900;cursor:pointer}
+.focus-three button:last-child{border-right:0}.focus-three button.active{background:#f5e6c6;color:#15432d}.focus-three button:hover:not(.active){background:#254a39}
+.momentum-index{display:inline-flex;min-width:43px;justify-content:center;padding:5px 6px;font-size:17px;border:1px solid #91a998}
+.momentum-index.up{background:#d8eade;color:#1b6845}.momentum-index.flat{background:#ece8d6;color:#5c6251}.momentum-index.down{background:#f2dcdb;color:#9b343b}
+.form-glens-summary span:nth-child(n){border-bottom:1px solid #8ca58f}
+.form-glens-summary span:nth-last-child(-n+2){border-bottom:0}
+.form-glens-summary .flat{color:#6b735e}
+.form-ledger-caption{font-size:10px;letter-spacing:.075em;font-weight:900;display:flex;justify-content:space-between;gap:8px;padding:9px;background:#dce8db;border-bottom:2px solid #234230}
+.form-ledger-caption small{font-weight:700;letter-spacing:normal}
+.form-match.context-match{grid-template-columns:53px 25px 46px minmax(0,1fr) 54px;gap:7px}
+.form-match.context-match.recent-three{background:#e3eddf;border-left:3px solid #16834d;padding-left:5px}
+.form-opponent small{display:block;color:#54705e;font-weight:600;font-size:10px;margin-top:3px}
+.form-opponent em{display:inline-block;font-size:8px;font-style:normal;font-weight:900;letter-spacing:.05em;background:#b9dfc4;color:#164c2f;padding:2px 4px;margin:4px 4px 0 0}
+.form-opponent em.reversal{background:#efceca;color:#9d3034}
+.form-impact{text-align:right;font-variant-numeric:tabular-nums;font-weight:900;font-size:13px}
+.form-impact.up{color:#216e49}.form-impact.down{color:#ab3f42}
+@media(max-width:580px){.focus-three button{font-size:9px;padding:9px 5px;min-height:46px}.form-match.context-match{grid-template-columns:43px 22px 39px minmax(0,1fr) 42px;gap:5px;font-size:11px;padding-right:3px}.form-match.context-match time{font-size:9px}.form-match.context-match strong{font-size:12px}.form-impact{font-size:11px}.form-opponent small{font-size:9px}.form-ledger-caption{font-size:9px}}
+</style>
+</head>
+<body>
+<div class="site">
+<header class="masthead">
+  <div class="mast-inner">
+    <div class="identity"><div class="shield" aria-hidden="true">G</div><div><div class="brand-title">THE OVAL <em>REPORT</em></div></div></div>
+    <div class="issue">BOYLE Sports Premiership <b>26 / 27</b> 8 November 2026</div>
+  </div>
+  <nav class="site-nav" aria-label="Dashboard sections"><a href="#match">01 / Next league game</a><a href="#standings">02 / Table</a><a href="#projection">Final table forecast</a><a href="#fixturelab">03 / Results guide</a><a href="#predictions">Match predictions</a><a href="#difficulty">Run-in difficulty</a><a href="#momentum">Form tracker</a><a href="#backtest">Accuracy audit</a><a href="#scorematrix">Scoreline matrix</a><a href="#postsplit">The split</a><a href="#targets">04 / Points targets</a><a href="#probabilities">05 / Forecast</a><a href="#calendar">06 / League fixtures</a><span class="edition">EAST BELFAST / THE OVAL</span></nav>
+</header>
+<section class="hero" id="match" aria-label="Next Glentoran fixture">
+ <div class="hero-main">
+   <div class="hero-topline"><span class="small-id">01 / Next league match</span><span class="live-mark"><span></span> Matchday 16</span></div>
+   <div class="hero-headline">UP <span>NEXT.</span></div>
+   <div class="duel" aria-label="Glentoran home versus Bangor away"><div class="duel-side"><div class="club-name">GLENTORAN</div><span class="club-tag">Home</span></div><div class="duel-mid"><span class="versus">V</span></div><div class="duel-side"><div class="club-name away">BANGOR</div><span class="club-tag opp">Away</span></div></div>
+   <div class="match-footer"><div class="location">Friday 13 November 2026 · BetMcLean Oval</div><a class="link-arrow" href="https://www.glentoran.com/matches/fixtures/" target="_blank" rel="noopener">Fixture details ↗</a></div>
+ </div>
+ <aside class="hero-stub" aria-label="Match details">
+   <div class="kickoff"><div class="stub-caption">Next Game / Friday</div><div class="date-huge">13</div><div class="monthline">NOVEMBER 2026</div><div class="time-line">19:45<small>GMT</small></div></div>
+   <div class="stub-bottom"><div class="stub-caption">Last League Game</div><div class="previous-line"><div><span>Carrick Rangers v Glentoran</span><b>0—0</b></div><div><span>7 Nov 2026</span></div></div><div class="stub-links"><a href="https://www.glentoran.com/tickets" target="_blank" rel="noopener">Official tickets ↗</a><a href="https://www.nifootballleague.com/all-clubs/glentoran/" target="_blank" rel="noopener">Club schedule ↗</a></div></div>
+ </aside>
+</section>
+
+<section class="prediction-section" id="match-analysis" aria-label="Next and last match statistical forecasts">
+ <div class="prediction-title"><div><span class="eyebrow">THE FORMBOOK / MATCH INTELLIGENCE</span><h2>THE NUMBERS<br>BEHIND THE MATCH.</h2></div><p>Current opponent strength, recent league form and a modelled 1–X–2 forecast. The previous fixture uses figures from before kick-off.</p></div>
+ <div class="prediction-columns">
+  <article class="prediction-card"><div class="eyebrow">01 / NEXT MATCH / LIVE FORECAST</div><div id="next-match-prediction"></div></article>
+  <article class="prediction-card past"><div class="eyebrow">02 / LAST LEAGUE GAME / RETROSPECTIVE</div><div id="previous-match-prediction"></div></article>
+ </div>
+ <p class="prediction-legend">Form badges run oldest to newest; the latest match is on the right. Strength is a relative 0–100 rating calculated from points per match, goal difference and recent results, not a win percentage. Expected goals are produced by the Poisson model, not official xG tracking data.</p>
+</section>
+
+<section class="stats-strip" aria-label="Glentoran season at a glance">
+ <div class="stat"><div class="label">League position</div><div class="number" id="k-position">4th</div><div class="detail">12-team Premiership</div></div>
+ <div class="stat"><div class="label">Points on the board</div><div class="number" id="k-points">22</div><div class="detail" id="k-record">6W / 4D / 4L · P14</div></div>
+ <div class="stat"><div class="label">Gap to leaders</div><div class="number" id="k-gap">14</div><div class="detail">Points off first place</div></div>
+ <div class="stat"><div class="label">League title chance</div><div class="number" id="k-title-chance">—</div><div class="detail">Modelled season finish · see forecast</div></div>
+</section>
+<main class="main-grid">
+ <section class="standings" id="standings">
+   <div class="chapter-heading"><div><span class="section-num">02 / The standings</span><h2>THE STATE<br>OF PLAY.</h2></div><div class="caption">The complete NIFL Premiership table, adjusted when you simulate results.</div></div>
+   <span class="table-mode" id="table-heading">Current league table</span>
+   <div class="league-wrap"><table class="league" aria-label="NIFL Premiership table"><thead><tr><th>POS</th><th>CLUB</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>PTS</th></tr></thead><tbody id="league-body"></tbody></table></div>
+   <div class="table-note" id="simulation-note">Select match results to see how they change the table.</div>
+ </section>
+ <section class="fixturelab" id="fixturelab">
+   <div class="chapter-heading"><div><span class="section-num">03 / Supporter's result guide</span><h2>WHO DO<br>WE WANT?</h2></div><div class="caption">All six league matches on Friday 13 November · result preferences calculated, not hand-picked</div></div>
+   <div class="control-bar focus-three" role="group" aria-label="Choose exact league position to optimise">
+<button id="focus-p1" class="active" type="button" onclick="setFocus('p1')" aria-pressed="true">League title</button>
+<button id="focus-p2" type="button" onclick="setFocus('p2')" aria-pressed="false">2nd · Direct Europe</button>
+<button id="focus-p3" type="button" onclick="setFocus('p3')" aria-pressed="false">3rd</button>
+</div>
+   <div class="pick-help"><span>Conditional simulations compare the three possible results for every match</span><span><b>H</b> Home · <b>D</b> Draw · <b>A</b> Away</span></div>
+   <p class="result-model-status" id="result-model-status">Computing scenario impact…</p><div id="fixture-list" aria-live="polite"></div>
+   <div class="simulation-footer"><span class="simulation-count" id="scenario-count">0 / 6 results simulated</span><button type="button" class="reset" onclick="resetPicks()">↺ Clear the board</button></div>
+   <p class="explain">Algorithmic preference: each tab maximises the probability of finishing in that <strong>exact position</strong>, not merely the probability of reaching that position or higher. Second is the direct league route to Europe, subject to UEFA access and licensing; third is not an automatic European qualification place. Changes smaller than sampling uncertainty are flagged as inconclusive. Select H, D or A beside any fixture to try a scenario. Each chosen win is modelled as 1–0; each draw as 0–0. The points table and Glentoran's full-season forecast update immediately using the actual remaining fixture list. The recommendations represent preferences, not predictions.</p>
+ </section>
+</main>
+<section class="oval-section oval-projection" id="projection" aria-label="Predicted final 2026 2027 Premiership table">
+ <div class="oval-heading"><div><span class="eyebrow">THE SEASON END / SIMULATED STANDINGS</span><h2>HOW IT<br><em>ENDS.</em></h2></div><p>An entire projected Premiership table. Every club receives an expected points total, finishing-position average and probabilities of first, top three and top six.</p></div>
+ <div class="proj-lead"><div><span>Glentoran / projected final points</span><strong id="proj-glens-points">—</strong></div><div><span>Glentoran / average finishing position</span><strong id="proj-glens-position">—</strong></div></div>
+ <div class="ov-table-scroll"><table class="ov-table" aria-label="Projected final Premiership table"><thead><tr><th>Rank*</th><th>Club</th><th>Mean pts</th><th>80% pts range</th><th>Mean pos</th><th>Title</th><th>Top 3</th><th>Top 6</th></tr></thead><tbody id="projected-tbody"></tbody></table></div>
+ <p class="oval-note" id="projection-run-note">Calculating projected table…</p><p class="oval-note">*Rank is ordered by average simulated finishing position, rather than a fictional exact final league result. “80% pts range” covers the central 80% of simulations. Sixth and seventh are separated by the league split.</p>
+</section>
+
+<section class="oval-section oval-split" id="postsplit">
+ <div class="oval-heading"><div><span class="eyebrow">BEYOND ROUND 33 / SECTION A AND B</span><h2>THE FINAL<br><em>FIVE.</em></h2></div><p>Possible compositions of the top six and the clubs Glentoran could meet after the split. Computed from the same 5,000 full-season simulations, without assuming the groups in advance.</p></div>
+ <div class="split-feature"><div><span>Glentoran / top-six group at split</span><strong id="split-glens-prob">—</strong><small>Chance of entering Section A after 33 matches</small></div><div><span>Predicted split opponents</span><div id="split-opponent-list"></div></div></div>
+ <div class="split-heading"><h3>MOST LIKELY TOP-SIX COMBINATIONS</h3><span>Probability of each exact six-club group</span></div><div id="split-groups" class="split-groups"></div>
+ <p class="oval-note">The final five pairings are inferred from simulated section membership. Home/away assignment is approximated; the actual NIFL allocation will follow the published balancing rules. Group composition is not a published fixture list. Post-split final positions cannot cross the sixth/seventh boundary.</p>
+</section>
+<section class="oval-section oval-predict" id="predictions" aria-label="Predictions for remaining league matches">
+ <div class="oval-heading"><div><span class="eyebrow">THE PREVIEW DESK / EVERY PREMIERSHIP GAME</span><h2>THE MATCH<br><em>FORECAST.</em></h2></div><p>Home, draw and away probabilities from the same form-weighted goal model. Each prediction includes a most likely exact scoreline. Results you fix in the simulator are excluded.</p></div>
+ <div class="match-filter"><div class="oval-tabbar" role="group" aria-label="Prediction date filter"><button id="pred-next" class="active" aria-pressed="true" onclick="setPredictionFilter('next')">Next round</button><button id="pred-month" aria-pressed="false" onclick="setPredictionFilter('month')">Next month</button><button id="pred-all" aria-pressed="false" onclick="setPredictionFilter('all')">Entire run-in</button></div><span id="pred-match-count"></span></div>
+ <div class="prediction-rows" id="all-match-predictions"></div><p class="oval-note" style="color:#b6cdb7">The most likely single score is not necessarily the most likely match outcome. Predictions use the published pre-split fixtures; the final five opponents are unknown until the split. All odds are statistical estimates.</p>
+</section>
+
+<section class="oval-section oval-matrix" id="scorematrix">
+ <div class="oval-heading"><div><span class="eyebrow">MATCH ENGINE / EXACT SCORE DISTRIBUTION</span><h2>EVERY<br><em>SCORELINE.</em></h2></div><p>Explore the probabilities behind the predicted score. Each cell is the chance of that particular final result from independent Poisson goals.</p></div>
+ <div class="matrix-toolbar"><label for="matrix-fixture">CHOOSE A GLENTORAN LEAGUE FIXTURE</label><select id="matrix-fixture" onchange="renderScoreMatrix()"></select></div>
+ <div class="matrix-stats" id="matrix-stats"></div><div id="matrix-key" class="matrix-key"></div><div id="matrix-grid" class="matrix-scroll"></div>
+ <p class="oval-note">Cells show scores from 0–0 to 5–5; probability outside that grid is reported separately. The most likely individual score need not share the most likely overall win/draw/loss category. Scenarios entered elsewhere in the dashboard update these values.</p>
+</section>
+<section class="oval-section oval-difficulty" id="difficulty" aria-label="Premiership fixture difficulty rankings">
+ <div class="oval-heading"><div><span class="eyebrow">THE RUN-IN / TOUGHNESS OF OPPOSITION</span><h2>HARDER<br><em>THAN WHO?</em></h2></div><p>Fixture strength ratings combine the opponent’s league and form rating with a venue adjustment. Higher scores indicate a harder programme.</p></div>
+ <div class="match-filter"><div class="oval-tabbar" role="group" aria-label="Difficulty analysis range"><button id="difficulty-all" class="active" aria-pressed="true" onclick="setRunInWindow('all')">All published</button><button id="difficulty-five" aria-pressed="false" onclick="setRunInWindow('five')">Next five</button></div><span id="difficulty-lede"></span></div>
+ <div class="difficulty-layout"><div id="runin-rows"></div><aside class="runin-glens" id="glens-runin"></aside></div>
+ <p class="oval-note">Difficulty = mean opponent strength (0–100) plus 6 for away matches, minus 6 for home matches. The average expected points per game is a separate output of the match model, not the difficulty score. Excludes the five post-split fixtures that cannot yet be identified.</p>
+</section>
+<section class="oval-section oval-momentum" id="momentum" aria-label="Last five and ten Premiership matches club momentum">
+ <div class="oval-heading"><div><span class="eyebrow">THE FORMBOOK / LAST 10 LEAGUE MATCHES</span><h2>FORM.<br><em>NOT FEELING.</em></h2></div><p>Actual scorelines and recent results for every club. Momentum is opponent-adjusted, rewards every win and puts nearly 70% of its weight on the last three games. Strong rebounds count; repeated setbacks hurt.</p></div>
+ <div class="ov-table-scroll"><table class="ov-table" aria-label="League recent form and momentum table"><thead><tr><th>Club</th><th>Last 5 (oldest → newest)</th><th>Pts / 5</th><th>Pts / 10</th><th>Goals 5 F–A</th><th>Weighted PPG</th><th>Momentum /100</th></tr></thead><tbody id="form-track-rows"></tbody></table></div>
+ <div class="form-detail"><div class="form-detail-left"><label for="form-club-select">SELECT A CLUB / LAST TEN RESULTS</label><select id="form-club-select" onchange="setFormClub(this.value)"><option>Glentoran</option><option>Bangor</option><option>Ballymena United</option><option>Carrick Rangers</option><option>Cliftonville</option><option>Coleraine</option><option>Crusaders</option><option>Dungannon Swifts</option><option>Larne</option><option>Limavady United</option><option>Linfield</option><option>Portadown</option></select><h3 id="form-club-title">GLENTORAN</h3><div class="form-glens-summary" id="form-glens-summary"></div><p class="oval-note">Goals in each game, oldest to newest</p><div class="form-chart" id="form-strips"></div><div class="form-legend"><span><i></i> Goals scored</span><span><i></i> Goals conceded</span></div></div><div id="form-match-ledger"></div></div>
+ <p class="oval-note">League games only, to 7 November 2026. Momentum uses a 0–100 index: 50 neutral, higher rising, lower falling. The most recent three results contribute about 69% of the weighted signal. Wins always add momentum, regardless of league position; draws add momentum only against stronger opponents. Defeats and repeated setbacks subtract momentum; immediate comeback wins add an extra recovery bonus. Opponent positions are reconstructed <strong>before their matchday</strong> and heavily down-weighted when early-season rankings are provisional. This is a heuristic form index, not a probability or betting measure.</p>
+</section>
+
+
+<section class="oval-section oval-audit" id="backtest">
+ <div class="oval-heading"><div><span class="eyebrow">87 COMPLETED LEAGUE MATCHES / WALK-FORWARD EVALUATION</span><h2>SHOW ME<br><em>THE RECEIPTS.</em></h2></div><p>Every Premiership match from the start of the season is predicted using the updated, fixed momentum model, using only league results available <strong>before that match date</strong>. All 87 results are retained, including misses.</p></div>
+ <div class="audit-stats" id="audit-summary"></div>
+ <div class="audit-method"><strong>FROZEN SCORE / 100</strong><span><b>35</b> correct 1X2 outcome</span><span><b>20 + 20</b> exact goals for each team (8 per team if one goal out)</span><span><b>10</b> exact goal difference (4 if one out)</span><span><b>15</b> exact score bonus</span><span>Perfect score = 100. No bonus for a wrong result; near misses can earn partial credit. Most likely W/D/L is the highest 1X2 probability. Brier score evaluates all three probabilities separately (lower is better). Models are NOT refitted to improve these results.</span></div>
+ <div class="audit-controls"><div class="oval-tabbar" role="group" aria-label="Historical backtest filter"><button id="audit-all" class="active" onclick="setAuditFilter('all')">All clubs</button><button id="audit-glens" onclick="setAuditFilter('glens')">Glentoran</button><button id="audit-others" onclick="setAuditFilter('others')">Other games</button></div><label>Sort <select id="audit-sort" onchange="setAuditSort(this.value)"><option value="date">Match date</option><option value="best">Highest accuracy</option><option value="worst">Lowest accuracy</option></select></label><span id="audit-count"></span></div>
+ <div class="ov-table-scroll"><table class="audit-table" aria-label="Complete walk-forward prediction accuracy results"><thead><tr><th>Date</th><th>Fixture</th><th>Model W/D/L</th><th>Predicted score</th><th>Actual FT</th><th>Outcome</th><th>Score /100</th></tr></thead><tbody id="audit-body"></tbody></table></div>
+ <div class="audit-bottom"><div><strong>BY CLUB</strong><p>Average points score across matches involving each club; both clubs share the same match prediction.</p><div id="audit-club-ranks" class="audit-club-ranks"></div></div><div><strong>HONEST LIMITATIONS</strong><p>This is a <em>retrospective walk-forward test</em>, not a record of predictions published before kick-off. The model settings are held fixed across all games and no later results enter earlier predictions. On the opening day, all clubs begin with a neutral prior because previous-season ratings are not part of this model. The 2026/27 match results were compiled after the games were played; the accuracy score was specified before examining the backtest output. Neither the model nor the rubric was tuned after the audit. Because the model was originally configured in November, this is <strong>not</strong> an independent prospective validation of parameters chosen before the season.</p><p id="audit-integrity"></p></div></div>
+</section>
+<section class="targets-section" id="targets">
+ <div class="targets-top"><div class="chapter-heading"><div><span class="section-num">04 / Season arithmetic</span><h2>THE MATHS.</h2></div></div><p class="targets-lede">No arbitrary targets: these are points thresholds derived from the final standings in the 5,000 simulated seasons. They update whenever you fix a match result.</p></div>
+ <div id="target-list" aria-live="polite"></div>
+ <p class="targets-caveat">Each target is the simulated points total of the club in that finishing position, with a central 80% range. This is a probabilistic benchmark, not a guaranteed threshold: ties and goal difference matter. Second is the direct European league route; lower places may require cup outcomes or a separate play-off.</p>
+</section>
+<section class="prob-section" id="probabilities">
+ <div class="prob-heading"><div><span class="section-num">05 / Season forecast</span><h2>THE ODDS<br><em>ON THE GLENS.</em></h2></div><p>The same simulation engine powers this position distribution, every club’s projected final table and the algorithmic preferred-results guide.</p></div>
+ <div class="prob-layout">
+   <div class="prob-feature"><span class="prob-eyebrow">CHANCE OF WINNING THE PREMIERSHIP</span><div id="title-prob" class="prob-giant" aria-live="polite">—</div><div class="prob-meter"><span id="title-prob-meter"></span></div><div class="prob-splits"><div><span>Top three</span><strong id="top3-prob">—</strong></div><div><span>Top six</span><strong id="top6-prob">—</strong></div></div><div class="prob-mini" id="prob-updated">5,000 simulations · After selected results</div></div>
+   <div class="prob-table"><div class="prob-table-head"><strong>FINAL POSITION</strong><span>ESTIMATED CHANCE</span></div><div id="position-prob" class="position-prob" aria-live="polite"><p>Calculating season distribution…</p></div></div>
+ </div>
+ <p class="prob-method">Method: 5,000 repeat simulations. Match goal rates blend league goals, points per match and exponentially weighted last-five league form, regressed towards league averages, with random variation in team strength. Each club completes 33 matches before a simulated top-six/bottom-six split and five final fixtures. All 111 published remaining pre-split pairings, including a postponed fixture with its date still pending, are used directly. These are model estimates, not bookmaker odds, and exclude cup qualification routes.</p>
+</section>
+
+<section class="calendar" id="calendar">
+ <div class="chapter-heading"><div><span class="section-num">06 / Published league programme</span><h2>THE RUN-IN.</h2></div><span class="caption">All remaining published Premiership fixtures · GMT</span></div>
+ <div class="schedule-top"><div class="schedule-toggle" role="group" aria-label="Fixture list filter"><button id="cal-glens" class="active" type="button" aria-pressed="true" onclick="setFixtureFilter('glens')">GLENTORAN ONLY</button><button id="cal-all" type="button" aria-pressed="false" onclick="setFixtureFilter('all')">ALL CLUBS</button></div><p id="fixture-summary">111 pre-split fixtures</p></div>
+ <div class="schedule-list" id="schedule-list" aria-live="polite"></div>
+ <p class="fixture-register-note">Dates and pairings follow the published 2026/27 programme. Glentoran v Ballymena United, postponed on 24 October, has a new date still to be confirmed. The last five games are determined after the top-six/bottom-six split and cannot yet have known opponents. Opponent ratings and probabilities reflect form as at 8 November, not future results.</p>
+ <details class="cup-aside"><summary>Domestic cup fixtures <span>Kept separate from the league</span></summary><div class="cup-content"><b>Tuesday 24 November · 19:45</b> — Glentoran v Larne · BetMcLean Cup · The Oval. Does not count towards the Premiership table or forecasts.</div></details>
+</section>
+
+<footer class="sources"><div class="sources-title">FIXTURES &amp; SOURCES</div><div class="source-date">Snapshot: 8 November 2026 · official standings and published fixture list, through 7 November results</div><div><a href="https://www.nifootballleague.com/premiership/2026-2027/standings/" target="_blank" rel="noopener">NIFL standings ↗</a><a href="https://www.glentoran.com/news/2026-27-boylesports-premiership-fixtures-released/" target="_blank" rel="noopener">Published fixtures ↗</a><a href="https://www.skysports.com/football/carrick-rangers-vs-glentoran/6898102845672426232" target="_blank" rel="noopener">Recent league form ↗</a><a href="https://www.thefishy.net/football-results.php?table=266" target="_blank" rel="noopener">Result scorelines ↗</a><a href="https://www.glentoran.com/news/tickets-on-sale-glentoran-v-bangor/" target="_blank" rel="noopener">Bangor tickets ↗</a><a href="https://www.nifootballleague.com/rules-regulations" target="_blank" rel="noopener">League rules ↗</a></div></footer>
+</div>
+<script>
+'use strict';
+const initial=[
+ {name:'Linfield',p:15,w:11,d:3,l:1,gf:24,ga:11,pts:36},
+ {name:'Coleraine',p:15,w:11,d:2,l:2,gf:32,ga:16,pts:35},
+ {name:'Larne',p:13,w:8,d:2,l:3,gf:24,ga:14,pts:26},
+ {name:'Glentoran',p:14,w:6,d:4,l:4,gf:17,ga:11,pts:22},
+ {name:'Cliftonville',p:15,w:7,d:0,l:8,gf:27,ga:19,pts:21},
+ {name:'Carrick Rangers',p:15,w:5,d:4,l:6,gf:23,ga:27,pts:19},
+ {name:'Dungannon Swifts',p:14,w:5,d:3,l:6,gf:16,ga:20,pts:18},
+ {name:'Crusaders',p:15,w:6,d:0,l:9,gf:20,ga:30,pts:18},
+ {name:'Ballymena United',p:13,w:4,d:4,l:5,gf:18,ga:17,pts:16},
+ {name:'Limavady United',p:15,w:4,d:2,l:9,gf:16,ga:26,pts:14},
+ {name:'Bangor',p:15,w:3,d:3,l:9,gf:13,ga:26,pts:12},
+ {name:'Portadown',p:15,w:2,d:3,l:10,gf:12,ga:25,pts:9}
+];
+// Chronological league form: oldest on left, most recent on right. Verified through 7 November 2026.
+const formData={
+ 'Linfield':'DWWDW','Coleraine':'WWWDL','Larne':'LWDWL','Glentoran':'WDWDD',
+ 'Cliftonville':'LLWWW','Carrick Rangers':'WDDLD','Dungannon Swifts':'LDLDW',
+ 'Crusaders':'LLLWL','Ballymena United':'WLWLD','Limavady United':'LDDLL',
+ 'Bangor':'LDLWW','Portadown':'DWLLD'
+};
+// This is the *published* schedule through round 33, not generated pairings.
+// The final five league matches per side are unknown until the split.
+const remainingFixtures=[{"date":"2026-11-13","time":"19:45","home":"Ballymena United","away":"Linfield","status":"scheduled"},{"date":"2026-11-13","time":"19:45","home":"Crusaders","away":"Carrick Rangers","status":"scheduled"},{"date":"2026-11-13","time":"19:45","home":"Coleraine","away":"Portadown","status":"scheduled"},{"date":"2026-11-13","time":"19:45","home":"Glentoran","away":"Bangor","status":"scheduled"},{"date":"2026-11-13","time":"19:45","home":"Larne","away":"Dungannon Swifts","status":"scheduled"},{"date":"2026-11-13","time":"19:45","home":"Limavady United","away":"Cliftonville","status":"scheduled"},{"date":"2026-11-20","time":"19:45","home":"Cliftonville","away":"Glentoran","status":"scheduled"},{"date":"2026-11-21","time":"15:00","home":"Carrick Rangers","away":"Coleraine","status":"scheduled"},{"date":"2026-11-21","time":"15:00","home":"Dungannon Swifts","away":"Crusaders","status":"scheduled"},{"date":"2026-11-21","time":"15:00","home":"Linfield","away":"Limavady United","status":"scheduled"},{"date":"2026-11-21","time":"15:00","home":"Portadown","away":"Bangor","status":"scheduled"},{"date":"2026-11-21","time":"18:00","home":"Larne","away":"Ballymena United","status":"scheduled"},{"date":"2026-11-27","time":"19:45","home":"Coleraine","away":"Dungannon Swifts","status":"scheduled"},{"date":"2026-11-27","time":"19:45","home":"Glentoran","away":"Larne","status":"scheduled"},{"date":"2026-11-28","time":"15:00","home":"Bangor","away":"Carrick Rangers","status":"scheduled"},{"date":"2026-11-28","time":"15:00","home":"Crusaders","away":"Linfield","status":"scheduled"},{"date":"2026-11-28","time":"15:00","home":"Limavady United","away":"Portadown","status":"scheduled"},{"date":"2026-11-28","time":"18:00","home":"Ballymena United","away":"Cliftonville","status":"scheduled"},{"date":"2026-12-01","time":"19:45","home":"Ballymena United","away":"Larne","status":"scheduled"},{"date":"2026-12-04","time":"19:45","home":"Limavady United","away":"Coleraine","status":"scheduled"},{"date":"2026-12-05","time":"15:00","home":"Carrick Rangers","away":"Ballymena United","status":"scheduled"},{"date":"2026-12-05","time":"15:00","home":"Cliftonville","away":"Bangor","status":"scheduled"},{"date":"2026-12-05","time":"15:00","home":"Dungannon Swifts","away":"Glentoran","status":"scheduled"},{"date":"2026-12-05","time":"15:00","home":"Portadown","away":"Crusaders","status":"scheduled"},{"date":"2026-12-05","time":"18:00","home":"Linfield","away":"Larne","status":"scheduled"},{"date":"2026-12-08","time":"19:45","home":"Larne","away":"Dungannon Swifts","status":"scheduled"},{"date":"2026-12-11","time":"19:45","home":"Bangor","away":"Linfield","status":"scheduled"},{"date":"2026-12-12","time":"15:00","home":"Ballymena United","away":"Limavady United","status":"scheduled"},{"date":"2026-12-12","time":"15:00","home":"Carrick Rangers","away":"Dungannon Swifts","status":"scheduled"},{"date":"2026-12-12","time":"15:00","home":"Cliftonville","away":"Coleraine","status":"scheduled"},{"date":"2026-12-12","time":"15:00","home":"Larne","away":"Crusaders","status":"scheduled"},{"date":"2026-12-12","time":"18:00","home":"Glentoran","away":"Portadown","status":"scheduled"},{"date":"2026-12-19","time":"15:00","home":"Coleraine","away":"Bangor","status":"scheduled"},{"date":"2026-12-19","time":"15:00","home":"Crusaders","away":"Glentoran","status":"scheduled"},{"date":"2026-12-19","time":"15:00","home":"Dungannon Swifts","away":"Ballymena United","status":"scheduled"},{"date":"2026-12-19","time":"15:00","home":"Limavady United","away":"Larne","status":"scheduled"},{"date":"2026-12-19","time":"15:00","home":"Portadown","away":"Carrick Rangers","status":"scheduled"},{"date":"2026-12-19","time":"18:00","home":"Linfield","away":"Cliftonville","status":"scheduled"},{"date":"2026-12-26","time":"15:00","home":"Bangor","away":"Limavady United","status":"scheduled"},{"date":"2026-12-26","time":"15:00","home":"Coleraine","away":"Ballymena United","status":"scheduled"},{"date":"2026-12-26","time":"15:00","home":"Crusaders","away":"Cliftonville","status":"scheduled"},{"date":"2026-12-26","time":"15:00","home":"Dungannon Swifts","away":"Portadown","status":"scheduled"},{"date":"2026-12-26","time":"15:00","home":"Glentoran","away":"Linfield","status":"scheduled"},{"date":"2026-12-26","time":"15:00","home":"Larne","away":"Carrick Rangers","status":"scheduled"},{"date":"2026-12-29","time":"19:45","home":"Ballymena United","away":"Bangor","status":"scheduled"},{"date":"2026-12-29","time":"19:45","home":"Cliftonville","away":"Dungannon Swifts","status":"scheduled"},{"date":"2026-12-29","time":"19:45","home":"Limavady United","away":"Crusaders","status":"scheduled"},{"date":"2026-12-29","time":"19:45","home":"Linfield","away":"Coleraine","status":"scheduled"},{"date":"2026-12-29","time":"19:45","home":"Portadown","away":"Larne","status":"scheduled"},{"date":"2026-12-30","time":"19:45","home":"Carrick Rangers","away":"Glentoran","status":"scheduled"},{"date":"2027-01-02","time":"15:00","home":"Bangor","away":"Portadown","status":"scheduled"},{"date":"2027-01-02","time":"15:00","home":"Coleraine","away":"Carrick Rangers","status":"scheduled"},{"date":"2027-01-02","time":"15:00","home":"Crusaders","away":"Linfield","status":"scheduled"},{"date":"2027-01-02","time":"15:00","home":"Dungannon Swifts","away":"Limavady United","status":"scheduled"},{"date":"2027-01-02","time":"15:00","home":"Larne","away":"Ballymena United","status":"scheduled"},{"date":"2027-01-02","time":"18:00","home":"Glentoran","away":"Cliftonville","status":"scheduled"},{"date":"2027-01-16","time":"15:00","home":"Ballymena United","away":"Cliftonville","status":"scheduled"},{"date":"2027-01-16","time":"15:00","home":"Carrick Rangers","away":"Bangor","status":"scheduled"},{"date":"2027-01-16","time":"15:00","home":"Crusaders","away":"Portadown","status":"scheduled"},{"date":"2027-01-16","time":"15:00","home":"Dungannon Swifts","away":"Coleraine","status":"scheduled"},{"date":"2027-01-16","time":"15:00","home":"Glentoran","away":"Larne","status":"scheduled"},{"date":"2027-01-16","time":"15:00","home":"Limavady United","away":"Linfield","status":"scheduled"},{"date":"2027-01-23","time":"15:00","home":"Ballymena United","away":"Linfield","status":"scheduled"},{"date":"2027-01-23","time":"15:00","home":"Bangor","away":"Dungannon Swifts","status":"scheduled"},{"date":"2027-01-23","time":"15:00","home":"Cliftonville","away":"Carrick Rangers","status":"scheduled"},{"date":"2027-01-23","time":"15:00","home":"Coleraine","away":"Glentoran","status":"scheduled"},{"date":"2027-01-23","time":"15:00","home":"Larne","away":"Crusaders","status":"scheduled"},{"date":"2027-01-23","time":"15:00","home":"Portadown","away":"Limavady United","status":"scheduled"},{"date":"2027-01-30","time":"15:00","home":"Crusaders","away":"Ballymena United","status":"scheduled"},{"date":"2027-01-30","time":"15:00","home":"Dungannon Swifts","away":"Carrick Rangers","status":"scheduled"},{"date":"2027-01-30","time":"15:00","home":"Larne","away":"Cliftonville","status":"scheduled"},{"date":"2027-01-30","time":"15:00","home":"Limavady United","away":"Coleraine","status":"scheduled"},{"date":"2027-01-30","time":"15:00","home":"Linfield","away":"Bangor","status":"scheduled"},{"date":"2027-01-30","time":"15:00","home":"Portadown","away":"Glentoran","status":"scheduled"},{"date":"2027-02-06","time":"15:00","home":"Ballymena United","away":"Portadown","status":"scheduled"},{"date":"2027-02-06","time":"15:00","home":"Bangor","away":"Limavady United","status":"scheduled"},{"date":"2027-02-06","time":"15:00","home":"Carrick Rangers","away":"Larne","status":"scheduled"},{"date":"2027-02-06","time":"15:00","home":"Cliftonville","away":"Linfield","status":"scheduled"},{"date":"2027-02-06","time":"15:00","home":"Coleraine","away":"Crusaders","status":"scheduled"},{"date":"2027-02-06","time":"15:00","home":"Glentoran","away":"Dungannon Swifts","status":"scheduled"},{"date":"2027-02-20","time":"15:00","home":"Ballymena United","away":"Coleraine","status":"scheduled"},{"date":"2027-02-20","time":"15:00","home":"Bangor","away":"Larne","status":"scheduled"},{"date":"2027-02-20","time":"15:00","home":"Crusaders","away":"Cliftonville","status":"scheduled"},{"date":"2027-02-20","time":"15:00","home":"Limavady United","away":"Glentoran","status":"scheduled"},{"date":"2027-02-20","time":"15:00","home":"Linfield","away":"Carrick Rangers","status":"scheduled"},{"date":"2027-02-20","time":"15:00","home":"Portadown","away":"Dungannon Swifts","status":"scheduled"},{"date":"2027-02-27","time":"15:00","home":"Carrick Rangers","away":"Ballymena United","status":"scheduled"},{"date":"2027-02-27","time":"15:00","home":"Cliftonville","away":"Bangor","status":"scheduled"},{"date":"2027-02-27","time":"15:00","home":"Coleraine","away":"Portadown","status":"scheduled"},{"date":"2027-02-27","time":"15:00","home":"Dungannon Swifts","away":"Linfield","status":"scheduled"},{"date":"2027-02-27","time":"15:00","home":"Glentoran","away":"Crusaders","status":"scheduled"},{"date":"2027-02-27","time":"15:00","home":"Larne","away":"Limavady United","status":"scheduled"},{"date":"2027-03-06","time":"15:00","home":"Ballymena United","away":"Glentoran","status":"scheduled"},{"date":"2027-03-06","time":"15:00","home":"Coleraine","away":"Bangor","status":"scheduled"},{"date":"2027-03-06","time":"15:00","home":"Crusaders","away":"Dungannon Swifts","status":"scheduled"},{"date":"2027-03-06","time":"15:00","home":"Limavady United","away":"Carrick Rangers","status":"scheduled"},{"date":"2027-03-06","time":"15:00","home":"Linfield","away":"Larne","status":"scheduled"},{"date":"2027-03-06","time":"15:00","home":"Portadown","away":"Cliftonville","status":"scheduled"},{"date":"2027-03-20","time":"15:00","home":"Ballymena United","away":"Dungannon Swifts","status":"scheduled"},{"date":"2027-03-20","time":"15:00","home":"Bangor","away":"Glentoran","status":"scheduled"},{"date":"2027-03-20","time":"15:00","home":"Cliftonville","away":"Limavady United","status":"scheduled"},{"date":"2027-03-20","time":"15:00","home":"Crusaders","away":"Carrick Rangers","status":"scheduled"},{"date":"2027-03-20","time":"15:00","home":"Larne","away":"Coleraine","status":"scheduled"},{"date":"2027-03-20","time":"15:00","home":"Linfield","away":"Portadown","status":"scheduled"},{"date":"2027-03-27","time":"15:00","home":"Coleraine","away":"Cliftonville","status":"scheduled"},{"date":"2027-03-27","time":"15:00","home":"Crusaders","away":"Bangor","status":"scheduled"},{"date":"2027-03-27","time":"15:00","home":"Dungannon Swifts","away":"Larne","status":"scheduled"},{"date":"2027-03-27","time":"15:00","home":"Glentoran","away":"Linfield","status":"scheduled"},{"date":"2027-03-27","time":"15:00","home":"Limavady United","away":"Ballymena United","status":"scheduled"},{"date":"2027-03-27","time":"15:00","home":"Portadown","away":"Carrick Rangers","status":"scheduled"},{"date":"TBC","time":null,"home":"Glentoran","away":"Ballymena United","status":"date pending"}];
+const fixtures=[
+ {home:'Glentoran',away:'Bangor',title:['H','The Glens must take all three points at home.'],europe:['H','Taking three points is the priority.']},
+ {home:'Ballymena United',away:'Linfield',title:['H','A Linfield defeat closes the gap to the leaders.'],europe:['A','Linfield taking points off a potential top-six challenger may help.']},
+ {home:'Coleraine',away:'Portadown',title:['A','Portadown taking three points off a title rival is ideal.'],europe:['N','Neither side immediately threatens Glentoran’s top-six place.']},
+ {home:'Crusaders',away:'Carrick Rangers',title:['D','A draw prevents either nearby challenger claiming three points.'],europe:['D','Two sides close to the top-six boundary drop points.']},
+ {home:'Larne',away:'Dungannon Swifts',title:['A','A Larne defeat helps narrow the gap to third place.'],europe:['H','Larne beating a challenger from below offers protection.']},
+ {home:'Limavady United',away:'Cliftonville',title:['H','A Cliftonville defeat protects Glentoran’s league position.'],europe:['H','Cliftonville sit directly behind the Glens.']}
+];
+let focus='p1';
+let fixtureFilter='glens';
+const selections={};
+const modelNames=initial.map(t=>t.name);
+const modelNameIndex=Object.fromEntries(modelNames.map((name,i)=>[name,i]));
+const MODEL_RUNS=5000;
+function ptsForLetter(letter){return letter==='W'?3:letter==='D'?1:0;}
+function formPoints(form){return [...form].reduce((total,letter)=>total+ptsForLetter(letter),0)}
+function weightedFormPoints(form){
+ // Exponential weights: the latest result counts ~4x as much as a result four matches earlier.
+ const decay=.70,arr=[...form].slice(-5),weights=arr.map((_,i)=>Math.pow(decay,arr.length-1-i));
+ return arr.reduce((s,letter,i)=>s+ptsForLetter(letter)*weights[i],0)/weights.reduce((a,b)=>a+b,0);
+}
+function adjustedForms(){
+ const changed={...formData};
+ for(const [index,result] of Object.entries(selections)){
+   const m=fixtures[Number(index)];
+   const h=result==='H'?'W':result==='A'?'L':'D',a=result==='A'?'W':result==='H'?'L':'D';
+   changed[m.home]=(changed[m.home]+h).slice(-5);
+   changed[m.away]=(changed[m.away]+a).slice(-5);
+ }
+ return changed;
+}
+function rankTeams(arr){return arr.sort((x,y)=>y.pts-x.pts||((y.gf-y.ga)-(x.gf-x.ga))||y.gf-x.gf||x.name.localeCompare(y.name))}
+function getTable(){
+ const teams=initial.map(t=>({...t}));
+ for(const [index,result] of Object.entries(selections)){
+   const m=fixtures[Number(index)],h=teams.find(t=>t.name===m.home),a=teams.find(t=>t.name===m.away);
+   h.p++;a.p++;
+   if(result==='D'){h.d++;a.d++;h.pts++;a.pts++;}
+   else if(result==='H'){h.w++;a.l++;h.pts+=3;h.gf++;a.ga++;}
+   else {a.w++;h.l++;a.pts+=3;a.gf++;h.ga++;}
+ }
+ return rankTeams(teams);
+}
+function ratingFor(team,form,momentumOverride){
+ const leagueAvg=1.42,priorMatches=9;
+ if(!team.p)return {attack:1,defence:1,ppg:1.4,formPPG:1.4,strength:50,form:'',momentum:50,seasonEffect:0,formEffect:0};
+ const ppg=team.pts/team.p;
+ const formPPG=weightedFormPoints(form);
+ // The context index never looks at matches after the team's current played count.
+ // Historical backtests supply an explicit pre-kick-off index.
+ const momentum=momentumOverride===undefined?momentumAtState(team):momentumOverride;
+ const momentumSignal=Math.max(-1,Math.min(1,(momentum-50)/35));
+ const seasonEffect=Math.max(-.30,Math.min(.30,(ppg-1.38)*.20));
+ // The new momentum factor is an independently defined input, not fitted to past scores.
+ const formEffect=Math.max(-.26,Math.min(.26,(formPPG-ppg)*.13 + momentumSignal*.095));
+ const attack=((team.gf+priorMatches*leagueAvg)/(team.p+priorMatches))/leagueAvg*Math.exp((seasonEffect+formEffect)*.52);
+ const defence=((team.ga+priorMatches*leagueAvg)/(team.p+priorMatches))/leagueAvg*Math.exp(-(seasonEffect+formEffect)*.52);
+ const rawStrength=50+17*(ppg-1.4)+9*((team.gf-team.ga)/team.p)+6*(formPPG-1.4)+7*momentumSignal;
+ const strength=Math.round(Math.min(96,Math.max(5,rawStrength)));
+ return {attack,defence,ppg,formPPG,strength,form,seasonEffect,formEffect,momentum};
+}
+function ratingSet(table,form){return Object.fromEntries(table.map(t=>[t.name,ratingFor(t,form[t.name]||'')]))}
+function poissonProbs(lambda){
+ const arr=[Math.exp(-lambda)];
+ for(let k=1;k<=12;k++)arr.push(arr[k-1]*lambda/k);
+ return arr;
+}
+function predict(homeName,awayName,table=initial,forms=formData,momentumOverrides=null){
+ const team=Object.fromEntries(table.map(t=>[t.name,t]));
+ const h=ratingFor(team[homeName],forms[homeName],momentumOverrides?.[homeName]),a=ratingFor(team[awayName],forms[awayName],momentumOverrides?.[awayName]);
+ const hExpected=Math.max(.20,Math.min(4.5,1.42*1.13*h.attack*a.defence));
+ const aExpected=Math.max(.20,Math.min(4.5,1.42*.90*a.attack*h.defence));
+ const hp=poissonProbs(hExpected),ap=poissonProbs(aExpected);
+ let home=0,draw=0,away=0,btts=0,over25=0,best=-1,bestScore=[0,0];
+ for(let i=0;i<hp.length;i++)for(let j=0;j<ap.length;j++){
+   const p=hp[i]*ap[j];
+   if(i>j)home+=p;else if(j>i)away+=p;else draw+=p;
+   if(i&&j)btts+=p;
+   if(i+j>=3)over25+=p;
+   if(p>best){best=p;bestScore=[i,j]}
+ }
+ const sum=home+away+draw;
+ home/=sum;draw/=sum;away/=sum;
+ return {home,draw,away,expectedHome:hExpected,expectedAway:aExpected,
+  expectedPointsHome:home*3+draw,expectedPointsAway:away*3+draw,
+  btts,over25,bestScore,hRating:h,aRating:a};
+}
+function pct(value){return (value*100).toFixed(1)+'%'}
+function round1(value){return value.toFixed(2)}
+function strengthLabel(r){return r>=68?'Very strong':r>=56?'Strong':r>=45?'Competitive':r>=34?'Below average':'Struggling'}
+function formBadges(form){return [...form].map(x=>`<span class="form-badge form-${x}">${x}</span>`).join('')}
+function oddsBars(pred,labels){
+ return `<div class="outcome-grid">${[
+  {n:labels[0],v:pred.home,cls:'out-home'},
+  {n:'Draw',v:pred.draw,cls:'out-draw'},
+  {n:labels[1],v:pred.away,cls:'out-away'}
+ ].map(x=>`<div class="outcome"><span class="outcome-name">${x.n}</span><strong>${pct(x.v)}</strong><div class="outcome-track"><span class="${x.cls}" style="width:${(x.v*100).toFixed(1)}%"></span></div></div>`).join('')}</div>`;
+}
+function matchPanel(id,home,away,table,forms,previous){
+ const mom=previous?Object.fromEntries([home,away].map(n=>[n,momentumAtState(table.find(t=>t.name===n),{})])):null;
+ const p=predict(home,away,table,forms,mom);
+ const actual=previous?'<span class="actual-score">FT 0–0</span>':`<span class="forecast-pick">MOST LIKELY SCORE · ${p.bestScore[0]}–${p.bestScore[1]}</span>`;
+ return `<div class="preview-head"><span>${previous?'07 NOV 2026 · BEFORE KICK-OFF':'13 NOV 2026 · 19:45 GMT'}</span>${actual}</div>
+ <div class="preview-teams"><div><span class="side-label">HOME</span><h3>${home.toUpperCase()}</h3><div class="recent-form">${formBadges(forms[home])}<small>${formPoints(forms[home])} / 15 pts</small></div></div><span class="mini-v">V</span><div class="right-side"><span class="side-label">AWAY</span><h3>${away.toUpperCase()}</h3><div class="recent-form">${formBadges(forms[away])}<small>${formPoints(forms[away])} / 15 pts</small></div></div></div>
+ ${oddsBars(p,[home,away])}
+ <div class="pre-metrics"><div><span>Home strength</span><strong>${p.hRating.strength}<small>/100</small></strong><em>${strengthLabel(p.hRating.strength)}</em></div><div><span>Away strength</span><strong>${p.aRating.strength}<small>/100</small></strong><em>${strengthLabel(p.aRating.strength)}</em></div><div><span>Model goals</span><strong>${round1(p.expectedHome)} <small>–</small> ${round1(p.expectedAway)}</strong><em>Home / away</em></div><div><span>Goal trends</span><strong>${pct(p.btts)}</strong><em>Both teams to score</em></div></div>
+ <div class="panel-foot"><span>${previous?'Retrospective pre-match forecast; actual result was 0–0':'Glentoran expected points: '+round1(p.expectedPointsHome)}</span><span>Most likely ${p.bestScore[0]}–${p.bestScore[1]}</span></div>`;
+}
+function renderMatchPanels(){
+ document.getElementById('next-match-prediction').innerHTML=matchPanel('next','Glentoran','Bangor',initial,formData,false);
+ // Reconstruct the *pre-match* records by reversing the 0–0 at Carrick.
+ // Do not include the 7 Nov result itself in the historical form or model ratings.
+ const before=initial.map(t=>({...t}));
+ const glens=before.find(t=>t.name==='Glentoran'),carrick=before.find(t=>t.name==='Carrick Rangers');
+ glens.p--;carrick.p--;glens.d--;carrick.d--;glens.pts--;carrick.pts--;
+ const beforeForm={...formData,'Glentoran':'WWDWD','Carrick Rangers':'WWDDL'};
+ document.getElementById('previous-match-prediction').innerHTML=matchPanel('previous','Carrick Rangers','Glentoran',before,beforeForm,true);
+}
+function setFocus(f){
+ focus=f;
+ for(const x of ['title','europe']){
+   const b=document.getElementById('focus-'+x);b.classList.toggle('active',x===f);b.setAttribute('aria-pressed',String(x===f));
+ }
+ renderFixtures();
+}
+function setPick(i,pick){if(selections[i]===pick)delete selections[i];else selections[i]=pick;renderFixtures();renderTable()}
+function resetPicks(){Object.keys(selections).forEach(k=>delete selections[k]);renderFixtures();renderTable()}
+function renderFixtures(){
+ const rows=fixtures.map((m,i)=>{
+  const verdict=m[focus],selected=selections[i],outcome=verdict[0];
+  const prefer=outcome==='N'?'No strong preference':outcome==='D'?'Draw preferred':(outcome==='H'?m.home:m.away)+' win preferred';
+  const verdictClass=outcome==='N'?'neutral':m.home==='Glentoran'?'own':'';
+  const btns=['H','D','A'].map(x=>`<button type="button" class="${selected===x?'chosen':''}" aria-label="${x==='H'?m.home+' win':x==='A'?m.away+' win':'Draw'}" aria-pressed="${selected===x}" onclick="setPick(${i},'${x}')">${x}</button>`).join('');
+  const p=predict(m.home,m.away);const outcomeStr=`${pct(p.home)} / ${pct(p.draw)} / ${pct(p.away)}`;
+  return `<article class="fixture-row ${m.home==='Glentoran'?'own':''}"><div class="fixture-no">${String(i+1).padStart(2,'0')}</div><div><div class="fixture-names">${m.home} <span class="vs">V</span> ${m.away}</div><div class="fixture-recommend"><span class="verdict ${verdictClass}">${prefer}</span>${verdict[1]}</div><div class="fixture-prob">FORM PREDICTION · HOME / DRAW / AWAY: ${outcomeStr}</div></div><div class="pick-grid" role="group" aria-label="Simulate ${m.home} versus ${m.away}">${btns}</div></article>`;
+ });
+ document.getElementById('fixture-list').innerHTML=rows.join('');
+}
+function renderTable(){
+ const t=getTable(),selected=Object.keys(selections).length,glens=t.find(s=>s.name==='Glentoran'),leader=t[0];
+ document.getElementById('league-body').innerHTML=t.map((s,i)=>{
+  const gd=s.gf-s.ga;
+  return `<tr class="${s.name==='Glentoran'?'glens':''}"><td><span class="rank ${i<6?'top':''}">${String(i+1).padStart(2,'0')}</span></td><td>${s.name}</td><td>${s.p}</td><td>${s.w}</td><td>${s.d}</td><td>${s.l}</td><td>${gd>0?'+':''}${gd}</td><td><span class="club-points">${s.pts}</span></td></tr>`;
+ }).join('');
+ document.getElementById('table-heading').textContent=selected?'What-if league table':'League table';
+ document.getElementById('simulation-note').textContent=selected?`Table including ${selected} assumed result${selected===1?'':'s'}. Wins are shown as 1–0 and draws as 0–0.`:'Select a match result to see how it changes the table.';
+ document.getElementById('scenario-count').textContent=selected+' / 6 results simulated';
+ const pos=t.findIndex(s=>s.name==='Glentoran')+1;
+ document.getElementById('k-position').textContent=pos+(pos===1?'st':pos===2?'nd':pos===3?'rd':'th');
+ document.getElementById('k-points').textContent=glens.pts;
+ document.getElementById('k-record').textContent=`${glens.w}W / ${glens.d}D / ${glens.l}L · P${glens.p}`;
+ document.getElementById('k-gap').textContent=leader.pts-glens.pts;
+ renderTargets(glens);renderProbabilities();
+}
+function renderTargets(glens){
+ const targets=[
+  {name:'European play-off contention',range:'50–60',aim:55,colour:'',desc:'Illustrative target for top-six contention and a potential European play-off route.'},
+  {name:'Direct European league route',range:'78–88',aim:82,colour:'euro',desc:'Indicative high league finish; actual European places depend on regulations and cups.'},
+  {name:'League championship',range:'86–94',aim:90,colour:'title',desc:'A demanding title pace rather than a fixed mathematical threshold.'}
+ ];
+ document.getElementById('target-list').innerHTML=targets.map(t=>{
+  const rem=38-glens.p,needed=Math.max(0,t.aim-glens.pts),ppg=rem?needed/rem:0,feasible=needed<=rem*3,progress=Math.min(100,100*glens.pts/t.aim);
+  return `<div class="target-row"><div><div class="target-name">${t.name}</div><div class="target-desc">${t.desc}</div></div><div class="target-number">${t.range}<small>Final points</small></div><div class="target-progress"><div class="target-meter-label"><span>${glens.pts} PTS BANKED</span><span>${Math.round(progress)}% of midpoint</span></div><div class="target-meter"><span class="${t.colour}" style="width:${progress}%"></span></div><div class="target-need">${needed} further points to ${t.aim} · ${ppg.toFixed(2)} pts/game from ${rem} remaining ${feasible?'':'· Beyond maximum possible'}</div></div></div>`;
+ }).join('');
+}
+function modelRng(seed){let a=seed>>>0;return function(){a=(a+0x6D2B79F5)>>>0;let t=a;t=Math.imul(t^(t>>>15),t|1);t^=t+Math.imul(t^(t>>>7),t|61);return ((t^(t>>>14))>>>0)/4294967296}}
+function normal01(random){return Math.sqrt(-2*Math.log(Math.max(random(),1e-12)))*Math.cos(2*Math.PI*random())}
+function poisson(lambda,random){const min=Math.exp(-lambda);let val=1,n=0;do{n++;val*=random()}while(val>min&&n<16);return n-1}
+function showPct(part){if(part===0)return '0.0%';const n=part*100;if(n<.1)return '<0.1%';return n.toFixed(1)+'%'}
+const schedule=remainingFixtures.map(f=>[modelNameIndex[f.home],modelNameIndex[f.away],f.home,f.away]);
+function validateSchedule(){
+ const counts=Object.fromEntries(initial.map(t=>[t.name,t.p]));
+ for(const m of remainingFixtures){counts[m.home]++;counts[m.away]++;}
+ return Object.entries(counts).every(([n,p])=>p===33);
+}
+if(!validateSchedule())throw Error('Fixture register does not reconcile with 33 games for every club.');
+function renderProbabilities(){
+ const scenarioKeys=Object.keys(selections);
+ const random=modelRng(218882^scenarioKeys.reduce((seed,k)=>seed+((Number(k)+1)*({H:7,D:13,A:19}[selections[k]]||0)),0));
+ const table=getTable();const forms=adjustedForms();
+ const base=modelNames.map(name=>table.find(t=>t.name===name));
+ const ratings=base.map(t=>ratingFor(t,forms[t.name]));
+ // Each scenario selection replaces an actual scheduled fixture, not an additional match.
+ const chosen=new Set(scenarioKeys.map(index=>`${fixtures[Number(index)].home}|${fixtures[Number(index)].away}|2026-11-13`));
+ const remaining=schedule.filter((f,i)=>!chosen.has(`${f[2]}|${f[3]}|${remainingFixtures[i].date}`));
+ const hist=Array(12).fill(0);
+ for(let run=0;run<MODEL_RUNS;run++){
+  const teams=base.map(t=>({name:t.name,pts:t.pts,gf:t.gf,ga:t.ga,p:t.p}));
+  const ratingSurprise=ratings.map(()=>normal01(random)*.145);
+  const strength=ratings.map((r,i)=>Math.exp(ratingSurprise[i]));
+  function simulateGame(h,a){
+   const home=teams[h],away=teams[a];
+   const shift=strength[h]/strength[a];
+   const hLambda=Math.max(.20,Math.min(4.5,1.42*1.13*ratings[h].attack*ratings[a].defence*shift));
+   const aLambda=Math.max(.20,Math.min(4.5,1.42*.90*ratings[a].attack*ratings[h].defence/shift));
+   const hg=poisson(hLambda,random),ag=poisson(aLambda,random);
+   home.p++;away.p++;home.gf+=hg;home.ga+=ag;away.gf+=ag;away.ga+=hg;
+   if(hg>ag)home.pts+=3;else if(ag>hg)away.pts+=3;else{home.pts++;away.pts++}
+  }
+  for(const [h,a] of remaining)simulateGame(h,a);
+  const preSplit=rankTeams([...teams]);
+  if(preSplit.some(t=>t.p!==33))throw Error('A club did not complete 33 matches prior to the league split');
+  // Split: each group of six plays a one-off fixture against every other club in its group.
+  for(let group=0;group<2;group++){
+   const groupIndex=preSplit.slice(group*6,group*6+6).map(t=>modelNameIndex[t.name]);
+   for(let i=0;i<6;i++)for(let j=i+1;j<6;j++){
+    const home=((i+j+run)%2===0)?groupIndex[i]:groupIndex[j];
+    const away=home===groupIndex[i]?groupIndex[j]:groupIndex[i];
+    simulateGame(home,away);
+   }
+  }
+  // Final position is defined by the two split groups: bottom-six clubs cannot climb above sixth.
+  const topSix=rankTeams([...preSplit.slice(0,6)]),bottomSix=rankTeams([...preSplit.slice(6,12)]);
+  // Re-read the updated team totals: preSplit members are references to the same simulated objects.
+  const finalRank=[...topSix,...bottomSix].findIndex(t=>t.name==='Glentoran');
+  hist[finalRank]++;
+ }
+ const probabilities=hist.map(x=>x/MODEL_RUNS),title=probabilities[0],top3=probabilities.slice(0,3).reduce((a,b)=>a+b,0),top6=probabilities.slice(0,6).reduce((a,b)=>a+b,0);
+ document.getElementById('title-prob').textContent=showPct(title);
+ document.getElementById('k-title-chance').textContent=showPct(title);
+ document.getElementById('title-prob-meter').style.width=(title*100)+'%';
+ document.getElementById('top3-prob').textContent=showPct(top3);
+ document.getElementById('top6-prob').textContent=showPct(top6);
+ document.getElementById('position-prob').innerHTML=probabilities.map((p,i)=>`<div class="pos-row"><span class="pos-label">${i+1}${i===0?'st':i===1?'nd':i===2?'rd':'th'}</span><span class="pos-bar"><span style="width:${(p*100).toFixed(3)}%"></span></span><span class="pos-val">${showPct(p)}</span></div>`).join('');
+ document.getElementById('prob-updated').textContent=`${MODEL_RUNS.toLocaleString('en-GB')} simulations · ${remaining.length} published fixtures still to simulate · ${scenarioKeys.length} what-if selections`;
+}
+function dateLabel(f){
+ if(f.date==='TBC')return 'DATE TBC';
+ const date=new Date(f.date+'T12:00:00Z');
+ const day=new Intl.DateTimeFormat('en-GB',{weekday:'short',timeZone:'UTC'}).format(date).toUpperCase();
+ const month=new Intl.DateTimeFormat('en-GB',{month:'short',timeZone:'UTC'}).format(date).toUpperCase();
+ return `${day} ${String(date.getUTCDate()).padStart(2,'0')} ${month} · ${f.time}`;
+}
+function setFixtureFilter(filter){
+ fixtureFilter=filter;
+ for(const f of ['glens','all']){
+  const button=document.getElementById('cal-'+f);
+  button.classList.toggle('active',f===filter);
+  button.setAttribute('aria-pressed',String(f===filter));
+ }
+ renderCalendar();
+}
+function renderCalendar(){
+ const list=remainingFixtures.filter(f=>fixtureFilter==='all'||f.home==='Glentoran'||f.away==='Glentoran');
+ const sorted=[...list].sort((a,b)=>(a.date==='TBC'?'9999':a.date).localeCompare(b.date==='TBC'?'9999':b.date)||String(a.time).localeCompare(String(b.time)));
+ let output='',lastMonth='';
+ for(const f of sorted){
+  const group=f.date==='TBC'?'DATE TO BE ANNOUNCED':new Intl.DateTimeFormat('en-GB',{month:'long',year:'numeric',timeZone:'UTC'}).format(new Date(f.date+'T12:00:00Z')).toUpperCase();
+  if(group!==lastMonth){output+=`<div class="schedule-month">${group}</div>`;lastMonth=group;}
+  const glens=f.home==='Glentoran'||f.away==='Glentoran';
+  const opponent=glens?(f.home==='Glentoran'?f.away:f.home):'';
+  let right;
+  if(glens){
+   const rating=ratingFor(initial.find(t=>t.name===opponent),formData[opponent]);
+   const prediction=predict(f.home,f.away);
+   const glensWin=f.home==='Glentoran'?prediction.home:prediction.away;
+   const expectedPts=f.home==='Glentoran'?prediction.expectedPointsHome:prediction.expectedPointsAway;
+   right=`<div class="schedule-right"><strong>${rating.strength}<small>/100</small></strong><span>OPPONENT STRENGTH</span><b>${pct(glensWin)} GLENS WIN · ${round1(expectedPts)} xPTS</b></div>`;
+  } else {
+   const pred=predict(f.home,f.away);
+   right=`<div class="schedule-right"><strong>${pct(pred.home)}</strong><span>HOME WIN CHANCE</span><b>${pct(pred.draw)} DRAW · ${pct(pred.away)} AWAY</b></div>`;
+  }
+  const homeAway=glens?`<span class="loc-tag">${f.home==='Glentoran'?'HOME':'AWAY'}</span>`:'';
+  output+=`<div class="schedule-row ${glens?'schedule-glens':''}"><div class="schedule-date">${dateLabel(f)}</div><div class="schedule-fixture"><strong>${f.home} <span>v</span> ${f.away}</strong>${homeAway}</div>${right}</div>`;
+ }
+ document.getElementById('schedule-list').innerHTML=output;
+ document.getElementById('fixture-summary').textContent=`${sorted.length} of 111 published pre-split fixtures · split fixtures set after round 33`;
+}
+/* =================== THE OVAL REPORT / PRIORITY ONE =================== */
+const RESULT_LEDGER = [["2026-08-07","Cliftonville",2,"Crusaders",1],["2026-08-08","Carrick Rangers",1,"Portadown",0],["2026-08-08","Dungannon Swifts",1,"Coleraine",3],["2026-08-08","Glentoran",2,"Limavady United",0],["2026-08-08","Linfield",0,"Ballymena United",3],["2026-08-15","Bangor",0,"Cliftonville",3],["2026-08-15","Coleraine",0,"Larne",0],["2026-08-15","Crusaders",2,"Ballymena United",1],["2026-08-15","Limavady United",1,"Carrick Rangers",2],["2026-08-15","Linfield",2,"Glentoran",1],["2026-08-15","Portadown",0,"Dungannon Swifts",1],["2026-08-21","Linfield",1,"Cliftonville",0],["2026-08-21","Ballymena United",0,"Glentoran",2],["2026-08-22","Carrick Rangers",0,"Coleraine",2],["2026-08-22","Dungannon Swifts",2,"Bangor",0],["2026-08-22","Crusaders",3,"Portadown",2],["2026-08-28","Portadown",0,"Coleraine",3],["2026-08-29","Bangor",0,"Carrick Rangers",4],["2026-08-29","Cliftonville",0,"Dungannon Swifts",2],["2026-08-29","Glentoran",1,"Crusaders",2],["2026-08-29","Limavady United",0,"Linfield",2],["2026-09-04","Larne",2,"Glentoran",1],["2026-09-05","Coleraine",4,"Crusaders",1],["2026-09-05","Bangor",2,"Ballymena United",2],["2026-09-05","Cliftonville",3,"Portadown",1],["2026-09-05","Limavady United",0,"Dungannon Swifts",2],["2026-09-05","Linfield",1,"Carrick Rangers",0],["2026-09-08","Larne",1,"Bangor",0],["2026-09-11","Coleraine",3,"Ballymena United",2],["2026-09-12","Dungannon Swifts",0,"Linfield",1],["2026-09-12","Carrick Rangers",1,"Cliftonville",3],["2026-09-12","Crusaders",1,"Limavady United",2],["2026-09-12","Glentoran",1,"Bangor",1],["2026-09-12","Portadown",0,"Larne",2],["2026-09-15","Ballymena United",1,"Carrick Rangers",1],["2026-09-15","Crusaders",3,"Dungannon Swifts",0],["2026-09-15","Glentoran",1,"Coleraine",2],["2026-09-15","Larne",2,"Cliftonville",0],["2026-09-15","Limavady United",3,"Bangor",1],["2026-09-15","Portadown",1,"Linfield",1],["2026-09-19","Coleraine",1,"Limavady United",0],["2026-09-19","Bangor",3,"Portadown",1],["2026-09-19","Carrick Rangers",2,"Larne",5],["2026-09-19","Cliftonville",1,"Glentoran",2],["2026-09-19","Dungannon Swifts",1,"Ballymena United",1],["2026-09-19","Linfield",1,"Crusaders",0],["2026-09-25","Coleraine",1,"Linfield",3],["2026-09-26","Ballymena United",2,"Portadown",0],["2026-09-26","Crusaders",2,"Bangor",1],["2026-09-26","Glentoran",2,"Carrick Rangers",0],["2026-09-26","Limavady United",1,"Cliftonville",0],["2026-10-03","Carrick Rangers",4,"Crusaders",0],["2026-10-03","Cliftonville",0,"Ballymena United",1],["2026-10-03","Glentoran",2,"Dungannon Swifts",0],["2026-10-03","Portadown",3,"Limavady United",1],["2026-10-04","Bangor",2,"Coleraine",3],["2026-10-09","Portadown",0,"Glentoran",0],["2026-10-10","Coleraine",1,"Cliftonville",0],["2026-10-10","Crusaders",0,"Larne",3],["2026-10-10","Dungannon Swifts",2,"Carrick Rangers",4],["2026-10-10","Limavady United",3,"Ballymena United",2],["2026-10-10","Linfield",2,"Bangor",0],["2026-10-16","Larne",2,"Coleraine",3],["2026-10-17","Cliftonville",1,"Portadown",2],["2026-10-17","Ballymena United",2,"Crusaders",1],["2026-10-17","Bangor",0,"Dungannon Swifts",0],["2026-10-17","Carrick Rangers",2,"Linfield",2],["2026-10-17","Glentoran",1,"Limavady United",0],["2026-10-20","Larne",1,"Linfield",2],["2026-10-23","Portadown",1,"Linfield",2],["2026-10-24","Bangor",1,"Larne",2],["2026-10-24","Carrick Rangers",1,"Limavady United",1],["2026-10-24","Crusaders",0,"Coleraine",5],["2026-10-24","Dungannon Swifts",1,"Cliftonville",3],["2026-10-27","Larne",1,"Limavady United",1],["2026-10-30","Coleraine",1,"Glentoran",1],["2026-10-30","Larne",1,"Portadown",0],["2026-10-31","Ballymena United",0,"Bangor",1],["2026-10-31","Cliftonville",7,"Carrick Rangers",1],["2026-10-31","Limavady United",1,"Crusaders",4],["2026-10-31","Linfield",1,"Dungannon Swifts",1],["2026-11-06","Cliftonville",4,"Larne",2],["2026-11-07","Linfield",3,"Coleraine",0],["2026-11-07","Bangor",1,"Crusaders",0],["2026-11-07","Carrick Rangers",0,"Glentoran",0],["2026-11-07","Dungannon Swifts",3,"Limavady United",2],["2026-11-07","Portadown",1,"Ballymena United",1]];
+const modelForecastCache = new Map();
+let modelVersion=0;
+let forecastResult=null;
+let nextPredFilter='next';
+let runinWindow='all';
+let formClub='Glentoran';
+const SENSITIVITY_RUNS=1200;
+const FIXTURE_DATE='2026-11-13';
+const datedFixtures=[...remainingFixtures].sort((a,b)=>((a.date==='TBC'?'9999-12-31':a.date)+' '+(a.time||'99:99')).localeCompare((b.date==='TBC'?'9999-12-31':b.date)+' '+(b.time||'99:99')));
+const clubLedger=Object.fromEntries(modelNames.map(n=>[n,[]]));
+for(const [date,home,hg,away,ag] of RESULT_LEDGER){
+ clubLedger[home].push({date,opponent:away,venue:'H',gf:hg,ga:ag,result:hg>ag?'W':hg===ag?'D':'L'});
+ clubLedger[away].push({date,opponent:home,venue:'A',gf:ag,ga:hg,result:ag>hg?'W':ag===hg?'D':'L'});
+}
+for(const name of modelNames){
+ clubLedger[name].sort((a,b)=>b.date.localeCompare(a.date));
+ if(clubLedger[name].length<10)throw Error('Missing ten-match history: '+name);
+ const lastFive=clubLedger[name].slice(0,5).map(g=>g.result).reverse().join('');
+ if(lastFive!==formData[name])throw Error('Form ledger does not match NIFL for '+name+' '+lastFive+' '+formData[name]);
+}
+/* =============== FORMBOOK V2 / CONTEXTUAL MOMENTUM ===============
+ * Fixed, interpretable heuristic. No hindsight: pre-date league positions are
+ * frozen BEFORE any scores on that date are applied. First four games use a
+ * graduated rank confidence, avoiding a misleading August league order.
+ * The most recent three weights total 5.55/8.1 = 68.5%.
+ */
+const MOMENTUM_WEIGHTS=Object.freeze([.15,.20,.25,.30,.40,.55,.70,1.35,1.80,2.40]);
+const chronologicalClubLedger=Object.fromEntries(modelNames.map(n=>[n,[]]));
+const orderedResults=[...RESULT_LEDGER].sort((a,b)=>a[0].localeCompare(b[0])||a[1].localeCompare(b[1]));
+const preDateTable=Object.fromEntries(modelNames.map(n=>[n,{name:n,p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0}]));
+for(let start=0;start<orderedResults.length;){
+ const date=orderedResults[start][0];let end=start;
+ while(end<orderedResults.length&&orderedResults[end][0]===date)end++;
+ const before=rankTeams(Object.values(preDateTable));
+ const ranks=Object.fromEntries(before.map((t,i)=>[t.name,i+1]));
+ const sameDay=orderedResults.slice(start,end);
+ for(const [d,home,hg,away,ag] of sameDay){
+  for(const [club,opp,gf,ga,venue] of [[home,away,hg,ag,'H'],[away,home,ag,hg,'A']]){
+   const confidence=Math.min(1,Math.min(preDateTable[club].p,preDateTable[opp].p)/4);
+   chronologicalClubLedger[club].push({date:d,opponent:opp,gf,ga,venue,
+    result:gf>ga?'W':gf===ga?'D':'L',selfRank:ranks[club],oppRank:ranks[opp],
+    rankConfidence:confidence,selfPlayed:preDateTable[club].p,oppPlayed:preDateTable[opp].p});
+  }
+ }
+ // Commit only after all positions for this date have been recorded.
+ for(const [d,home,hg,away,ag] of sameDay){
+  const h=preDateTable[home],a=preDateTable[away];h.p++;a.p++;
+  h.gf+=hg;h.ga+=ag;a.gf+=ag;a.ga+=hg;
+  if(hg>ag){h.w++;a.l++;h.pts+=3}else if(hg<ag){a.w++;h.l++;a.pts+=3}else{h.d++;a.d++;h.pts++;a.pts++}
+ }
+ start=end;
+}
+for(const t of initial){
+ const h=preDateTable[t.name];
+ if(['p','w','d','l','gf','ga','pts'].some(k=>h[k]!==t[k]))throw Error('Rank-at-kick-off reconstruction failed for '+t.name);
+}
+function formPulse(g,prior){
+ const gap=(g.selfRank-g.oppRank)/11*Math.max(0,Math.min(1,g.rankConfidence));
+ const quality=(12-g.oppRank)/11*g.rankConfidence + .5*(1-g.rankConfidence);
+ let pulse,reason='';
+ if(g.result==='W'){
+  pulse=.92+.38*quality+.20*Math.max(0,gap);
+  reason='Win: always positive, stronger opposition adds credit';
+ }else if(g.result==='D'){
+  pulse=gap>0?-.02+.92*gap:-.16+.48*gap;
+  // Draws against only marginally better sides should not manufacture momentum.
+  if(gap<.065)pulse=Math.min(0,pulse);
+  reason=gap>=.065?'Draw against higher-ranked opposition':'Draw against comparable or lower-ranked opposition';
+ }else{
+  pulse=-.94-.55*Math.max(0,-gap)+.28*Math.max(0,gap);
+  reason='Defeat: bigger setback against lower-ranked opposition';
+ }
+ const prev=prior.at(-1),prev2=prior.at(-2);
+ if(g.result==='W'){
+  if(prev&&prev.result!=='W'){
+   const priorGood=prior.slice(-5,-1).filter(x=>x.result==='W').length>=2;
+   pulse+=(prev.result==='L'?.56:.28)+(priorGood?.20:0);
+   reason+=' · BOUNCEBACK bonus';
+  }else if(prev?.result==='W'){
+   pulse+=.10*Math.min(3,prior.slice().reverse().findIndex(x=>x.result!=='W')===-1?3:Math.max(1,prior.slice().reverse().findIndex(x=>x.result!=='W')));
+   reason+=' · winning run reinforced';
+  }
+ }else{
+  if(prev&&prev.result!=='W'){
+   pulse-=.23+(prev2&&prev2.result!=='W'?.18:0);
+   reason+=' · successive poor result';
+  }else if(prev?.result==='W'&&prev2&&prev2.result!=='W'){
+   pulse-=.48;
+   reason+=' · recovery followed by setback';
+  }
+ }
+ return {...g,pulse,reason,bounceback:g.result==='W'&&!!prev&&prev.result!=='W',
+  doubleDip:g.result!=='W'&&!!prev&&prev.result==='W'&&!!prev2&&prev2.result!=='W'};
+}
+function calculateMomentum(history){
+ if(!history.length)return {index:50,mean:0,bouncebacks:0,recent3:0,annotated:[]};
+ const annotated=[];
+ for(let i=0;i<history.length;i++)annotated.push(formPulse(history[i],annotated));
+ const last=annotated.slice(-10),weights=MOMENTUM_WEIGHTS.slice(-last.length);
+ const total=weights.reduce((a,b)=>a+b,0);
+ const mean=last.reduce((sum,g,i)=>sum+g.pulse*weights[i],0)/total;
+ const index=Math.max(0,Math.min(100,Math.round(50+29*mean)));
+ return {index,mean,recent3:last.slice(-3).reduce((sum,g)=>sum+g.pulse,0),
+  bouncebacks:last.filter(g=>g.bounceback).length,annotated:last.slice().reverse()};
+}
+const historicalMomentumByCount=Object.fromEntries(modelNames.map(n=>[
+ n,Array.from({length:chronologicalClubLedger[n].length+1},(_,i)=>calculateMomentum(chronologicalClubLedger[n].slice(0,i)).index)
+]));
+const momentumPickCache=new Map();
+function momentumIndexesForPicks(picks={}){
+ const key=pickEntries(picks).map(([i,v])=>i+v).sort().join(',');
+ if(momentumPickCache.has(key))return momentumPickCache.get(key);
+ const priorRank=Object.fromEntries(rankTeams(initial.map(t=>({...t}))).map((t,i)=>[t.name,i+1]));
+ const byName=Object.fromEntries(modelNames.map(n=>[n,chronologicalClubLedger[n].slice()]));
+ for(const [index,pick] of pickEntries(picks)){
+  const m=fixtures[Number(index)],h=pick==='H'?1:0,a=pick==='A'?1:0;
+  for(const [club,opp,gf,ga,venue] of [[m.home,m.away,h,a,'H'],[m.away,m.home,a,h,'A']]){
+   byName[club].push({date:FIXTURE_DATE,opponent:opp,gf,ga,venue,
+    result:gf>ga?'W':gf===ga?'D':'L',selfRank:priorRank[club],oppRank:priorRank[opp],
+    rankConfidence:1,selfPlayed:initial.find(t=>t.name===club).p,oppPlayed:initial.find(t=>t.name===opp).p});
+  }
+ }
+ const ratings=Object.fromEntries(modelNames.map(n=>[n,calculateMomentum(byName[n]).index]));
+ if(momentumPickCache.size>75)momentumPickCache.clear();
+ momentumPickCache.set(key,ratings);
+ return ratings;
+}
+function momentumAtState(team,forcePicks=null){
+ if(!team?.p)return 50;
+ const lastActual=chronologicalClubLedger[team.name]?.length||0;
+ if(team.p<=lastActual)return historicalMomentumByCount[team.name][team.p];
+ return momentumIndexesForPicks(forcePicks===null?selections:forcePicks)[team.name] ?? 50;
+}
+/* ================== END FORMBOOK V2 ================== */
+
+function pickEntries(picks){return Object.entries(picks).filter(([index,v])=>fixtures[index]&&['H','D','A'].includes(v))}
+function tableFromPicks(picks){
+ const teams=initial.map(t=>({...t}));
+ const lookup=Object.fromEntries(teams.map(t=>[t.name,t]));
+ for(const [idx,pick] of pickEntries(picks)){
+  const m=fixtures[Number(idx)],h=lookup[m.home],a=lookup[m.away];
+  const hg=pick==='H'?1:0,ag=pick==='A'?1:0;
+  h.p++;a.p++;h.gf+=hg;h.ga+=ag;a.gf+=ag;a.ga+=hg;
+  if(hg>ag){h.w++;a.l++;h.pts+=3}else if(ag>hg){a.w++;h.l++;a.pts+=3}else{h.d++;a.d++;h.pts++;a.pts++}
+ }
+ return rankTeams(teams);
+}
+function formsFromPicks(picks){
+ const forms={...formData};
+ for(const [idx,pick] of pickEntries(picks)){
+  const m=fixtures[Number(idx)];const h=pick==='H'?'W':pick==='A'?'L':'D';const a=pick==='A'?'W':pick==='H'?'L':'D';
+  forms[m.home]=(forms[m.home]+h).slice(-5);forms[m.away]=(forms[m.away]+a).slice(-5);
+ }
+ return forms;
+}
+function quantile(xs,q){const index=Math.min(xs.length-1,Math.max(0,Math.floor((xs.length-1)*q)));return xs[index]}
+function metricSummary(s){return {positions:s.glens,title:s.glens[0],top3:s.glens.slice(0,3).reduce((a,b)=>a+b,0),top6:s.glens.slice(0,6).reduce((a,b)=>a+b,0)}}
+function simulateSeason(picks,runs,seed,full=false){
+ const teamTable=tableFromPicks(picks),forms=formsFromPicks(picks);
+ const base=modelNames.map(name=>teamTable.find(t=>t.name===name));
+ const scenarioMomenta=momentumIndexesForPicks(picks);
+ const ratings=base.map(t=>ratingFor(t,forms[t.name],scenarioMomenta[t.name]));
+ const fixed=new Set(pickEntries(picks).map(([i])=>{
+  const m=fixtures[Number(i)];return FIXTURE_DATE+'|'+m.home+'|'+m.away;
+ }));
+ const glensHist=Array(12).fill(0),positionHistogram=full?modelNames.map(()=>Array(12).fill(0)):null;
+ const pointSums=full?Array(12).fill(0):null,positionsSums=full?Array(12).fill(0):null;
+ const pointsRuns=full?modelNames.map(()=>[]):null;
+ const rankPointRuns=full?Array.from({length:12},()=>[]):null;
+ const splitOpponentCount=full?Array(12).fill(0):null;
+ const splitCombinations=full?new Map():null;
+ let glensTopSplitCount=0;
+ const random=modelRng(seed);
+ for(let run=0;run<runs;run++){
+  const ts=base.map(t=>({name:t.name,pts:t.pts,p:t.p,gf:t.gf,ga:t.ga}));
+  const sk=ratings.map(()=>Math.exp(normal01(random)*.145));
+  function play(h,a,alreadyFixed=false){
+   const ht=ts[h],at=ts[a];const shift=sk[h]/sk[a];
+   const xH=Math.max(.2,Math.min(4.5,1.42*1.13*ratings[h].attack*ratings[a].defence*shift));
+   const xA=Math.max(.2,Math.min(4.5,1.42*.90*ratings[a].attack*ratings[h].defence/shift));
+   const hg=poisson(xH,random),ag=poisson(xA,random);
+   // Consuming draws for fixed games keeps random streams closely paired across alternative outcomes.
+   if(alreadyFixed)return;
+   ht.p++;at.p++;ht.gf+=hg;ht.ga+=ag;at.gf+=ag;at.ga+=hg;
+   if(hg>ag)ht.pts+=3;else if(ag>hg)at.pts+=3;else{ht.pts++;at.pts++}
+  }
+  for(let k=0;k<schedule.length;k++){
+   const m=remainingFixtures[k],f=schedule[k];
+   play(f[0],f[1],fixed.has(m.date+'|'+m.home+'|'+m.away));
+  }
+  const pre=rankTeams(ts.slice());
+  if(full){
+   const upper=pre.slice(0,6).map(t=>t.name);
+   const glenUpper=upper.includes('Glentoran');if(glenUpper)glensTopSplitCount++;
+   const group=glenUpper?upper:pre.slice(6).map(t=>t.name);
+   for(const name of group){if(name!=='Glentoran')splitOpponentCount[modelNameIndex[name]]++}
+   const sortedGroup=upper.slice().sort().join(' • ');
+   splitCombinations.set(sortedGroup,(splitCombinations.get(sortedGroup)||0)+1);
+  }
+  for(let gi=0;gi<2;gi++){
+   const group=pre.slice(gi*6,gi*6+6).map(t=>modelNameIndex[t.name]);
+   for(let i=0;i<6;i++)for(let j=i+1;j<6;j++){
+    const h=(i+j+run)%2===0?group[i]:group[j];const a=h===group[i]?group[j]:group[i];
+    play(h,a);
+   }
+  }
+  const rank=[...rankTeams(pre.slice(0,6)),...rankTeams(pre.slice(6,12))];
+  for(let pos=0;pos<12;pos++){
+   const idx=modelNameIndex[rank[pos].name];
+   if(idx===modelNameIndex.Glentoran)glensHist[pos]++;
+   if(full){positionHistogram[idx][pos]++;positionsSums[idx]+=pos+1;pointSums[idx]+=rank[pos].pts;pointsRuns[idx].push(rank[pos].pts);rankPointRuns[pos].push(rank[pos].pts)}
+  }
+ }
+ const output={glens:glensHist.map(v=>v/runs),runs};
+ if(full){
+  output.pointThresholds=rankPointRuns.map((a,i)=>{a.sort((x,y)=>x-y);return {rank:i+1,low:quantile(a,.1),median:quantile(a,.5),high:quantile(a,.9)}});
+  output.split={glensTopSix:glensTopSplitCount/runs,opponents:modelNames.filter(n=>n!=='Glentoran').map(name=>({name,probability:splitOpponentCount[modelNameIndex[name]]/runs})).sort((a,b)=>b.probability-a.probability),combinations:[...splitCombinations].sort((a,b)=>b[1]-a[1]).slice(0,6).map(([teams,count])=>({teams:teams.split(' • '),probability:count/runs}))};
+  output.clubs=modelNames.map((name,i)=>{
+   const ps=pointsRuns[i].sort((a,b)=>a-b);
+   return {name,expectedPoints:pointSums[i]/runs,averagePosition:positionsSums[i]/runs,
+    p10:quantile(ps,.1),p90:quantile(ps,.9),positions:positionHistogram[i].map(c=>c/runs),
+    title:positionHistogram[i][0]/runs,top3:positionHistogram[i].slice(0,3).reduce((a,b)=>a+b,0)/runs,
+    top6:positionHistogram[i].slice(0,6).reduce((a,b)=>a+b,0)/runs};
+  }).sort((a,b)=>a.averagePosition-b.averagePosition||b.expectedPoints-a.expectedPoints);
+ }
+ return output;
+}
+function updateSeasonProbabilityUI(sim){
+ const ps=sim.glens;const title=ps[0],top3=ps.slice(0,3).reduce((a,b)=>a+b,0),top6=ps.slice(0,6).reduce((a,b)=>a+b,0);
+ document.getElementById('title-prob').textContent=showPct(title);
+ document.getElementById('k-title-chance').textContent=showPct(title);
+ document.getElementById('title-prob-meter').style.width=(title*100)+'%';
+ document.getElementById('top3-prob').textContent=showPct(top3);
+ document.getElementById('top6-prob').textContent=showPct(top6);
+ document.getElementById('position-prob').innerHTML=ps.map((p,i)=>`<div class="pos-row"><span class="pos-label">${ordinal(i+1)}</span><span class="pos-bar"><span style="width:${(p*100).toFixed(3)}%"></span></span><span class="pos-val">${showPct(p)}</span></div>`).join('');
+ document.getElementById('prob-updated').textContent=`${sim.runs.toLocaleString('en-GB')} simulations · ${111-pickEntries(selections).length} remaining published fixtures · ${pickEntries(selections).length} fixed results`;
+}
+function ordinal(n){return n+(n%100>=11&&n%100<=13?'th':n%10===1?'st':n%10===2?'nd':n%10===3?'rd':'th')}
+function renderProjection(sim){
+ const rows=sim.clubs;
+ document.getElementById('proj-glens-points').textContent=rows.find(t=>t.name==='Glentoran').expectedPoints.toFixed(1);
+ document.getElementById('proj-glens-position').textContent=rows.find(t=>t.name==='Glentoran').averagePosition.toFixed(1);
+ document.getElementById('projected-tbody').innerHTML=rows.map((r,i)=>`<tr class="${r.name==='Glentoran'?'featured':''}"><td>${String(i+1).padStart(2,'0')}</td><td>${r.name}</td><td>${r.expectedPoints.toFixed(1)}</td><td>${r.p10}–${r.p90}</td><td>${r.averagePosition.toFixed(1)}</td><td>${showPct(r.title)}</td><td>${showPct(r.top3)}</td><td>${showPct(r.top6)}</td></tr>`).join('');
+ document.getElementById('projection-run-note').textContent=`${sim.runs.toLocaleString('en-GB')} complete simulated seasons · sorted by average finishing position · final points 10th–90th percentile`;
+}
+function scenarioCacheKey(picks,seed,runs){return Object.entries(picks).sort((a,b)=>Number(a[0])-Number(b[0])).map(([k,v])=>k+v).join(',')+'|'+seed+'|'+runs}
+function getScenarioMetrics(picks,seed=0xCA172D3,runs=SENSITIVITY_RUNS){
+ const key=scenarioCacheKey(picks,seed,runs);
+ if(!modelForecastCache.has(key)){
+  if(modelForecastCache.size>130)modelForecastCache.clear();
+  modelForecastCache.set(key,metricSummary(simulateSeason(picks,runs,seed)));
+ }
+ return modelForecastCache.get(key);
+}
+function deltaText(p){return (p>=0?'+':'−')+Math.abs(p*100).toFixed(1)+' pp'}
+function metricValue(x){return x.positions[Math.max(0,Math.min(2,Number(focus.slice(1))-1))]}
+function renderFixtureGuideSkeleton(){
+ const base=getTable(),forms=formsFromPicks(selections);
+ document.getElementById('fixture-list').innerHTML=fixtures.map((m,i)=>{
+  const p=predict(m.home,m.away,base,forms),labels=['HOME','DRAW','AWAY'],perc=[p.home,p.draw,p.away];
+  const btns=['H','D','A'].map(x=>`<button class="${selections[i]===x?'chosen':''}" type="button" aria-pressed="${selections[i]===x}" onclick="setPick(${i},'${x}')" aria-label="${x==='H'?m.home+' win':x==='A'?m.away+' win':'Draw'}">${x}</button>`).join('');
+  return `<article class="fixture-row ${m.home==='Glentoran'?'own':''}"><div class="fixture-no">${String(i+1).padStart(2,'0')}</div><div><div class="fixture-names">${m.home}<span class="vs"> V </span>${m.away}</div><div class="fixture-recommend" id="pref-${i}"><span class="verdict neutral">COMPUTING MODEL IMPACT…</span></div><div class="fixture-prob">HOME ${pct(p.home)} · DRAW ${pct(p.draw)} · AWAY ${pct(p.away)}</div><div class="impact-values" id="impact-${i}" aria-live="polite">Simulation sensitivities loading</div></div><div class="pick-grid" role="group" aria-label="Simulate ${m.home} versus ${m.away}">${btns}</div></article>`;
+ }).join('');
+}
+function renderRecommendedOutcome(i,batch){
+ const chosenPos=Number(focus.slice(1));const order=['H','D','A'];
+ const scored=order.map(x=>({x,primary:metricValue(batch.alts[x]),secondary:batch.alts[x].top6}));
+ scored.sort((a,b)=>b.primary-a.primary||b.secondary-a.secondary||order.indexOf(a.x)-order.indexOf(b.x));
+ const best=scored[0],spread=scored[0].primary-scored[2].primary;
+ const fixture=fixtures[i],recommendation=best.x==='H'?fixture.home+' win':best.x==='A'?fixture.away+' win':'Draw';
+ const inconclusive=spread<.015;
+ document.getElementById('pref-'+i).innerHTML=`<span class="verdict ${inconclusive?'neutral':fixture.home==='Glentoran'?'own':''}">${inconclusive?'VERY CLOSE · ':''}${recommendation} ${inconclusive?'(weak preference)':'preferred'}</span><span>Maximum probability of finishing <b>${ordinal(chosenPos)}</b> exactly. The alternative outcomes are compared with identical random seeds.</span>`;
+ document.getElementById('impact-'+i).innerHTML=order.map(x=>`<div class="impact-chip ${best.x===x?'best':''}"><strong>${x==='H'?'HOME':x==='D'?'DRAW':'AWAY'}</strong><span>${showPct(metricValue(batch.alts[x]))}</span><small>${deltaText(metricValue(batch.alts[x])-metricValue(batch.base))}</small></div>`).join('')+`<div class="impact-context">PROBABILITY OF FINISHING EXACTLY ${ordinal(chosenPos).toUpperCase()} · change compared with leaving this result open · ${SENSITIVITY_RUNS.toLocaleString('en-GB')} simulations per outcome. Differences under 1.5 pp are too small to treat as decisive.</div>`;
+}
+function renderResultSensitivity(version){
+ const button=document.getElementById('result-model-status');button.textContent='Comparing all 18 results…';
+ let i=0;
+ function next(){
+  if(version!==modelVersion)return;
+  if(i>=fixtures.length){button.textContent='Result guide recalculated · select any score to explore';return}
+  const idx=i++;const context={...selections};delete context[idx];
+  const base=getScenarioMetrics(context);
+  const alts={};for(const x of ['H','D','A'])alts[x]=getScenarioMetrics({...context,[idx]:x});
+  renderRecommendedOutcome(idx,{base,alts});
+  setTimeout(next,0);
+ }
+ setTimeout(next,0);
+}
+function renderFixtures(){
+ renderFixtureGuideSkeleton();
+ renderResultSensitivity(modelVersion);
+}
+function setFocus(f){
+ if(!/^p[1-3]$/.test(f))return;
+ focus=f;
+ for(let n=1;n<=3;n++){const el=document.getElementById('focus-p'+n);el.classList.toggle('active','p'+n===f);el.setAttribute('aria-pressed',String('p'+n===f));}
+ modelVersion++;renderFixtures();
+}
+function setPick(i,pick){
+ if(selections[i]===pick)delete selections[i];else selections[i]=pick;
+ modelVersion++;renderTable();renderFixtures();renderMatchPredictions();renderRunIn();renderCalendar();renderScoreMatrix();
+}
+function resetPicks(){
+ for(const i of Object.keys(selections))delete selections[i];
+ modelVersion++;renderTable();renderFixtures();renderMatchPredictions();renderRunIn();renderCalendar();renderScoreMatrix();
+}
+function renderProbabilities(){
+ // Reuse a single 5,000-run sample for position probabilities and every club's projected final table.
+ forecastResult=simulateSeason(selections,MODEL_RUNS,0x1ADC761,true);
+ updateSeasonProbabilityUI(forecastResult);
+ renderProjection(forecastResult);
+ renderDynamicTargets(forecastResult);renderSplitExplorer(forecastResult);
+}
+function predictionRow(m){
+ const p=predict(m.home,m.away,getTable(),formsFromPicks(selections));
+ const isGlens=m.home==='Glentoran'||m.away==='Glentoran';
+ const score=p.bestScore.join('–');
+ const ps=[p.home,p.draw,p.away];
+ return `<div class="prediction-row ${isGlens?'glens':''}"><div class="pr-date">${dateLabel(m)}</div><div class="pr-clubs"><strong>${m.home}</strong><span>v</span><strong>${m.away}</strong></div><div class="pr-outcomes"><div class="pr-percents"><span>H <b>${pct(p.home)}</b></span><span>D <b>${pct(p.draw)}</b></span><span>A <b>${pct(p.away)}</b></span></div><div class="pr-probbar"><span style="width:${(100*p.home).toFixed(3)}%"></span><span style="width:${(100*p.draw).toFixed(3)}%"></span><span style="width:${(100*p.away).toFixed(3)}%"></span></div></div><div class="pr-score"><strong>${score}</strong><small>Likely score</small></div></div>`;
+}
+function setPredictionFilter(filter){
+ nextPredFilter=filter;
+ for(const x of ['next','month','all']){const el=document.getElementById('pred-'+x);el.classList.toggle('active',x===filter);el.setAttribute('aria-pressed',String(x===filter))}
+ renderMatchPredictions();
+}
+function renderMatchPredictions(){
+ const fixed=pickEntries(selections).map(([idx])=>fixtures[Number(idx)].home+'|'+fixtures[Number(idx)].away+'|'+FIXTURE_DATE);
+ const shown=datedFixtures.filter(m=>!fixed.includes(m.home+'|'+m.away+'|'+m.date));
+ const list=nextPredFilter==='all'?shown:nextPredFilter==='month'?shown.filter(m=>m.date==='TBC'||m.date<='2026-12-13').filter(m=>m.date!=='TBC'):shown.filter(m=>m.date===FIXTURE_DATE);
+ document.getElementById('pred-match-count').textContent=`${list.length} published ${list.length===1?'fixture':'fixtures'} · home/draw/away probabilities`;
+ document.getElementById('all-match-predictions').innerHTML=list.map(predictionRow).join('')||'<p>All the selected fixtures have been fixed as what-if results.</p>';
+}
+function setRunInWindow(scope){
+ runinWindow=scope;for(const x of ['all','five']){const el=document.getElementById('difficulty-'+x);el.classList.toggle('active',x===scope);el.setAttribute('aria-pressed',String(x===scope))}renderRunIn();
+}
+function remainingDifficulties(){
+ const tab=getTable(),fm=formsFromPicks(selections);const fixed=pickEntries(selections).map(([i])=>{
+  const m=fixtures[Number(i)];return m.home+'|'+m.away+'|'+FIXTURE_DATE;
+ });
+ return modelNames.map(name=>{
+  const games=datedFixtures.filter(m=>(m.home===name||m.away===name)&&!fixed.includes(m.home+'|'+m.away+'|'+m.date)).slice(0,runinWindow==='five'?5:undefined);
+  const data=games.map(m=>{
+   const isAway=m.away===name,opp=isAway?m.home:m.away;
+   const raw=ratingFor(tab.find(t=>t.name===opp),fm[opp]).strength;
+   const pred=predict(m.home,m.away,tab,fm);
+   return {opponent:opp,away:isAway,strength:raw,difficulty:Math.max(0,Math.min(100,raw+(isAway?6:-6))),expectedPoints:isAway?pred.expectedPointsAway:pred.expectedPointsHome};
+  });
+  const avg=data.length?data.reduce((s,p)=>s+p.difficulty,0)/data.length:0;
+  const xp=data.reduce((s,p)=>s+p.expectedPoints,0);
+  return {name,avg,fixtures:games.length,averageExpectedPts:data.length?xp/data.length:0,opponents:data};
+ }).sort((a,b)=>b.avg-a.avg);
+}
+function renderRunIn(){
+ const data=remainingDifficulties();
+ document.getElementById('difficulty-lede').textContent=`${runinWindow==='five'?'Next five published fixtures':'All published remaining pre-split fixtures'} · 0–100 difficulty, adjusted for home/away`;
+ document.getElementById('runin-rows').innerHTML=data.map((t,i)=>`<div class="runin-row ${t.name==='Glentoran'?'glens':''}"><span class="run-rank">${String(i+1).padStart(2,'0')}</span><div class="run-team"><strong>${t.name}</strong><small>${t.fixtures} games · ${t.averageExpectedPts.toFixed(2)} expected points/game</small></div><div class="run-bar"><span style="width:${t.avg.toFixed(2)}%"></span></div><strong class="run-value">${t.avg.toFixed(1)}</strong></div>`).join('');
+ const glens=data.find(t=>t.name==='Glentoran');
+ const next=glens.opponents.slice(0,5);
+ document.getElementById('glens-runin').innerHTML=`<div class="runin-glens-label">GLENTORAN · ${glens.avg.toFixed(1)} / 100 difficulty</div>`+next.map((x,i)=>`<div class="runin-mini"><b>${String(i+1).padStart(2,'0')}</b><span>${x.opponent}<small>${x.away?'Away':'Home'} · strength ${x.strength}/100</small></span><strong>${x.difficulty.toFixed(0)}</strong></div>`).join('');
+}
+function resultForm(name){
+ const raw=chronologicalClubLedger[name],mom=calculateMomentum(raw);
+ const last=mom.annotated,curr=last.slice(0,5),prior=last.slice(5,10);
+ const points=gs=>gs.reduce((sum,g)=>sum+ptsForLetter(g.result),0);
+ const goals=(gs,key)=>gs.reduce((sum,g)=>sum+g[key],0);
+ const season=initial.find(t=>t.name===name);
+ return {name,results:last,last5:curr,last10:last,points5:points(curr),points10:points(last),
+  ppg5:points(curr)/Math.max(1,curr.length),ppg10:points(last)/Math.max(1,last.length),
+  weighted:weightedFormPoints(formData[name]),momentum:mom.index,
+  bouncebacks:mom.bouncebacks,recent3:mom.recent3,
+  gf5:goals(curr,'gf'),ga5:goals(curr,'ga'),prevGf5:goals(prior,'gf'),prevGa5:goals(prior,'ga'),seasonPPG:season.pts/season.p};
+}
+function setFormClub(name){formClub=name;renderFormTracker()}
+function momentumClass(v){return v>=65?'up':v<42?'down':'flat'}
+function renderFormTracker(){
+ const form=modelNames.map(resultForm).sort((a,b)=>b.momentum-a.momentum||b.ppg5-a.ppg5);
+ document.getElementById('form-track-rows').innerHTML=form.map(t=>`<tr class="${t.name==='Glentoran'?'featured':''}"><td>${t.name}</td><td><div class="form-seq">${formBadges(t.results.slice(0,5).map(r=>r.result).reverse().join(''))}</div></td><td>${t.points5}<small>/15</small></td><td>${t.points10}<small>/30</small></td><td>${t.gf5}–${t.ga5}</td><td>${t.weighted.toFixed(2)}</td><td><strong class="momentum-index ${momentumClass(t.momentum)}">${t.momentum}</strong></td></tr>`).join('');
+ const t=resultForm(formClub),option=document.getElementById('form-club-select');option.value=formClub;
+ document.getElementById('form-club-title').textContent=formClub.toUpperCase();
+ document.getElementById('form-glens-summary').innerHTML=`<span>${t.ppg5.toFixed(2)}<small>Last 5 PPG</small></span><span>${t.ppg10.toFixed(2)}<small>Last 10 PPG</small></span><span>${t.gf5} : ${t.ga5}<small>Last 5 GF / GA</small></span><span class="${momentumClass(t.momentum)}">${t.momentum}<small>Contextual momentum / 100</small></span><span>${t.bouncebacks}<small>Bounceback wins · last 10</small></span><span>${t.recent3>=0?'+':''}${t.recent3.toFixed(2)}<small>Recent 3 impact (raw)</small></span>`;
+ document.getElementById('form-match-ledger').innerHTML=`<div class="form-ledger-caption">OPPONENT'S POSITION AT KICK-OFF <small>Recent three emphasised</small></div>`+t.results.map((g,i)=>{
+  const rankText=g.oppPlayed===0?'Unranked':ordinal(g.oppRank)+(g.rankConfidence<1?' · early':'');
+  const trend=g.pulse>=0?'up':'down';const impact=(g.pulse>=0?'+':'')+g.pulse.toFixed(2);
+  return `<div class="form-match context-match ${i<3?'recent-three':''}" title="${g.reason}"><time>${g.date.substring(5)}</time><span class="form-badge form-${g.result}">${g.result}</span><strong>${g.gf}–${g.ga}</strong><span class="form-opponent">${g.opponent}<small>${g.venue==='H'?'Home':'Away'} · Opp. ${rankText}</small>${g.bounceback?'<em>BOUNCEBACK</em>':''}${g.doubleDip?'<em class="reversal">REVERSE</em>':''}</span><span class="form-impact ${trend}">${impact}</span></div>`;
+ }).join('');
+ document.getElementById('form-strips').innerHTML=t.results.slice().reverse().map(g=>`<div class="form-goalbar" title="${g.date}: ${g.opponent}, ${g.gf}-${g.ga}; opponents ${ordinal(g.oppRank)} before kick-off"><span class="form-gf" style="height:${Math.max(4,g.gf*13)}px"></span><span class="form-ga" style="height:${Math.max(4,g.ga*13)}px"></span></div>`).join('');
+}
+/* ================== THE OVAL REPORT / FIVE NEW FEATURES ================== */
+// Fixed scoring protocol. This rubric and the updated momentum coefficients are
+// not changed after any historical score is inspected.
+const ACCURACY_PROTOCOL=Object.freeze({correctOutcome:35,exactHome:20,nearHome:8,exactAway:20,nearAway:8,exactMargin:10,nearMargin:4,exactScoreBonus:15});
+let auditFilter='all',auditSort='date',auditResults=null;
+let selectedMatrixFixture='';
+
+// Ratings for the opening match: neutral league-average attack, defence and PPG.
+// There are no pre-season inputs in the underlying Oval model; do not infer any
+// strength from future matches. From each side's first result onwards, use the
+// *same existing ratingFor() and Poisson goal predictor* as the current forecast.
+function walkForwardPrediction(home,away,table,form){
+ const rating=n=>{
+  const t=table[n];
+  if(t.p===0)return {attack:1,defence:1,ppg:1.4,formPPG:1.4,strength:50};
+  return ratingFor(t,form[n],momentumAtState(t,{}));
+ };
+ const h=rating(home),a=rating(away);
+ const expectedHome=Math.max(.20,Math.min(4.5,1.42*1.13*h.attack*a.defence));
+ const expectedAway=Math.max(.20,Math.min(4.5,1.42*.90*a.attack*h.defence));
+ const hp=poissonProbs(expectedHome),ap=poissonProbs(expectedAway);
+ let ph=0,pd=0,pa=0,best=0,bestScore=[0,0];
+ for(let i=0;i<hp.length;i++)for(let j=0;j<ap.length;j++){
+  const prob=hp[i]*ap[j];
+  if(i>j)ph+=prob;else if(j>i)pa+=prob;else pd+=prob;
+  if(prob>best){best=prob;bestScore=[i,j]}
+ }
+ const den=ph+pd+pa;
+ return {home:ph/den,draw:pd/den,away:pa/den,expectedHome,expectedAway,bestScore};
+}
+function resultLetter(h,a){return h>a?'H':h<a?'A':'D'}
+function pointsFromForecast(p,hg,ag){
+ const [ph,pa]=p.bestScore,actual=resultLetter(hg,ag),probPick= p.home>=p.draw&&p.home>=p.away?'H':p.draw>=p.away?'D':'A';
+ const outcomeRight=probPick===actual,exact=ph===hg&&pa===ag;
+ const homeDiff=Math.abs(ph-hg),awayDiff=Math.abs(pa-ag),marginDiff=Math.abs((ph-pa)-(hg-ag));
+ const rewardHome=homeDiff===0?ACCURACY_PROTOCOL.exactHome:homeDiff===1?ACCURACY_PROTOCOL.nearHome:0;
+ const rewardAway=awayDiff===0?ACCURACY_PROTOCOL.exactAway:awayDiff===1?ACCURACY_PROTOCOL.nearAway:0;
+ const rewardMargin=marginDiff===0?ACCURACY_PROTOCOL.exactMargin:marginDiff===1?ACCURACY_PROTOCOL.nearMargin:0;
+ const outcomeReward=outcomeRight?ACCURACY_PROTOCOL.correctOutcome:0;
+ // Exact final score takes precedence if single score mode differs from
+ // plurality 1X2 outcome (mathematically possible with Poisson scores).
+ const score=exact?100:outcomeReward+rewardHome+rewardAway+rewardMargin;
+ const probs=[p.home,p.draw,p.away],oneHot=[Number(actual==='H'),Number(actual==='D'),Number(actual==='A')];
+ const brier=probs.reduce((sum,v,i)=>sum+Math.pow(v-oneHot[i],2),0);
+ return {score,exact,outcomeRight,probPick,actual,brier,
+  detail:exact?'Exact scoreline · 100/100':`Outcome ${outcomeReward}/35 · home goals ${rewardHome}/20 · away goals ${rewardAway}/20 · goal difference ${rewardMargin}/10 · exact-score bonus 0/15`};
+}
+function runHonestBacktest(){
+ const table=Object.fromEntries(modelNames.map(name=>[name,{name,p:0,w:0,d:0,l:0,gf:0,ga:0,pts:0}]));
+ const form=Object.fromEntries(modelNames.map(name=>[name,'']));
+ const chronological=[...RESULT_LEDGER].sort((a,b)=>a[0].localeCompare(b[0])||a[1].localeCompare(b[1]));
+ const audit=[];
+ for(let cursor=0;cursor<chronological.length;){
+  const date=chronological[cursor][0];let end=cursor;
+  while(end<chronological.length&&chronological[end][0]===date)end++;
+  // No results on this calendar date influence another game on the same date.
+  const today=chronological.slice(cursor,end);
+  for(const [date,home,hg,away,ag] of today){
+   const pred=walkForwardPrediction(home,away,table,form);
+   audit.push({date,homeClub:home,hg,awayClub:away,ag,...pred,...pointsFromForecast(pred,hg,ag),matchesKnown:table[home].p+table[away].p});
+  }
+  // Commit the scores only *after* every prediction for this date is frozen.
+  for(const [date,home,hg,away,ag] of today){
+   const h=table[home],a=table[away];h.p++;a.p++;h.gf+=hg;h.ga+=ag;a.gf+=ag;a.ga+=hg;
+   const res=resultLetter(hg,ag);
+   if(res==='H'){h.pts+=3;h.w++;a.l++}else if(res==='A'){a.pts+=3;a.w++;h.l++}else{h.pts++;a.pts++;h.d++;a.d++}
+   form[home]=(form[home]+(res==='H'?'W':res==='D'?'D':'L')).slice(-5);
+   form[away]=(form[away]+(res==='A'?'W':res==='D'?'D':'L')).slice(-5);
+  }
+  cursor=end;
+ }
+ const fields=['p','w','d','l','gf','ga','pts'];
+ const failures=initial.filter(t=>fields.some(k=>table[t.name][k]!==t[k]));
+ if(failures.length)throw Error('Backtest integrity: historical results do not reconcile with actual league table: '+failures.map(x=>x.name).join(', '));
+ return audit;
+}
+function average(xs){return xs.length?xs.reduce((a,b)=>a+b,0)/xs.length:0}
+function setAuditFilter(v){auditFilter=v;for(const k of ['all','glens','others']){const el=document.getElementById('audit-'+k);el.classList.toggle('active',v===k);el.setAttribute('aria-pressed',String(v===k));}drawAuditRows()}
+function setAuditSort(v){auditSort=v;drawAuditRows()}
+function scoreBucket(n){return n>=85?'excellent':n>=65?'good':n>=30?'partial':'poor'}
+function drawAuditRows(){
+ if(!auditResults)return;
+ let matches=auditResults.filter(r=>auditFilter==='glens'?(r.homeClub==='Glentoran'||r.awayClub==='Glentoran'):auditFilter==='others'?(r.homeClub!=='Glentoran'&&r.awayClub!=='Glentoran'):true);
+ matches=matches.slice().sort((a,b)=>auditSort==='best'?b.score-a.score||b.date.localeCompare(a.date):auditSort==='worst'?a.score-b.score||b.date.localeCompare(a.date):b.date.localeCompare(a.date)||a.homeClub.localeCompare(b.homeClub));
+ document.getElementById('audit-count').textContent=matches.length+' of '+auditResults.length+' league matches';
+ document.getElementById('audit-body').innerHTML=matches.map(x=>{
+  const h=(x.homeClub==='Glentoran'||x.awayClub==='Glentoran')?'glens-match':'';
+  const probs=`${Math.round(x.home*100)} / ${Math.round(x.draw*100)} / ${Math.round(x.away*100)}`;
+  return `<tr class="${h}"><td>${x.date.slice(8)} ${x.date.slice(5,7)}/${x.date.slice(2,4)}</td><td><strong>${x.homeClub}</strong><span> v </span><strong>${x.awayClub}</strong></td><td><b>${x.probPick}</b><small>H/D/A ${probs}</small></td><td class="scoreline">${x.bestScore.join('–')}</td><td class="scoreline">${x.hg}–${x.ag}</td><td>${x.outcomeRight?'<span class="audit-hit">CORRECT</span>':'<span class="audit-miss">MISSED</span>'}</td><td><details class="audit-breakdown"><summary><span class="audit-score ${scoreBucket(x.score)}">${x.score}</span><span class="audit-open">Details</span></summary><p>${x.detail}</p></details></td></tr>`;
+ }).join('');
+}
+function renderBacktest(){
+ auditResults=runHonestBacktest();
+ const glens=auditResults.filter(x=>x.homeClub==='Glentoran'||x.awayClub==='Glentoran');
+ const all=auditResults;
+ const mean=average(all.map(x=>x.score)),hit=average(all.map(x=>Number(x.outcomeRight))),exact=all.filter(x=>x.exact).length;
+ const brier=average(all.map(x=>x.brier));
+ const glensMean=average(glens.map(x=>x.score));
+ document.getElementById('audit-summary').innerHTML=`
+ <div><span>MATCHES AUDITED</span><strong>${all.length}</strong><small>Full Premiership to 7 Nov</small></div>
+ <div><span>AVERAGE ACCURACY SCORE</span><strong>${mean.toFixed(1)}<sup>/100</sup></strong><small>All matches · never excluded</small></div>
+ <div><span>1X2 OUTCOME HIT RATE</span><strong>${(hit*100).toFixed(1)}%</strong><small>${all.filter(x=>x.outcomeRight).length} correct</small></div>
+ <div><span>EXACT FULL-TIME SCORES</span><strong>${exact}<sup>/${all.length}</sup></strong><small>${(exact/all.length*100).toFixed(1)}% of games</small></div>
+ <div><span>MEAN BRIER SCORE</span><strong>${brier.toFixed(3)}</strong><small>0 perfect · 2 worst</small></div>
+ <div><span>GLENTORAN-ONLY SCORE</span><strong>${glensMean.toFixed(1)}<sup>/100</sup></strong><small>${glens.length} league matches</small></div>`;
+ const clubData=modelNames.map(name=>{
+  const rs=all.filter(g=>g.homeClub===name||g.awayClub===name);
+  return {name,n:rs.length,mean:average(rs.map(x=>x.score)),hits:rs.filter(x=>x.outcomeRight).length};
+ }).sort((a,b)=>b.mean-a.mean);
+ document.getElementById('audit-club-ranks').innerHTML=clubData.map((t,i)=>`<div class="audit-club ${t.name==='Glentoran'?'highlight':''}"><span>${i+1}.</span><strong>${t.name}</strong><span>${t.mean.toFixed(1)}/100</span><small>${t.hits}/${t.n} outcomes</small></div>`).join('');
+ document.getElementById('audit-integrity').innerHTML='<strong>CHECKED:</strong> 87/87 results reconstitute all 12 clubs’ current played, W/D/L, GF/GA and points totals exactly. Matches played on the same date use the identical pre-match information set. <strong>BENCHMARK:</strong> Always selecting a home win would have been right in 38/87 matches (43.7%); an equal-probability 1X2 forecast has Brier score 0.667. <strong>RULE:</strong> An exact predicted full-time score earns 100 points even if the separately calculated most likely 1X2 outcome differs.';
+ drawAuditRows();
+}
+
+function buildScoreMatrixOptions(){
+ const next=datedFixtures.filter(f=>f.home==='Glentoran'||f.away==='Glentoran');
+ const select=document.getElementById('matrix-fixture');
+ select.innerHTML=next.map((f,i)=>`<option value="${i}">${f.date==='TBC'?'Date TBC':f.date.slice(8)+'/'+f.date.slice(5,7)} · ${f.home} v ${f.away}</option>`).join('');
+}
+function renderScoreMatrix(){
+ const list=datedFixtures.filter(f=>f.home==='Glentoran'||f.away==='Glentoran');
+ const ix=Number(document.getElementById('matrix-fixture').value)||0;
+ const fixture=list[Math.min(ix,list.length-1)];if(!fixture)return;
+ const pred=predict(fixture.home,fixture.away,getTable(),formsFromPicks(selections));
+ const hp=poissonProbs(pred.expectedHome),ap=poissonProbs(pred.expectedAway);
+ const best=pred.bestScore;
+ let sum=0;
+ const cells=[];
+ for(let h=0;h<=5;h++){
+  const row=[];
+  for(let a=0;a<=5;a++){const p=hp[h]*ap[a];sum+=p;row.push({p,home:h,away:a})}
+  cells.push(row);
+ }
+ document.getElementById('matrix-key').textContent='ROWS: '+fixture.home.toUpperCase()+' GOALS · COLUMNS: '+fixture.away.toUpperCase()+' GOALS';
+ document.getElementById('matrix-stats').innerHTML=`<div><small>HOME / DRAW / AWAY</small><strong>${pct(pred.home)} / ${pct(pred.draw)} / ${pct(pred.away)}</strong></div><div><small>EXPECTED GOALS</small><strong>${pred.expectedHome.toFixed(2)} – ${pred.expectedAway.toFixed(2)}</strong></div><div><small>TOP INDIVIDUAL SCORE</small><strong>${best.join('–')}</strong></div><div><small>SCORELINES ABOVE 5 GOALS</small><strong>${((1-sum)*100).toFixed(2)}%</strong></div>`;
+ document.getElementById('matrix-grid').innerHTML=`<table class="matrix-table"><thead><tr><th>HOME ↓ / AWAY →</th>${Array.from({length:6},(_,i)=>`<th>${i}</th>`).join('')}</tr></thead><tbody>${cells.map((row,h)=>`<tr><th>${h}</th>${row.map(({p,away})=>`<td class="${h===best[0]&&away===best[1]?'matrix-best':''}" style="--intensity:${Math.min(1,p/.23).toFixed(3)}" title="${fixture.home} ${h}–${away} ${fixture.away}: ${(p*100).toFixed(2)}%">${(p*100).toFixed(1)}<small>%</small></td>`).join('')}</tr>`).join('')}</tbody></table>`;
+}
+function renderDynamicTargets(sim){
+ const glens=getTable().find(t=>t.name==='Glentoran');
+ const rem=38-glens.p;
+ const goals=[
+  {pos:1,name:'League championship',desc:'Estimated points achieved by the champion in each simulation.'},
+  {pos:2,name:'2nd · Direct Europe',desc:'The runner-up position, subject to UEFA access and licence.'},
+  {pos:3,name:'3rd · Higher play-off route',desc:'May become direct Europe depending on the Irish Cup winner.'},
+  {pos:6,name:'6th · Top-six place',desc:'Keeps a potential European play-off route open.'}
+ ];
+ document.getElementById('target-list').innerHTML=goals.map((t,i)=>{
+  const q=sim.pointThresholds[t.pos-1];const need=Math.max(0,q.median-glens.pts);
+  const ppg=rem?need/rem:0,feasible=need<=3*rem;
+  const actualChance=sim.glens.slice(0,t.pos).reduce((a,b)=>a+b,0);
+  return `<div class="target-row dynamic-target"><div><div class="target-name">${t.name}</div><div class="target-desc">${t.desc} · Top-${t.pos} chance: ${showPct(actualChance)}</div></div><div class="target-number">${q.median}<small>Median pts · ${q.low}–${q.high} range</small></div><div class="target-progress"><div class="target-meter-label"><span>${glens.pts} POINTS HELD</span><span>${need} more needed to median</span></div><div class="target-meter"><span style="width:${Math.min(100,100*glens.pts/Math.max(q.median,1))}%"></span></div><p>${feasible?`${ppg.toFixed(2)} points per remaining match to reach the median`:'Median target is now mathematically out of reach'}. <strong>Position is not guaranteed at this points total.</strong></p></div></div>`;
+ }).join('');
+}
+function renderSplitExplorer(sim){
+ const split=sim.split;
+ document.getElementById('split-glens-prob').textContent=showPct(split.glensTopSix);
+ document.getElementById('split-opponent-list').innerHTML=split.opponents.slice(0,7).map(x=>`<div class="split-opponent"><span>${x.name}</span><b>${showPct(x.probability)}</b></div>`).join('');
+ document.getElementById('split-groups').innerHTML=split.combinations.map((x,i)=>`<div class="split-group"><div><small>${String(i+1).padStart(2,'0')} / TOP-SIX COMBINATION</small><strong>${x.teams.join(' · ')}</strong></div><span>${showPct(x.probability)}</span></div>`).join('');
+}
+/* ================== END FIVE NEW FEATURES ================== */
+
+/* =================== END PRIORITY ONE =================== */
+
+buildScoreMatrixOptions();
+renderMatchPanels();
+renderCalendar();
+renderTable();
+renderMatchPredictions();
+renderRunIn();
+renderFormTracker();
+renderScoreMatrix();
+renderBacktest();
+renderFixtures();
+
+</script>
+</body>
+</html>

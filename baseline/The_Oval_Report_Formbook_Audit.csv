@@ -1,0 +1,175 @@
+﻿date,club,opponent,home_or_away,club_position_before_matchday,opponent_position_before_matchday,club_matches_before,opponent_matches_before,rank_confidence,goals_for,goals_against,result,momentum_pulse,bounceback_win,repeated_setback_after_recovery,momentum_index_after_game,explanation
+2026-08-08,Linfield,Ballymena United,H,10,2,0,0,0,0,3,L,-0.94,False,False,23,Defeat: bigger setback against lower-ranked opposition
+2026-08-15,Linfield,Glentoran,H,12,3,1,1,0.25,2,1,W,1.74114,True,False,67,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-21,Linfield,Cliftonville,H,8,1,2,2,0.5,1,0,W,1.36864,False,False,77,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-29,Linfield,Limavady United,A,7,10,3,2,0.5,2,0,W,1.24955,False,False,83,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-05,Linfield,Carrick Rangers,H,5,2,4,4,1,1,0,W,1.62,False,False,87,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-12,Linfield,Dungannon Swifts,A,3,2,5,5,1,1,0,W,1.58364,False,False,90,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-15,Linfield,Portadown,A,2,12,6,6,1,1,1,D,-0.59636,False,False,72,Draw against comparable or lower-ranked opposition
+2026-09-19,Linfield,Crusaders,H,2,5,7,7,1,1,0,W,1.64182,True,False,79,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-25,Linfield,Coleraine,A,2,1,8,8,1,3,1,W,1.41818,False,False,82,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-10,Linfield,Bangor,H,2,11,9,10,1,2,0,W,1.15455,False,False,84,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-17,Linfield,Carrick Rangers,A,2,5,10,11,1,2,2,D,-0.29091,False,False,72,Draw against comparable or lower-ranked opposition
+2026-10-20,Linfield,Larne,A,2,4,11,8,1,2,1,W,1.67636,True,False,79,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-23,Linfield,Portadown,A,2,11,12,12,1,2,1,W,1.05455,False,False,79,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-31,Linfield,Dungannon Swifts,H,2,9,13,12,1,1,1,D,-0.46545,False,False,68,Draw against comparable or lower-ranked opposition
+2026-11-07,Linfield,Coleraine,H,2,1,14,14,1,3,0,W,1.79818,True,False,76,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-08,Coleraine,Dungannon Swifts,A,5,6,0,0,0,3,1,W,1.11,False,False,82,"Win: always positive, stronger opposition adds credit"
+2026-08-15,Coleraine,Larne,H,2,7,1,0,0,0,0,D,-0.16,False,False,61,Draw against comparable or lower-ranked opposition
+2026-08-22,Coleraine,Carrick Rangers,A,5,3,2,2,0.5,2,0,W,1.46864,True,False,75,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-28,Coleraine,Portadown,A,1,10,3,3,0.75,3,0,W,1.11932,False,False,77,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-05,Coleraine,Crusaders,H,1,4,4,4,1,4,1,W,1.39636,False,False,83,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-11,Coleraine,Ballymena United,H,1,9,5,4,1,3,2,W,1.32364,False,False,85,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-15,Coleraine,Glentoran,A,1,8,6,6,1,2,1,W,1.35818,False,False,86,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-19,Coleraine,Limavady United,H,1,9,7,6,1,1,0,W,1.32364,False,False,87,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-25,Coleraine,Linfield,H,1,2,8,8,1,1,3,L,-0.99,False,False,67,Defeat: bigger setback against lower-ranked opposition
+2026-10-04,Coleraine,Bangor,A,1,11,9,9,1,3,2,W,1.71455,True,False,76,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-10,Coleraine,Cliftonville,H,1,9,10,10,1,1,0,W,1.12364,False,False,77,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-16,Coleraine,Larne,A,1,3,11,7,1,3,2,W,1.43091,False,False,84,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-24,Coleraine,Crusaders,A,2,7,12,12,1,5,0,W,1.39273,False,False,85,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-30,Coleraine,Glentoran,H,1,4,13,12,1,1,1,D,-0.29091,False,False,73,Draw against comparable or lower-ranked opposition
+2026-11-07,Coleraine,Linfield,A,1,2,14,14,1,0,3,L,-1.22,False,False,54,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-08-15,Larne,Coleraine,A,7,2,0,1,0,0,0,D,-0.16,False,False,45,Draw against comparable or lower-ranked opposition
+2026-09-04,Larne,Glentoran,H,9,6,1,4,0.25,2,1,W,1.40795,True,False,71,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-08,Larne,Bangor,H,8,10,2,4,0.5,1,0,W,1.14955,False,False,77,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-12,Larne,Portadown,A,7,12,3,5,0.75,2,0,W,1.1675,False,False,81,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-15,Larne,Cliftonville,H,5,3,4,6,1,2,0,W,1.56727,False,False,85,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-19,Larne,Carrick Rangers,A,3,7,5,7,1,5,2,W,1.39273,False,False,87,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-10,Larne,Crusaders,A,4,5,6,10,1,3,0,W,1.46182,False,False,89,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-16,Larne,Coleraine,H,3,1,7,11,1,2,3,L,-0.88909,False,False,69,Defeat: bigger setback against lower-ranked opposition
+2026-10-20,Larne,Linfield,H,4,2,8,11,1,1,2,L,-1.11909,False,False,52,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-24,Larne,Bangor,A,4,12,9,12,1,2,1,W,1.68,True,False,65,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-27,Larne,Limavady United,H,3,10,10,12,1,1,1,D,-0.94545,False,True,54,Draw against comparable or lower-ranked opposition · recovery followed by setback
+2026-10-30,Larne,Portadown,H,3,11,11,13,1,1,0,W,1.43455,True,False,66,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-11-06,Larne,Cliftonville,A,3,5,12,14,1,2,4,L,-1.52,False,True,47,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-08-08,Glentoran,Limavady United,H,7,9,0,0,0,2,0,W,1.11,False,False,82,"Win: always positive, stronger opposition adds credit"
+2026-08-15,Glentoran,Linfield,A,3,12,1,1,0.25,1,2,L,-1.0525,False,False,46,Defeat: bigger setback against lower-ranked opposition
+2026-08-21,Glentoran,Ballymena United,A,5,4,2,2,0.5,2,0,W,1.72227,True,False,70,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-29,Glentoran,Crusaders,H,3,4,3,3,0.75,1,2,L,-1.4575,False,True,45,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-09-04,Glentoran,Larne,A,6,9,4,1,0.25,1,2,L,-1.2075,False,False,36,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-12,Glentoran,Bangor,H,8,10,5,5,1,1,1,D,-0.65727,False,False,31,Draw against comparable or lower-ranked opposition · successive poor result
+2026-09-15,Glentoran,Coleraine,H,8,1,6,6,1,1,2,L,-1.17182,False,False,28,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-19,Glentoran,Cliftonville,A,8,4,7,7,1,2,1,W,1.82909,True,False,51,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-26,Glentoran,Carrick Rangers,H,7,8,8,8,1,2,0,W,1.15818,False,False,62,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-03,Glentoran,Dungannon Swifts,H,5,6,9,8,1,2,0,W,1.32727,False,False,72,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-09,Glentoran,Portadown,A,4,12,10,10,1,0,0,D,-0.50909,False,False,59,Draw against comparable or lower-ranked opposition
+2026-10-17,Glentoran,Limavady United,H,4,10,11,10,1,1,0,W,1.46909,True,False,69,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-30,Glentoran,Coleraine,A,4,1,12,13,1,1,1,D,-0.24909,False,True,60,Draw against higher-ranked opposition · recovery followed by setback
+2026-11-07,Glentoran,Carrick Rangers,A,5,6,13,14,1,0,0,D,-0.43364,False,False,55,Draw against comparable or lower-ranked opposition · successive poor result
+2026-08-07,Cliftonville,Crusaders,H,4,6,0,0,0,2,1,W,1.11,False,False,82,"Win: always positive, stronger opposition adds credit"
+2026-08-15,Cliftonville,Bangor,A,4,6,1,0,0,3,0,W,1.41,False,False,87,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-21,Cliftonville,Linfield,A,1,8,2,2,0.5,0,1,L,-1.115,False,False,57,Defeat: bigger setback against lower-ranked opposition
+2026-08-29,Cliftonville,Dungannon Swifts,H,2,5,3,3,0.75,0,2,L,-1.2825,False,False,39,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-05,Cliftonville,Portadown,H,7,11,4,4,1,3,1,W,1.71455,True,False,58,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-12,Cliftonville,Carrick Rangers,A,4,5,5,5,1,3,1,W,1.26182,False,False,69,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-15,Cliftonville,Larne,A,3,5,6,4,1,0,2,L,-1.04,False,False,56,Defeat: bigger setback against lower-ranked opposition
+2026-09-19,Cliftonville,Glentoran,H,4,8,7,7,1,1,2,L,-1.37,False,False,40,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-26,Cliftonville,Limavady United,A,5,10,8,7,1,0,1,L,-1.6,False,False,28,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-03,Cliftonville,Ballymena United,H,7,9,9,8,1,0,1,L,-1.45,False,False,22,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-10,Cliftonville,Coleraine,A,9,1,10,10,1,0,1,L,-1.14636,False,False,20,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-17,Cliftonville,Portadown,H,9,11,11,11,1,1,2,L,-1.45,False,False,16,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-24,Cliftonville,Dungannon Swifts,A,9,8,12,11,1,3,1,W,1.63636,True,False,41,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-31,Cliftonville,Carrick Rangers,H,7,5,13,13,1,7,1,W,1.29818,False,False,56,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-11-06,Cliftonville,Larne,H,5,3,14,12,1,4,2,W,1.46727,False,False,68,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-08,Carrick Rangers,Portadown,H,4,11,0,0,0,1,0,W,1.11,False,False,82,"Win: always positive, stronger opposition adds credit"
+2026-08-15,Carrick Rangers,Limavady United,A,5,11,1,1,0.25,2,1,W,1.37114,False,False,87,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-22,Carrick Rangers,Coleraine,H,3,5,2,2,0.5,0,2,L,-0.99,False,False,58,Defeat: bigger setback against lower-ranked opposition
+2026-08-29,Carrick Rangers,Bangor,A,6,11,3,2,0.5,4,0,W,1.79227,True,False,74,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-05,Carrick Rangers,Linfield,A,2,5,4,4,1,0,1,L,-1.57,False,True,49,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-09-12,Carrick Rangers,Cliftonville,H,5,4,5,5,1,1,3,L,-1.14455,False,False,39,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-15,Carrick Rangers,Ballymena United,A,6,9,6,5,1,1,1,D,-0.70091,False,False,33,Draw against comparable or lower-ranked opposition · successive poor result
+2026-09-19,Carrick Rangers,Larne,H,7,3,7,5,1,2,5,L,-1.24818,False,False,29,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-26,Carrick Rangers,Glentoran,A,8,7,8,8,1,0,2,L,-1.32455,False,False,24,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-03,Carrick Rangers,Crusaders,H,8,4,9,9,1,4,0,W,1.82909,True,False,48,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-10,Carrick Rangers,Dungannon Swifts,A,6,7,10,9,1,4,2,W,1.19273,False,False,59,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-17,Carrick Rangers,Linfield,H,5,2,11,10,1,2,2,D,0.23091,False,False,60,Draw against higher-ranked opposition
+2026-10-24,Carrick Rangers,Limavady United,H,5,10,12,11,1,1,1,D,-0.60818,False,False,50,Draw against comparable or lower-ranked opposition · successive poor result
+2026-10-31,Carrick Rangers,Cliftonville,A,5,7,13,13,1,1,7,L,-1.45,False,False,36,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-11-07,Carrick Rangers,Glentoran,H,6,5,14,13,1,0,0,D,-0.34636,False,False,37,Draw against higher-ranked opposition · successive poor result
+2026-08-08,Dungannon Swifts,Coleraine,H,6,5,0,0,0,1,3,L,-0.94,False,False,23,Defeat: bigger setback against lower-ranked opposition
+2026-08-15,Dungannon Swifts,Portadown,A,10,9,1,1,0.25,1,0,W,1.65295,True,False,66,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-22,Dungannon Swifts,Bangor,H,8,12,2,1,0.25,2,0,W,1.1625,False,False,73,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-29,Dungannon Swifts,Cliftonville,A,5,2,3,3,0.75,2,0,W,1.4675,False,False,83,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-05,Dungannon Swifts,Limavady United,A,3,10,4,3,0.75,2,0,W,1.31932,False,False,84,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-12,Dungannon Swifts,Linfield,H,2,3,5,5,1,0,1,L,-0.99,False,False,63,Defeat: bigger setback against lower-ranked opposition
+2026-09-15,Dungannon Swifts,Crusaders,A,4,7,6,6,1,0,3,L,-1.32,False,False,46,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-19,Dungannon Swifts,Ballymena United,H,6,10,7,6,1,1,1,D,-0.74455,False,False,39,Draw against comparable or lower-ranked opposition · successive poor result
+2026-10-03,Dungannon Swifts,Glentoran,A,6,5,8,9,1,0,2,L,-1.32455,False,False,31,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-10,Dungannon Swifts,Carrick Rangers,H,7,6,9,10,1,2,4,L,-1.32455,False,False,26,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-17,Dungannon Swifts,Bangor,A,7,12,10,11,1,0,0,D,-0.78818,False,False,27,Draw against comparable or lower-ranked opposition · successive poor result
+2026-10-24,Dungannon Swifts,Cliftonville,H,8,9,11,12,1,1,3,L,-1.4,False,False,22,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-31,Dungannon Swifts,Linfield,A,9,2,12,13,1,1,1,D,0.15545,False,False,31,Draw against higher-ranked opposition · successive poor result
+2026-11-07,Dungannon Swifts,Limavady United,H,9,10,13,14,1,3,2,W,1.26909,True,False,47,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-07,Crusaders,Cliftonville,A,6,4,0,0,0,1,2,L,-0.94,False,False,23,Defeat: bigger setback against lower-ranked opposition
+2026-08-15,Crusaders,Ballymena United,H,8,1,1,1,0.25,2,1,W,1.74932,True,False,67,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-08-22,Crusaders,Portadown,H,7,10,2,2,0.5,3,2,W,1.14955,False,False,74,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-29,Crusaders,Glentoran,A,4,3,3,3,0.75,2,1,W,1.41432,False,False,83,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-05,Crusaders,Coleraine,A,4,1,4,4,1,1,4,L,-0.86364,False,False,62,Defeat: bigger setback against lower-ranked opposition
+2026-09-12,Crusaders,Limavady United,H,6,11,5,4,1,1,2,L,-1.42,False,False,43,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-15,Crusaders,Dungannon Swifts,H,7,4,6,6,1,3,0,W,2.01091,True,False,62,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-19,Crusaders,Linfield,A,5,2,7,7,1,0,1,L,-1.34364,False,True,48,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-09-26,Crusaders,Bangor,H,6,11,8,8,1,2,1,W,1.71455,True,False,65,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-03,Crusaders,Carrick Rangers,A,4,8,9,9,1,0,4,L,-1.62,False,True,45,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-10-10,Crusaders,Larne,H,5,4,10,6,1,0,3,L,-1.14455,False,False,39,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-17,Crusaders,Ballymena United,A,6,8,11,10,1,1,2,L,-1.45,False,False,26,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-24,Crusaders,Coleraine,H,7,2,12,12,1,0,5,L,-1.22273,False,False,23,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-31,Crusaders,Limavady United,A,8,10,13,13,1,4,1,W,1.54909,True,False,44,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-11-07,Crusaders,Bangor,A,7,11,14,14,1,0,1,L,-1.62,False,True,33,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-08-08,Ballymena United,Linfield,A,2,10,0,0,0,3,0,W,1.11,False,False,82,"Win: always positive, stronger opposition adds credit"
+2026-08-15,Ballymena United,Crusaders,A,1,8,1,1,0.25,1,2,L,-1.0275,False,False,47,Defeat: bigger setback against lower-ranked opposition
+2026-08-21,Ballymena United,Glentoran,H,4,5,2,2,0.5,0,2,L,-1.195,False,False,33,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-05,Ballymena United,Bangor,A,9,12,3,3,0.75,2,2,D,-0.66818,False,False,30,Draw against comparable or lower-ranked opposition · successive poor result
+2026-09-11,Ballymena United,Coleraine,A,9,1,4,5,1,2,3,L,-1.14636,False,False,26,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-15,Ballymena United,Carrick Rangers,H,9,6,5,6,1,1,1,D,-0.17909,False,False,32,Draw against higher-ranked opposition · successive poor result
+2026-09-19,Ballymena United,Dungannon Swifts,A,10,6,6,7,1,1,1,D,-0.09545,False,False,37,Draw against higher-ranked opposition · successive poor result
+2026-09-26,Ballymena United,Portadown,H,9,12,7,8,1,2,0,W,1.2,True,False,53,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-03,Ballymena United,Cliftonville,A,9,7,8,9,1,1,0,W,1.22909,False,False,63,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-10-10,Ballymena United,Limavady United,A,8,10,9,9,1,2,3,L,-1.04,False,False,51,Defeat: bigger setback against lower-ranked opposition
+2026-10-17,Ballymena United,Crusaders,H,8,6,10,11,1,2,1,W,1.92364,True,False,65,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-31,Ballymena United,Bangor,H,6,12,11,13,1,0,1,L,-1.72,False,True,46,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-11-07,Ballymena United,Portadown,A,8,12,12,14,1,1,1,D,-0.56455,False,False,43,Draw against comparable or lower-ranked opposition · successive poor result
+2026-08-08,Limavady United,Glentoran,A,9,7,0,0,0,0,2,L,-0.94,False,False,23,Defeat: bigger setback against lower-ranked opposition
+2026-08-15,Limavady United,Carrick Rangers,H,11,5,1,1,0.25,1,2,L,-1.13182,False,False,20,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-08-29,Limavady United,Linfield,H,10,7,2,3,0.5,0,2,L,-1.31182,False,False,16,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-05,Limavady United,Dungannon Swifts,H,10,3,3,4,0.75,0,2,L,-1.21636,False,False,15,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-12,Limavady United,Crusaders,A,11,6,4,5,1,2,1,W,1.77818,True,False,46,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-15,Limavady United,Bangor,H,10,11,5,6,1,3,1,W,1.05455,False,False,59,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-09-19,Limavady United,Coleraine,A,9,1,6,7,1,0,1,L,-0.73636,False,False,51,Defeat: bigger setback against lower-ranked opposition
+2026-09-26,Limavady United,Cliftonville,H,10,5,7,8,1,1,0,W,2.01273,True,False,66,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-03,Limavady United,Portadown,A,10,12,8,9,1,1,3,L,-1.52,False,True,48,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-10-10,Limavady United,Ballymena United,H,10,8,9,9,1,3,2,W,1.85455,True,False,65,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-17,Limavady United,Glentoran,A,10,4,10,11,1,0,1,L,-1.26727,False,True,48,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-10-24,Limavady United,Carrick Rangers,A,10,5,11,12,1,1,1,D,0.16818,False,False,52,Draw against higher-ranked opposition · successive poor result
+2026-10-27,Limavady United,Larne,A,10,3,12,10,1,1,1,D,0.15545,False,False,52,Draw against higher-ranked opposition · successive poor result
+2026-10-31,Limavady United,Crusaders,H,10,8,13,13,1,1,4,L,-1.29909,False,False,42,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-11-07,Limavady United,Dungannon Swifts,A,10,9,14,13,1,2,3,L,-1.32455,False,False,32,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-08-15,Bangor,Cliftonville,H,6,4,0,1,0,0,3,L,-0.94,False,False,23,Defeat: bigger setback against lower-ranked opposition
+2026-08-22,Bangor,Dungannon Swifts,A,12,8,1,2,0.25,0,2,L,-1.14455,False,False,19,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-08-29,Bangor,Carrick Rangers,H,11,6,2,3,0.5,0,4,L,-1.28636,False,False,16,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-05,Bangor,Ballymena United,H,12,9,3,3,0.75,2,2,D,-0.24182,False,False,26,Draw against higher-ranked opposition · successive poor result
+2026-09-08,Bangor,Larne,A,10,8,4,2,0.5,0,1,L,-1.32455,False,False,22,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-12,Bangor,Glentoran,A,10,8,5,5,1,1,1,D,-0.26273,False,False,29,Draw against higher-ranked opposition · successive poor result
+2026-09-15,Bangor,Limavady United,A,11,10,6,5,1,1,3,L,-1.32455,False,False,23,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-19,Bangor,Portadown,H,11,12,7,7,1,3,1,W,1.48,True,False,45,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-09-26,Bangor,Crusaders,A,11,6,8,8,1,1,2,L,-1.29273,False,True,35,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-10-04,Bangor,Coleraine,H,11,1,9,9,1,2,3,L,-0.91545,False,False,32,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-10,Bangor,Linfield,A,11,2,10,9,1,0,2,L,-1.12091,False,False,26,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-17,Bangor,Dungannon Swifts,H,12,7,11,10,1,0,0,D,-0.01182,False,False,34,Draw against higher-ranked opposition · successive poor result
+2026-10-24,Bangor,Larne,H,12,4,12,9,1,1,2,L,-1.14636,False,False,29,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-31,Bangor,Ballymena United,A,12,6,13,11,1,1,0,W,1.79636,True,False,51,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-11-07,Bangor,Crusaders,H,11,7,14,14,1,1,0,W,1.26545,False,False,62,"Win: always positive, stronger opposition adds credit · winning run reinforced"
+2026-08-08,Portadown,Carrick Rangers,A,11,4,0,0,0,0,1,L,-0.94,False,False,23,Defeat: bigger setback against lower-ranked opposition
+2026-08-15,Portadown,Dungannon Swifts,H,9,10,1,1,0.25,0,1,L,-1.1825,False,False,19,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-08-22,Portadown,Crusaders,A,10,7,2,2,0.5,2,3,L,-1.31182,False,False,16,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-08-28,Portadown,Coleraine,H,10,1,3,3,0.75,0,3,L,-1.17818,False,False,15,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-05,Portadown,Cliftonville,A,11,7,4,4,1,1,3,L,-1.24818,False,False,15,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-12,Portadown,Larne,H,12,7,5,3,0.75,0,2,L,-1.25455,False,False,15,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-15,Portadown,Linfield,H,12,2,6,6,1,1,1,D,0.40636,False,False,30,Draw against higher-ranked opposition · successive poor result
+2026-09-19,Portadown,Bangor,A,12,11,7,7,1,1,3,L,-1.32455,False,False,25,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-09-26,Portadown,Ballymena United,A,12,9,8,7,1,0,2,L,-1.27364,False,False,22,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-10-03,Portadown,Limavady United,H,12,10,9,8,1,3,1,W,1.58545,True,False,42,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-09,Portadown,Glentoran,H,12,4,10,10,1,0,0,D,0.16909,False,True,47,Draw against higher-ranked opposition · recovery followed by setback
+2026-10-17,Portadown,Cliftonville,A,11,9,11,11,1,2,1,W,1.34,True,False,61,"Win: always positive, stronger opposition adds credit · BOUNCEBACK bonus"
+2026-10-23,Portadown,Linfield,H,11,2,12,12,1,1,2,L,-1.19091,False,True,47,Defeat: bigger setback against lower-ranked opposition · recovery followed by setback
+2026-10-30,Portadown,Larne,A,11,3,13,11,1,0,1,L,-0.96636,False,False,40,Defeat: bigger setback against lower-ranked opposition · successive poor result
+2026-11-07,Portadown,Ballymena United,H,12,8,14,12,1,1,1,D,-0.09545,False,False,40,Draw against higher-ranked opposition · successive poor result
