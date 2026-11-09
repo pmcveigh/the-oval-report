@@ -1,0 +1,11 @@
+{
+  "name": "the-oval-report-offline-tests",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "test": "node tests/test_engine.cjs && node tests/test_dom.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

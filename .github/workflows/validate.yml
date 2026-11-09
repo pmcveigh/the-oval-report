@@ -1,0 +1,25 @@
+name: Validate offline report
+on: [push, pull_request]
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+      - run: python -m pip install -r requirements.txt
+      - run: npm ci --ignore-scripts
+      - run: PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python -m oval build
+      - run: PYTHONPATH=src OPENBLAS_NUM_THREADS=1 python -m unittest discover -s tests -v
+      - run: npm test
+      - run: python scripts/package.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: The-Oval-Report
+          path: |
+            The_Oval_Report.html
+            work/The_Oval_Report_bundle.zip
