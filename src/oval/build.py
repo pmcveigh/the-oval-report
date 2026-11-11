@@ -105,13 +105,15 @@ def build(results_path=None,fixtures_path=None,as_of=None,provenance_path=None,r
                  production=production,goal_model=goal_model,previous=previous,previous_models=previous_models,manifest=manifest,
                  exports={p.name:p.read_text(encoding='utf-8-sig') for p in sorted((ROOT/'exports').glob('*.csv'))})
     write_json(ROOT/'data/canonical/dashboard.json',payload)
-    template=(ROOT/'web/template.html').read_text()
     css=(ROOT/'web/style.css').read_text()+'\n'+(ROOT/'web/overrides.css').read_text()
-    # Escaping prevents an imported club/source string terminating the inline JSON script.
+    # Escape imported text before embedding the unchanged shared data in either offline page.
     data_json=json.dumps(payload,separators=(',',':'),allow_nan=False).replace('<','\\u003c').replace('\u2028','\\u2028').replace('\u2029','\\u2029')
-    output=template.replace('/* STYLE */',css).replace('/* DATA */',data_json).replace('/* ENGINE */',(ROOT/'web/engine.js').read_text()).replace('/* UI */',(ROOT/'web/ui.js').read_text())
-    (ROOT/'The_Oval_Report.html').write_text(output)
-    (ROOT/'dist').mkdir(exist_ok=True); (ROOT/'dist/index.html').write_text(output)
+    (ROOT/'dist').mkdir(exist_ok=True)
+    for source,filename,distname in [('template.html','The_Oval_Report.html','index.html'),('all-clubs.html','All_Clubs_Predictions.html','All_Clubs_Predictions.html')]:
+        template=(ROOT/'web'/source).read_text()
+        output=template.replace('/* STYLE */',css).replace('/* DATA */',data_json).replace('/* ENGINE */',(ROOT/'web/engine.js').read_text()).replace('/* UI */',(ROOT/'web/ui.js').read_text())
+        (ROOT/filename).write_text(output)
+        (ROOT/'dist'/distname).write_text(output.replace('href="The_Oval_Report.html"','href="index.html"'))
     engineering_report(evaluation,manifest)
     return payload
 

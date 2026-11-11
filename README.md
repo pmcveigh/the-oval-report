@@ -1,11 +1,30 @@
 # The Oval Report
 
-Open **`The_Oval_Report.html`** directly. It contains its own CSS, JavaScript, data,
-model parameters and CSV downloads; no installation or internet connection is needed
-to use the dashboard. Source data cover the supplied 2026/27 snapshot through
+Open **`The_Oval_Report.html`** for the Glentoran dashboard. Keep
+**`All_Clubs_Predictions.html`** beside it: the compact navigation links the two pages.
+Each page embeds its own CSS, JavaScript, data, model parameters and CSV downloads;
+no installation or internet connection is needed to use the report. You can also
+serve the project with `python -m http.server 8000` and open
+`http://localhost:8000/The_Oval_Report.html`. The build writes the hosted pair to
+`dist/index.html` and `dist/All_Clubs_Predictions.html`, with matching return links. Source data cover the supplied 2026/27 snapshot through
 7 November 2026. Opening the HTML does **not** refresh it.
 
-The supplied Glentoran editorial design and all principal panels are retained.
+The compact Glentoran overview shows the next fixture, result prediction, win/draw/loss
+chances, latest result, form, position, points and goal difference above the fold at
+1366 × 768 and 1920 × 1080. Hash-addressable tabs keep fixtures, form, scenarios,
+score chances, Glentoran's historical prediction record and exports accessible.
+The season tab pairs the projected league table with Glentoran's finishing chances;
+points targets and split details expand below. Current summary statistics stay factual
+when a hypothetical result changes the scenario table. Assumed results follow navigation
+between the two pages when session storage is available; storage is optional.
+
+All-club match predictions, the full historical record and model comparisons are on
+the separate all-clubs page, together with club form and league fixture filters.
+Long lists use pages of 12 matches. The information buttons support hover, keyboard
+focus, Enter/Space, Escape, tapping, closing and outside-click dismissal. Their content
+stays within the viewport. Important data and competition warnings remain visible.
+Predicted goals refer to the scoring model, not shot-based xG. Data, fitting,
+simulation and historical exports are unchanged by this presentation redesign.
 `baseline/` preserves the original HTML, build brief and both audits unchanged.
 The original reference is a reconstructed backtest, not a published prediction record.
 
@@ -37,11 +56,27 @@ npm ci --ignore-scripts --cache work/npm-cache
 npm test
 ```
 
-DOM tests exercise real event handlers, selections/reset, all filters, matrix, audit
-coverage, projections and download actions. They do not substitute for browser
-rendering or mobile layout checks. The managed preview relay and Chrome's local-file
-policy blocked browser inspection in this session; cross-browser compatibility and
-visual layout remain unverified.
+DOM tests exercise both pages, real event handlers, selections/reset, filters,
+pagination across all 87 historical matches and 111 remaining fixtures, matrix,
+projections, Glentoran-only scope, navigation and download actions.
+
+Browser checks require Playwright and Chromium, independently of the offline app:
+
+```sh
+# With the static server running:
+node tests/test_browser.cjs
+# Optional: OVAL_BASE_URL=http://localhost:8000 CHROMIUM_PATH=/path/to/chromium
+```
+
+Chromium rendering and interaction were tested at 1366 × 768, 1920 × 1080,
+768 px, 390 px and 320 px widths. Tests cover every tab's horizontal bounds,
+first-viewport essentials, direct URLs and deep links, shared scenarios, mouse /
+keyboard / touch help, empty fixtures, no filter matches and calculation errors.
+Screenshots are generated under `work/browser/` for visual review. Managed Chrome
+blocks `file://` URLs with `ERR_BLOCKED_BY_ADMINISTRATOR`; local-file browser
+navigation remains unverified in this environment. HTTP navigation works, and
+both self-contained HTML files retain relative sibling links. Firefox, Safari and
+physical touchscreen devices have not been tested.
 
 Run the entire declared chronological evaluation again:
 
@@ -128,7 +163,7 @@ refit to the accepted factual snapshot using the validation-selected hyperparame
 
 | Path | Purpose |
 |---|---|
-| `web/template.html`, `style.css`, `overrides.css` | Maintainable supplied visual design |
+| `web/template.html`, `all-clubs.html`, `style.css`, `overrides.css` | Separate offline pages and shared compact design |
 | `web/engine.js` | Browser inference, joint distributions, paired season simulation |
 | `web/ui.js` | Offline interactions and downloads |
 | `src/oval/` | Import, quality checks, fitting, evaluation, build and update CLI |
@@ -151,6 +186,6 @@ Create a portable ZIP without virtual environments, dependencies, cache or Git h
 python scripts/package.py
 ```
 
-The ZIP contains the standalone HTML, sources, baseline, documented data, reports,
+The ZIP contains both offline HTML pages, sources, baseline, documented data, reports,
 CSV exports and tests. No external fonts, badges or third-party artwork are bundled.
 Source/data licensing is not inferred from the user-supplied files; see provenance.
