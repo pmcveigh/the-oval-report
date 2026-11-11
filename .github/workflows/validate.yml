@@ -22,4 +22,5 @@ jobs:
           name: The-Oval-Report
           path: |
             The_Oval_Report.html
+            All_Clubs_Predictions.html
             work/The_Oval_Report_bundle.zip

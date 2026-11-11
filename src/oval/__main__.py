@@ -14,4 +14,4 @@ if args.command=='check-sources' or args.check_sources:
     for row in check_sources(): print(row['url'],row['status'],row.get('reason',''))
 if args.command!='check-sources':
     build(args.results,args.fixtures,args.as_of,args.provenance,reevaluate=args.command=='evaluate')
-    print('Built The_Oval_Report.html and exports. Read reports/engineering-report.md for evidence and gaps.')
+    print('Built The_Oval_Report.html, All_Clubs_Predictions.html and exports. Read reports/engineering-report.md for evidence and gaps.')

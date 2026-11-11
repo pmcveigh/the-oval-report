@@ -1,3 +1,48 @@
+# Dashboard redesign validation — 11 November 2026
+
+The earlier model-validation record is retained below. Its browser limitation is
+superseded for HTTP rendering by these checks; local-file browser restrictions remain.
+
+- Rebuilt both offline pages and the `dist/` pair. Exact byte reproducibility now
+  checks both generated HTML files and the hosted return URL.
+- Python: all 10 existing pipeline tests passed. Numerical JavaScript: all 660
+  golden cases passed, maximum error 6.661338147750939e-15; simulation determinism,
+  immutable factual records and paired result changes still pass.
+- Updated jsdom integration passed for both pages. All 87 historical matches,
+  including 21 early unavailable candidate forecasts, and all 111 remaining fixtures
+  are reachable through pagination. The main record and selectors are Glentoran-only.
+  Filters, sorting, three scenario objectives, coherent projections, reset, form,
+  score matrix, all tab links and eight CSV downloads passed.
+- Playwright with `/usr/bin/chromium`: required next-fixture, prediction, chances,
+  latest-result, form, position, points and goal-difference elements all fit above
+  the fold at 1366 × 768 and 1920 × 1080.
+- Every tab on both pages checked at 1366, 768, 390 and 320 px. No page-wide
+  horizontal overflow or primary-content vertical scroll panes were found.
+  Dense mobile tables use row layouts or expandable detail, retaining their data.
+- Direct HTTP URLs, hash links, return links, hosted `dist/index.html` navigation,
+  shared assumed results, club/date filters and empty filter results passed.
+- Information buttons passed hover, keyboard focus, visible focus, Enter, Escape,
+  close-button focus return, outside-click and emulated touchscreen tap tests.
+  The touch explanation's bounds fit the viewport and its close button works.
+- Empty fixtures display unavailable next-match, score and season forecasts without
+  inventing data. An injected calculation failure produces a visible error message.
+- Screenshots in `work/browser/` were visually inspected, including both desktop
+  sizes, mobile overview, model comparison, prediction record, form, forecast,
+  score chances and the touch explanation. Visual review led to fixes for narrow
+  screens and compact table captions. The browser run reported no unexpected JS errors.
+- `git diff --check` and portable packaging passed. Both HTML pages are included
+  in the ZIP and CI artifact list. The engine, source data, fitted parameters,
+  historical records, baseline and CSV exports have no redesign changes.
+
+Limitations: this managed Chromium policy rejects `file://` navigation with
+`ERR_BLOCKED_BY_ADMINISTRATOR`. Both pages work over static HTTP and embed all
+required resources, but direct local-file browsing remains unverified here. Firefox,
+Safari, physical touchscreen devices and independent verification of the supplied
+snapshot / league rules were outside these checks. No data refresh or model retuning
+was performed.
+
+---
+
 # Validation record — 9 November 2026
 
 Environment: Python 3.12.14, Node 24.22.1, NumPy 2.3.5, SciPy 1.17.0.

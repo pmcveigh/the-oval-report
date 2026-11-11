@@ -135,8 +135,13 @@ class PipelineTests(unittest.TestCase):
         self.assertEqual(len(rows),435)
         self.assertTrue(all('reconstructed' in r['forecast_type'] for r in rows))
         before=(ROOT/'The_Oval_Report.html').read_bytes()
+        all_before=(ROOT/'All_Clubs_Predictions.html').read_bytes()
         subprocess.run(['python','-m','oval','build'],cwd=ROOT,check=True,capture_output=True)
         self.assertEqual(before,(ROOT/'The_Oval_Report.html').read_bytes())
+        self.assertEqual(all_before,(ROOT/'All_Clubs_Predictions.html').read_bytes())
+        self.assertIn('id="predictions"',all_before.decode())
+        self.assertNotIn('id="predictions"',before.decode())
+        self.assertIn('href="index.html"',(ROOT/'dist/All_Clubs_Predictions.html').read_text())
         text=before.decode();self.assertEqual(text.count('id="focus-p'),3)
         self.assertNotIn('<script src=',text);self.assertNotIn('@import',text)
 
